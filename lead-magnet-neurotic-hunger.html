@@ -140,17 +140,21 @@ img, svg { max-width: 100%; height: auto; display: block; }
 }
 
 .hero-author-dot {
-  width: 40px;
-  height: 40px;
+  width: 56px;
+  height: 56px;
+  min-width: 56px;
   border-radius: 50%;
+  overflow: hidden;
   background: linear-gradient(135deg, var(--accent), var(--gold));
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: 'Cormorant Garamond', serif;
-  font-weight: 700;
-  font-size: 18px;
-  color: #FFF;
+  box-shadow: 0 4px 18px rgba(196,122,90,0.35), 0 0 0 2px rgba(245,237,230,0.25);
+}
+
+.hero-author-dot img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
 }
 
 .hero-author-text {
@@ -599,7 +603,9 @@ section {
 
 /* ========== COUNTER BAR ========== */
 .counter-bar {
-  position: sticky;
+  position: fixed;
+  left: 0;
+  right: 0;
   bottom: 0;
   background: rgba(44,35,33,0.95);
   -webkit-backdrop-filter: blur(12px);
@@ -611,8 +617,28 @@ section {
   flex-wrap: wrap;
   gap: 16px;
   z-index: 100;
-  transition: opacity 0.3s;
+  box-shadow: 0 -8px 32px rgba(44,35,33,0.25);
+  transform: translateY(120%);
+  transition: transform 0.35s ease, opacity 0.3s ease;
+  opacity: 0;
+  pointer-events: none;
   padding-bottom: calc(14px + env(safe-area-inset-bottom));
+}
+
+.counter-bar.is-visible {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Add bottom padding to body when bar is visible so the footer isn't hidden */
+body.has-counter-bar {
+  padding-bottom: 84px;
+}
+@supports (padding-bottom: env(safe-area-inset-bottom)) {
+  body.has-counter-bar {
+    padding-bottom: calc(84px + env(safe-area-inset-bottom));
+  }
 }
 
 .counter-bar-text {
@@ -721,7 +747,7 @@ section {
   <h1>5 типов <span>невротического голода</span></h1>
   <p class="hero-sub">Узнай, какой тип заставляет тебя переедать — и&nbsp;почему ни&nbsp;одна диета не&nbsp;работала</p>
   <div class="hero-author">
-    <div class="hero-author-dot">Е</div>
+    <div class="hero-author-dot"><img src="avatar.jpg" alt="Евгения Отабаева" loading="eager" decoding="async"></div>
     <div class="hero-author-text">
       <strong>Евгения Отабаева</strong>
       психолог · краткосрочная терапия
@@ -974,7 +1000,7 @@ section {
 </footer>
 
 <!-- STICKY BAR -->
-<div class="counter-bar" id="counter-bar" style="opacity:0;pointer-events:none;">
+<div class="counter-bar" id="counter-bar" role="complementary" aria-live="polite">
   <div class="counter-bar-text">Отмечено: <strong id="bar-count">0</strong>/20</div>
   <a href="https://janeotabaeva.ru/intensiv" class="counter-bar-btn">Смотреть видео →</a>
 </div>
@@ -993,11 +1019,11 @@ function update() {
 
   if (n === 0) {
     resultMessage.textContent = 'Отмечай признаки выше — и здесь появится твой результат';
-    counterBar.style.opacity = '0';
-    counterBar.style.pointerEvents = 'none';
+    counterBar.classList.remove('is-visible');
+    document.body.classList.remove('has-counter-bar');
   } else {
-    counterBar.style.opacity = '1';
-    counterBar.style.pointerEvents = 'auto';
+    counterBar.classList.add('is-visible');
+    document.body.classList.add('has-counter-bar');
     if (n <= 3) {
       resultMessage.innerHTML = 'Невротический голод уже влияет на твою жизнь. Пока это «фоновый шум» — но именно он не даёт весу уходить. <strong>Одной сессии может быть достаточно.</strong>';
     } else if (n <= 8) {
