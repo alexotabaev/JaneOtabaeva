@@ -17,3 +17,9 @@ npm-debug.log*
 
 # Dependencies (if ever added)
 node_modules/
+
+# Claude Code workspace
+.claude/
+
+# Original Tilda export — already migrated to repo root, kept locally only
+project997326/

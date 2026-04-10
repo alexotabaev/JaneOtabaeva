@@ -1,51 +1,79 @@
-# JaneOtabaeva — Лендинг
+# JaneOtabaeva.ru — сайт
 
-Сайт-лендинг Евгении Отабаевой (психолог, краткосрочная терапия).
+Статичный сайт Евгении Отабаевой (психолог, гипнотерапевт, краткосрочная терапия).
 
-## Страницы
+Исходно сделан в Tilda, перенесён на GitHub Pages с переписыванием внутренних ссылок.
 
-- **`index.html`** — главная страница сайта (лид-магнит «5 типов невротического голода»)
-- **`lead-magnet-neurotic-hunger.html`** — та же страница под отдельным URL для прямых ссылок из рекламы/рассылок
+## Точка входа
 
-Обе страницы идентичны, чтобы работали любые входящие ссылки.
+**`index.html`** — главная страница.
 
-## Запуск локально
+Сайт открывается тут: **https://alexotabaev.github.io/JaneOtabaeva/**
 
-Откройте `index.html` в браузере. Никаких сборок и зависимостей не требуется — это чистый HTML/CSS/JS.
+## Структура
 
-Либо поднимите локальный сервер:
+- 🗺️ **Карта сайта и архитектура** → [`SITEMAP.md`](SITEMAP.md)
+- 📋 **Реестр всех страниц с описанием** → [`PAGES.md`](PAGES.md)
+- 📄 **38 HTML-страниц** в корне репо (с человекочитаемыми именами: `about.html`, `blog.html`, `peresborka.html` и т.д.)
+- 🎨 **Ассеты Tilda:** `css/`, `js/`, `images/`, `files/`
+- 🚫 **`404.html`** — кастомная страница ошибки
+
+## Основные страницы (в меню)
+
+| Пункт меню | Файл |
+|---|---|
+| Главная | `index.html` |
+| Метод «Пересборка» | `peresborka.html` |
+| Диагностика | `diagnostic.html` |
+| Обо мне | `about.html` |
+| Ближайший вебинар | `intensivo.html` |
+| Блог | `blog.html` |
+
+## Что было сделано при импорте из Tilda
+
+1. **Переименованы страницы** — `pageXXXXX.html` → человекочитаемые (`about.html`, `peresborka.html`, …). Маппинг взят из `.htaccess`, который Tilda положила в экспорт.
+2. **Переписаны внутренние ссылки** — все `href="https://janeotabaeva.ru/about"` и `href="/about"` переделаны на `href="about.html"`, чтобы работали локально и на GitHub Pages без собственного домена.
+3. **Проверено 146 ассетов** — все найдены, битых ссылок на картинки/CSS/JS нет.
+4. **Проверено 0 битых внутренних `.html` ссылок** — меню полностью кликабельны.
+5. **Дубли и устаревшее** помечены в `PAGES.md` с рекомендацией «в архив» или «удалить».
+6. **Создана кастомная `404.html`** вместо дефолтной Тильдовской заглушки.
+7. **Наш лид-магнит `5prichin.html`** сохранён как отдельная страница, CTA перенастроен на локальный `intensiv.html`.
+
+## Локальный запуск
+
+Любой статический сервер подойдёт — нет ни сборки, ни зависимостей:
 
 ```bash
 python3 -m http.server 8000
-# откройте http://localhost:8000
+# http://localhost:8000
 ```
+
+Или просто открой `index.html` в браузере (но некоторые Tilda-скрипты могут не отработать из-за `file://` — лучше через сервер).
 
 ## Публикация на GitHub Pages
 
-1. Settings → Pages
-2. Source: `Deploy from a branch`
-3. Branch: `main` / `/ (root)`
-4. Сайт будет доступен по адресу `https://<username>.github.io/JaneOtabaeva/`
+Уже включено:
 
-## Адаптивность
+- Settings → Pages → Source: `Deploy from a branch` → `main` → `/ (root)`
+- URL: https://alexotabaev.github.io/JaneOtabaeva/
 
-Сайт протестирован и работает на всех экранах:
+После каждого `git push` в `main` GitHub Pages пересобирается автоматически (1–3 минуты).
 
-- **<360px** — компактные телефоны
-- **360–480px** — стандартные телефоны
-- **768px+** — планшеты
-- **1024px+** — десктоп
-- **1200px+** — большие экраны
+## Подключение своего домена
 
-Используются `clamp()`, `meta viewport`, `overflow-x: hidden`, поддержка `prefers-reduced-motion` и `safe-area-inset` для iPhone с вырезом.
+См. отдельный разговор в сессии — краткая инструкция:
+
+1. DNS: A-записи apex → 4 IP GitHub (`185.199.108.153`…`111.153`) + CNAME `www` → `alexotabaev.github.io.`
+2. Settings → Pages → Custom domain: `janeotabaeva.ru`
+3. Enforce HTTPS — когда DNS дойдёт.
 
 ## Технологии
 
-- HTML5
-- CSS3 (custom properties, grid, media queries)
-- Vanilla JavaScript (интерактивный тест с подсчётом признаков)
-- Google Fonts: Cormorant Garamond, Nunito Sans
+- Статичный HTML (экспорт Tilda)
+- Tilda CSS/JS (`tilda-blocks-*.min.css`, `tilda-scripts-3.0.min.js`)
+- jQuery 1.10.2 (под капотом Tilda)
+- Google Fonts: Lora, Noto Sans, Cormorant Garamond (для нашего лид-магнита)
 
 ## Автор
 
-Евгения Отабаева · [janeotabaeva.ru](https://janeotabaeva.ru)
+Евгения Отабаева · психолог, гипнотерапевт

@@ -1,0 +1,34 @@
+User-Agent: *
+Disallow: /page7447535.html
+Disallow: /main
+Disallow: /page7423147.html
+Disallow: /marafon
+Disallow: /page7431740.html
+Disallow: /page7452277.html
+Disallow: /videokurs
+Disallow: /page7452832.html
+Disallow: /getcourse
+Disallow: /page7458545.html
+Disallow: /page7431968.html
+Disallow: /footer
+Disallow: /page12486329.html
+Disallow: /gaiddownload
+Disallow: /page12521672.html
+Disallow: /gaid
+Disallow: /page33096556.html
+Disallow: /menu
+Disallow: /tilda/form*
+Disallow: /tilda/rec*
+Disallow: /tilda/click*
+Disallow: /tilda/scroll*
+Disallow: /tilda/popup*
+Disallow: /tilda/cart*
+Disallow: /tilda/product*
+Disallow: /tilda/event*
+Disallow: /members/login*
+Disallow: /members/signup*
+Disallow:
+
+
+Sitemap: https://janeotabaeva.ru/sitemap.xml
+Sitemap: https://janeotabaeva.ru/sitemap-feeds.xml

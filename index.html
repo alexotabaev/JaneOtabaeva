@@ -1,1043 +1,423 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>5 типов невротического голода — Евгения Отабаева</title>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Nunito+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
-<style>
-:root {
-  --bg: #FDF8F4;
-  --bg-card: #FFFFFF;
-  --bg-accent: #F5EDE6;
-  --bg-dark: #2C2321;
-  --text: #3A2E2A;
-  --text-light: #7A6B65;
-  --text-on-dark: #F5EDE6;
-  --accent: #C47A5A;
-  --accent-deep: #9E5A3C;
-  --accent-light: #E8C4B0;
-  --accent-glow: #F0D5C4;
-  --gold: #BFA26A;
-  --green: #7A9E7E;
-  --red-soft: #D4847A;
-  --shadow: 0 4px 24px rgba(60,40,30,0.08);
-  --shadow-lg: 0 12px 48px rgba(60,40,30,0.12);
-  --radius: 16px;
-  --radius-sm: 10px;
-}
-
-* { margin: 0; padding: 0; box-sizing: border-box; }
-
-html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
-
-html, body { overflow-x: hidden; width: 100%; }
-
-body {
-  font-family: 'Nunito Sans', sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  line-height: 1.7;
-  font-size: 16px;
-  -webkit-font-smoothing: antialiased;
-  min-height: 100vh;
-}
-
-img, svg { max-width: 100%; height: auto; display: block; }
-
-.serif { font-family: 'Cormorant Garamond', serif; }
-
-.container {
-  max-width: 680px;
-  margin: 0 auto;
-  padding: 0 24px;
-}
-
-/* ========== HERO ========== */
-.hero {
-  background: linear-gradient(165deg, #2C2321 0%, #4A3530 40%, #6B4A40 100%);
-  padding: 64px 24px 56px;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-}
-
-.hero::before {
-  content: '';
-  position: absolute;
-  top: -40%;
-  right: -20%;
-  width: 500px;
-  height: 500px;
-  background: radial-gradient(circle, rgba(196,122,90,0.15) 0%, transparent 70%);
-  border-radius: 50%;
-}
-
-.hero::after {
-  content: '';
-  position: absolute;
-  bottom: -30%;
-  left: -15%;
-  width: 400px;
-  height: 400px;
-  background: radial-gradient(circle, rgba(191,162,106,0.1) 0%, transparent 70%);
-  border-radius: 50%;
-}
-
-.hero-badge {
-  display: inline-block;
-  background: rgba(196,122,90,0.2);
-  border: 1px solid rgba(196,122,90,0.3);
-  color: var(--accent-light);
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 2.5px;
-  text-transform: uppercase;
-  padding: 8px 20px;
-  border-radius: 30px;
-  margin-bottom: 28px;
-  position: relative;
-  z-index: 1;
-}
-
-.hero h1 {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(30px, 7vw, 52px);
-  font-weight: 700;
-  color: #FFF;
-  line-height: 1.15;
-  margin-bottom: 20px;
-  position: relative;
-  z-index: 1;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-  hyphens: auto;
-}
-
-.hero h1 span {
-  color: var(--accent-light);
-  font-style: italic;
-}
-
-.hero-sub {
-  color: rgba(245,237,230,0.75);
-  font-size: 17px;
-  line-height: 1.6;
-  max-width: 520px;
-  margin: 0 auto;
-  position: relative;
-  z-index: 1;
-}
-
-.hero-author {
-  margin-top: 32px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  position: relative;
-  z-index: 1;
-}
-
-.hero-author-dot {
-  width: 56px;
-  height: 56px;
-  min-width: 56px;
-  border-radius: 50%;
-  overflow: hidden;
-  background: linear-gradient(135deg, var(--accent), var(--gold));
-  box-shadow: 0 4px 18px rgba(196,122,90,0.35), 0 0 0 2px rgba(245,237,230,0.25);
-}
-
-.hero-author-dot img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center top;
-  display: block;
-}
-
-.hero-author-text {
-  text-align: left;
-  color: rgba(245,237,230,0.65);
-  font-size: 13px;
-  line-height: 1.4;
-}
-
-.hero-author-text strong {
-  display: block;
-  color: rgba(245,237,230,0.9);
-  font-size: 14px;
-}
-
-/* ========== SECTIONS ========== */
-section {
-  padding: 48px 0;
-}
-
-.section-intro {
-  padding: 56px 24px;
-  background: var(--bg);
-}
-
-.intro-text {
-  max-width: 680px;
-  margin: 0 auto;
-  font-size: 17px;
-  color: var(--text);
-}
-
-.intro-text p {
-  margin-bottom: 20px;
-}
-
-.intro-text .highlight {
-  background: linear-gradient(to bottom, transparent 60%, var(--accent-glow) 60%);
-  padding: 0 2px;
-}
-
-.intro-text .aside {
-  color: var(--text-light);
-  font-style: italic;
-  font-size: 15px;
-}
-
-/* ========== TYPE CARDS ========== */
-.types-section {
-  padding: 48px 0 24px;
-}
-
-.types-header {
-  text-align: center;
-  margin-bottom: 48px;
-}
-
-.types-header h2 {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(26px, 5vw, 36px);
-  font-weight: 700;
-  margin-bottom: 12px;
-}
-
-.types-header p {
-  color: var(--text-light);
-  font-size: 15px;
-}
-
-.type-card {
-  background: var(--bg-card);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  padding: 36px 32px;
-  margin-bottom: 28px;
-  position: relative;
-  overflow: hidden;
-  border: 1px solid rgba(196,122,90,0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.type-card:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-lg);
-}
-
-.type-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 4px;
-  height: 100%;
-}
-
-.type-card[data-type="1"]::before { background: var(--accent); }
-.type-card[data-type="2"]::before { background: var(--gold); }
-.type-card[data-type="3"]::before { background: var(--green); }
-.type-card[data-type="4"]::before { background: var(--red-soft); }
-.type-card[data-type="5"]::before { background: #8B7EC8; }
-
-.type-number {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 56px;
-  font-weight: 700;
-  line-height: 1;
-  opacity: 0.08;
-  position: absolute;
-  top: 16px;
-  right: 28px;
-}
-
-.type-emoji {
-  font-size: 28px;
-  margin-bottom: 12px;
-  display: block;
-}
-
-.type-name {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(22px, 5vw, 26px);
-  font-weight: 700;
-  margin-bottom: 6px;
-  padding-right: 60px;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-}
-
-.type-tagline {
-  font-size: 14px;
-  color: var(--text-light);
-  font-style: italic;
-  margin-bottom: 16px;
-}
-
-.type-desc {
-  font-size: 15px;
-  line-height: 1.7;
-  margin-bottom: 20px;
-}
-
-.type-signs {
-  background: var(--bg-accent);
-  border-radius: var(--radius-sm);
-  padding: 20px 24px;
-  margin-bottom: 0;
-}
-
-.type-signs-title {
-  font-size: 12px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  color: var(--text-light);
-  margin-bottom: 12px;
-}
-
-.type-signs label {
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
-  margin-bottom: 10px;
-  cursor: pointer;
-  font-size: 14.5px;
-  line-height: 1.5;
-  transition: opacity 0.2s;
-}
-
-.type-signs label:last-child { margin-bottom: 0; }
-
-.type-signs input[type="checkbox"] {
-  appearance: none;
-  -webkit-appearance: none;
-  width: 20px;
-  height: 20px;
-  min-width: 20px;
-  border: 2px solid var(--accent-light);
-  border-radius: 5px;
-  margin-top: 2px;
-  cursor: pointer;
-  transition: all 0.2s;
-  position: relative;
-}
-
-.type-signs input[type="checkbox"]:checked {
-  background: var(--accent);
-  border-color: var(--accent);
-}
-
-.type-signs input[type="checkbox"]:checked::after {
-  content: '✓';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: #FFF;
-  font-size: 13px;
-  font-weight: 700;
-}
-
-/* ========== RESULT ========== */
-.result-section {
-  background: linear-gradient(165deg, #2C2321, #4A3530);
-  padding: 56px 24px;
-  text-align: center;
-  border-radius: var(--radius);
-  margin: 0 16px 48px;
-  max-width: 680px;
-}
-
-@media (min-width: 720px) {
-  .result-section { margin: 0 auto 48px; }
-}
-
-.result-count {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(56px, 12vw, 72px);
-  font-weight: 700;
-  color: var(--accent-light);
-  line-height: 1;
-}
-
-.result-label {
-  color: rgba(245,237,230,0.6);
-  font-size: 14px;
-  margin-bottom: 24px;
-}
-
-.result-message {
-  color: var(--text-on-dark);
-  font-size: 17px;
-  line-height: 1.7;
-  max-width: 520px;
-  margin: 0 auto 8px;
-}
-
-/* ========== MECHANISM ========== */
-.mechanism-section {
-  padding: 48px 24px;
-  max-width: 680px;
-  margin: 0 auto;
-}
-
-.mechanism-section h2 {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(24px, 5vw, 32px);
-  font-weight: 700;
-  margin-bottom: 24px;
-  text-align: center;
-}
-
-.mechanism-block {
-  background: var(--bg-card);
-  border-radius: var(--radius);
-  padding: 28px;
-  box-shadow: var(--shadow);
-  margin-bottom: 20px;
-  border: 1px solid rgba(196,122,90,0.08);
-}
-
-.mechanism-block h3 {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 20px;
-  font-weight: 600;
-  margin-bottom: 10px;
-}
-
-.mechanism-block p {
-  font-size: 15px;
-  color: var(--text);
-  line-height: 1.7;
-}
-
-.mechanism-block .metaphor {
-  font-style: italic;
-  color: var(--accent-deep);
-}
-
-/* ========== CASES ========== */
-.cases-section {
-  padding: 48px 24px;
-  background: var(--bg-accent);
-}
-
-.cases-section h2 {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(24px, 5vw, 32px);
-  font-weight: 700;
-  text-align: center;
-  margin-bottom: 36px;
-}
-
-.case-card {
-  background: var(--bg-card);
-  border-radius: var(--radius);
-  padding: 28px 28px 24px;
-  margin-bottom: 20px;
-  max-width: 680px;
-  margin-left: auto;
-  margin-right: auto;
-  box-shadow: var(--shadow);
-  position: relative;
-}
-
-.case-card::before {
-  content: '"';
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 64px;
-  color: var(--accent-light);
-  position: absolute;
-  top: 12px;
-  left: 20px;
-  line-height: 1;
-}
-
-.case-quote {
-  font-size: 15px;
-  line-height: 1.7;
-  padding-left: 8px;
-  margin-bottom: 16px;
-  font-style: italic;
-  color: var(--text);
-}
-
-.case-meta {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding-left: 8px;
-}
-
-.case-avatar {
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: 'Cormorant Garamond', serif;
-  font-weight: 700;
-  font-size: 15px;
-  color: #FFF;
-}
-
-.case-meta-text {
-  font-size: 13px;
-  color: var(--text-light);
-}
-
-.case-meta-text strong {
-  display: block;
-  color: var(--text);
-  font-size: 14px;
-}
-
-.case-result {
-  display: inline-block;
-  background: rgba(122,158,126,0.12);
-  color: var(--green);
-  font-size: 12px;
-  font-weight: 700;
-  padding: 4px 10px;
-  border-radius: 20px;
-  margin-top: 8px;
-}
-
-/* ========== CTA ========== */
-.cta-section {
-  padding: 64px 24px;
-  text-align: center;
-}
-
-.cta-section h2 {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(24px, 5vw, 34px);
-  font-weight: 700;
-  margin-bottom: 16px;
-}
-
-.cta-section p {
-  font-size: 16px;
-  color: var(--text-light);
-  max-width: 520px;
-  margin: 0 auto 32px;
-  line-height: 1.7;
-}
-
-.cta-btn {
-  display: inline-block;
-  background: linear-gradient(135deg, var(--accent), var(--accent-deep));
-  color: #FFF;
-  font-size: 16px;
-  font-weight: 700;
-  padding: 18px 44px;
-  border-radius: 50px;
-  text-decoration: none;
-  border: none;
-  cursor: pointer;
-  transition: transform 0.2s, box-shadow 0.2s;
-  box-shadow: 0 8px 24px rgba(196,122,90,0.3);
-  letter-spacing: 0.3px;
-}
-
-.cta-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 12px 32px rgba(196,122,90,0.4);
-}
-
-.cta-sub {
-  font-size: 13px;
-  color: var(--text-light);
-  margin-top: 16px;
-}
-
-/* ========== FOOTER ========== */
-.footer {
-  padding: 32px 24px;
-  text-align: center;
-  font-size: 13px;
-  color: var(--text-light);
-  border-top: 1px solid rgba(196,122,90,0.1);
-}
-
-.footer a { color: var(--accent); text-decoration: none; }
-
-/* ========== DIVIDER ========== */
-.divider {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 16px;
-  padding: 24px 0;
-}
-
-.divider::before, .divider::after {
-  content: '';
-  height: 1px;
-  width: 60px;
-  background: var(--accent-light);
-}
-
-.divider span {
-  color: var(--accent-light);
-  font-size: 18px;
-}
-
-/* ========== COUNTER BAR ========== */
-.counter-bar {
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(44,35,33,0.95);
-  -webkit-backdrop-filter: blur(12px);
-  backdrop-filter: blur(12px);
-  padding: 14px 24px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 16px;
-  z-index: 100;
-  box-shadow: 0 -8px 32px rgba(44,35,33,0.25);
-  transform: translateY(120%);
-  transition: transform 0.35s ease, opacity 0.3s ease;
-  opacity: 0;
-  pointer-events: none;
-  padding-bottom: calc(14px + env(safe-area-inset-bottom));
-}
-
-.counter-bar.is-visible {
-  transform: translateY(0);
-  opacity: 1;
-  pointer-events: auto;
-}
-
-/* Add bottom padding to body when bar is visible so the footer isn't hidden */
-body.has-counter-bar {
-  padding-bottom: 84px;
-}
-@supports (padding-bottom: env(safe-area-inset-bottom)) {
-  body.has-counter-bar {
-    padding-bottom: calc(84px + env(safe-area-inset-bottom));
-  }
-}
-
-.counter-bar-text {
-  color: var(--text-on-dark);
-  font-size: 14px;
-}
-
-.counter-bar-text strong {
-  color: var(--accent-light);
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 22px;
-  font-weight: 700;
-}
-
-.counter-bar-btn {
-  background: var(--accent);
-  color: #FFF;
-  font-size: 13px;
-  font-weight: 700;
-  padding: 10px 24px;
-  border-radius: 30px;
-  text-decoration: none;
-  border: none;
-  cursor: pointer;
-  white-space: nowrap;
-}
-
-/* ========== RESPONSIVE BREAKPOINTS ========== */
-
-/* Extra small screens — phones <360px */
-@media (max-width: 359px) {
-  body { font-size: 15px; }
-  .container { padding: 0 16px; }
-  .hero { padding: 40px 16px 36px; }
-  .hero-badge { font-size: 10px; letter-spacing: 2px; padding: 7px 16px; margin-bottom: 22px; }
-  .hero h1 { font-size: 28px; }
-  .hero-sub { font-size: 15px; }
-  .type-card { padding: 24px 18px; }
-  .type-signs { padding: 14px 16px; }
-  .type-signs label { font-size: 13.5px; }
-  .type-number { font-size: 44px; right: 18px; }
-  .result-section { margin: 0 8px 36px; padding: 40px 16px; }
-  .mechanism-section { padding: 36px 16px; }
-  .mechanism-block { padding: 22px 20px; }
-  .cases-section { padding: 40px 16px; }
-  .case-card { padding: 24px 20px 22px; }
-  .cta-section { padding: 48px 16px; }
-  .cta-btn { padding: 16px 32px; font-size: 15px; }
-  .counter-bar { padding: 12px 16px; gap: 10px; }
-  .counter-bar-text { font-size: 13px; }
-  .counter-bar-text strong { font-size: 19px; }
-  .counter-bar-btn { font-size: 12px; padding: 9px 18px; }
-}
-
-/* Phones */
-@media (max-width: 480px) {
-  .hero { padding: 48px 20px 44px; }
-  .type-card { padding: 28px 24px; }
-  .type-signs { padding: 16px 18px; }
-  .result-section { margin: 0 8px 40px; padding: 44px 20px; }
-  .section-intro { padding: 44px 20px; }
-  .mechanism-section { padding: 40px 20px; }
-  .cases-section { padding: 44px 20px; }
-  .cta-section { padding: 52px 20px; }
-  .hero-author-text { font-size: 12px; }
-  .hero-author-text strong { font-size: 13px; }
-}
-
-/* Tablets and up */
-@media (min-width: 768px) {
-  body { font-size: 17px; }
-  .hero { padding: 88px 32px 76px; }
-  .section-intro { padding: 72px 32px; }
-  .types-section { padding: 64px 0 32px; }
-  .mechanism-section { padding: 64px 32px; }
-  .cases-section { padding: 72px 32px; }
-  .cta-section { padding: 88px 32px; }
-  .type-card { padding: 44px 40px; }
-  .mechanism-block { padding: 32px 36px; }
-  .case-card { padding: 32px 32px 28px; }
-}
-
-/* Desktop */
-@media (min-width: 1024px) {
-  .hero { padding: 112px 32px 96px; }
-  .hero::before { width: 720px; height: 720px; }
-  .hero::after { width: 600px; height: 600px; }
-}
-
-/* Large desktop — cap the hero content */
-@media (min-width: 1200px) {
-  .hero-sub { font-size: 19px; max-width: 600px; }
-}
-
-/* Print + reduced motion */
-@media (prefers-reduced-motion: reduce) {
-  * { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
-}
-</style>
-</head>
-<body>
-
-<!-- HERO -->
-<header class="hero">
-  <div class="hero-badge">Бесплатный гайд + тест</div>
-  <h1>5 типов <span>невротического голода</span></h1>
-  <p class="hero-sub">Узнай, какой тип заставляет тебя переедать — и&nbsp;почему ни&nbsp;одна диета не&nbsp;работала</p>
-  <div class="hero-author">
-    <div class="hero-author-dot"><img src="avatar.jpg" alt="Евгения Отабаева" loading="eager" decoding="async"></div>
-    <div class="hero-author-text">
-      <strong>Евгения Отабаева</strong>
-      психолог · краткосрочная терапия
-    </div>
-  </div>
-</header>
-
-<!-- INTRO -->
-<section class="section-intro">
-  <div class="intro-text">
-    <p>Знаешь, что меня вгоняло в отчаяние больше всего, когда я весила 75 кг при своей норме в 55?</p>
-    <p>Не сам вес. А то, что <span class="highlight">я не могла понять, почему я ем</span>. Только поужинала — и рука сама тянется к шоколадке. Мозг говорит «не надо», а тело уже жуёт.</p>
-    <p>Потом — вина. Потом — «ну всё, с понедельника точно». Потом — очередной понедельник, который ничего не меняет. <span class="aside">(знакомо, да?)</span></p>
-    <p>И вот когда я разобралась в механизме, стало понятно: <strong>проблема не в еде. И не в силе воли. А в том, какой именно тип невротического голода тобой управляет.</strong></p>
-    <p>Их всего 5. И у каждого — своя ловушка, свой триггер и свой способ разрешения.</p>
-    <p>Ниже — каждый тип с тестом. Отмечай то, что про тебя. В&nbsp;конце — узнаешь, насколько глубоко засела проблема и что с&nbsp;этим делать. <span class="aside">(спойлер: не диета)</span></p>
-  </div>
-</section>
-
-<div class="divider"><span>✦</span></div>
-
-<!-- TYPES -->
-<section class="types-section">
-  <div class="container">
-    <div class="types-header">
-      <h2>5 типов невротического голода</h2>
-      <p>Отмечай признаки, которые узнаёшь в себе</p>
-    </div>
-
-    <!-- TYPE 1 -->
-    <div class="type-card" data-type="1">
-      <span class="type-number">01</span>
-      <span class="type-emoji">🌊</span>
-      <div class="type-name">Эмоциональный заедатель</div>
-      <div class="type-tagline">«Мне плохо — значит, мне нужна шоколадка»</div>
-      <div class="type-desc">
-        Это когда еда = антидепрессант. Скучно — пожевать. Тревожно — пожевать. Поссорилась с мужем — там точно есть мороженое в морозилке. Ты не голодна. Ты пытаешься <em>заесть чувство</em>, которое не можешь переварить эмоционально.
-        <br><br>
-        А бывает и так: поставила себе цель — заработать определённую сумму, начать вести блог, продавать. Но тебе страшно. И каждый раз, когда страшно — появляется желание что-то съесть. А от мысли, что ты не реализуешься, не можешь добиться своей цели — фоновая тревога и неудовлетворённость собой. А это = постоянное желание что-то жевать.
-        <br><br>
-        Причина не в слабости характера. В подсознании еда связалась с безопасностью. Когда-то давно мозг запомнил: поела — стало спокойнее. И теперь гонит тебя к холодильнику каждый раз, когда внутри штормит.
-      </div>
-      <div class="type-signs">
-        <div class="type-signs-title">Узнаёшь себя?</div>
-        <label><input type="checkbox" class="sign-check"> После ссоры или стресса первым делом хочется что-то съесть</label>
-        <label><input type="checkbox" class="sign-check"> Когда скучно или одиноко — рука сама тянется к еде</label>
-        <label><input type="checkbox" class="sign-check"> Страх перед важным делом (продажи, блог, выступление) = поход к холодильнику</label>
-        <label><input type="checkbox" class="sign-check"> После еды ненадолго становится легче, потом — вина</label>
-      </div>
-    </div>
-
-    <!-- TYPE 2 -->
-    <div class="type-card" data-type="2">
-      <span class="type-number">02</span>
-      <span class="type-emoji">👁</span>
-      <div class="type-name">Визуальный голод</div>
-      <div class="type-tagline">«Увидела — всё, пропала»</div>
-      <div class="type-desc">
-        Минуту назад ты не хотела есть. А потом увидела фото бургера в ленте — и всё. Или зашла в магазин за чаем, а на витрине — свежие круассаны, золотистые, идеальные. Ты выходишь с полной корзиной и думаешь: «Как? Я же просто за чаем шла!»
-        <br><br>
-        Визуальный голод — это когда глаза буквально «включают» аппетит. Мозг видит еду — и древний инстинкт кричит: «Хватай! Кто знает, когда ещё будет!» <span style="color:var(--text-light);font-style:italic">(привет, пещерный человек внутри нас)</span>
-      </div>
-      <div class="type-signs">
-        <div class="type-signs-title">Узнаёшь себя?</div>
-        <label><input type="checkbox" class="sign-check"> Кулинарные фото/видео вызывают моментальное желание поесть</label>
-        <label><input type="checkbox" class="sign-check"> Увидела красивую витрину в магазине — и уже несёшь то, что не планировала</label>
-        <label><input type="checkbox" class="sign-check"> Когда при тебе едят вкусное — невозможно отказаться</label>
-        <label><input type="checkbox" class="sign-check"> Телевизор/ролики про еду = немедленный поход на кухню</label>
-      </div>
-    </div>
-
-    <!-- TYPE 3 -->
-    <div class="type-card" data-type="3">
-      <span class="type-number">03</span>
-      <span class="type-emoji">⏰</span>
-      <div class="type-name">Голод-привычка</div>
-      <div class="type-tagline">«14:00 — значит, пора обедать. Даже если не хочу»</div>
-      <div class="type-desc">
-        Включила телевизор — надо что-то пожевать. Пришла домой с работы — надо поесть. 14:00 — обед, точка. Ты не спрашиваешь тело, голодно ли оно. Ты действуешь на автопилоте. Это рефлекс, который годами укреплялся и стал частью «расписания».
-        <br><br>
-        Знаешь, как собака Павлова? Вот ты — немножко она. <span style="color:var(--text-light);font-style:italic">(без обид, я тоже была)</span>
-      </div>
-      <div class="type-signs">
-        <div class="type-signs-title">Узнаёшь себя?</div>
-        <label><input type="checkbox" class="sign-check"> Ешь в одно и то же время, даже если не голодна</label>
-        <label><input type="checkbox" class="sign-check"> Перед телевизором/ноутбуком обязательно нужно что-то жевать</label>
-        <label><input type="checkbox" class="sign-check"> На столе всегда стоят орешки/конфеты/что-то «для фона»</label>
-        <label><input type="checkbox" class="sign-check"> В отпуске тело «хочет есть» ровно в то же время, что и на работе</label>
-      </div>
-    </div>
-
-    <!-- TYPE 4 -->
-    <div class="type-card" data-type="4">
-      <span class="type-number">04</span>
-      <span class="type-emoji">🌙</span>
-      <div class="type-name">Ночной едок</div>
-      <div class="type-tagline">«Весь день держалась. Ночью — сорвалась»</div>
-      <div class="type-desc">
-        Днём ты молодец. Всё по плану. А ночью — как подменили. Холодильник манит, рука открывает, и ты стоишь в темноте и ешь. Потом вина. Потом «как повесить замок на холодильник». Потом засыпаешь с тяжестью в желудке и в душе.
-        <br><br>
-        Это не слабость. За день копится напряжение, которое ты держишь «на зубах». Это как воздушный шарик: весь день надуваешь, надуваешь — а ночью он лопается. Контроль заканчивается, и тело берёт своё. Чем жёстче ты себя ограничиваешь днём, тем сильнее «отпускает» ночью.
-      </div>
-      <div class="type-signs">
-        <div class="type-signs-title">Узнаёшь себя?</div>
-        <label><input type="checkbox" class="sign-check"> Регулярно ешь после 22:00–23:00, хотя давала себе слово не делать этого</label>
-        <label><input type="checkbox" class="sign-check"> Утром — вина и обещание «больше никогда»</label>
-        <label><input type="checkbox" class="sign-check"> Днём ограничиваешь себя, а вечером «компенсируешь»</label>
-        <label><input type="checkbox" class="sign-check"> Сон не приходит, пока не поешь</label>
-      </div>
-    </div>
-
-    <!-- TYPE 5 -->
-    <div class="type-card" data-type="5">
-      <span class="type-number">05</span>
-      <span class="type-emoji">🚫</span>
-      <div class="type-name">Пружина запрета</div>
-      <div class="type-tagline">«Нельзя-нельзя-нельзя... ДАЙТЕ ВСЁ»</div>
-      <div class="type-desc">
-        Ты на диете. Строго. Никакого хлеба, сладкого, мучного. Неделю, две, месяц. А потом — срыв. И не просто «съела конфетку», а прямо полная корзина, три порции, расстегнуть пуговицу на джинсах. И потом — опускаются руки: «Видимо, красивое тело не для меня».
-        <br><br>
-        Это как резинка: чем сильнее натягиваешь — тем больнее бьёт, когда отпускаешь. Диета → срыв → диета → срыв. Замкнутый круг. Ты пытаешься логикой запретить то, что требует твой древний инстинкт выживания. А он всегда сильнее любых правил — потому что ему миллионы лет, а твоему решению «с понедельника не есть сладкое» — три дня.
-      </div>
-      <div class="type-signs">
-        <div class="type-signs-title">Узнаёшь себя?</div>
-        <label><input type="checkbox" class="sign-check"> После каждой диеты — срыв и набор ещё бо́льшего веса</label>
-        <label><input type="checkbox" class="sign-check"> Чувствуешь боль/обиду, когда при тебе едят «запрещённое»</label>
-        <label><input type="checkbox" class="sign-check"> Уже пробовала 3+ диет/методов — и каждый раз откат</label>
-        <label><input type="checkbox" class="sign-check"> Думаешь: «Может, просто смириться и жить так»</label>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- RESULT -->
-<div id="result-block" class="result-section">
-  <div class="result-count" id="result-count">0</div>
-  <div class="result-label">признаков отмечено из 20</div>
-  <p class="result-message" id="result-message">Отмечай признаки выше — и здесь появится твой результат</p>
-</div>
-
-<div class="divider"><span>✦</span></div>
-
-<!-- MECHANISM -->
-<section class="mechanism-section">
-  <h2>Почему диеты не работают<br>(и что работает)</h2>
-
-  <div class="mechanism-block">
-    <h3>🦖 Человек против динозавра</h3>
-    <p>Представь: ты стоишь перед голодным тираннозавром и пытаешься <em>уговорить</em> его тебя не есть. Объясняешь логически, приводишь аргументы, строишь графики. Он тебя не слышит — у него другие приоритеты. Вот именно так работает сила воли против инстинктов. Твоя логика — это ты. Древний мозг, которому миллионы лет и который управляет голодом — это динозавр. <span class="metaphor">Представь масштаб этой неравной битвы.</span></p>
-  </div>
-
-  <div class="mechanism-block">
-    <h3>🔥 Как рождается «сбой» в голове</h3>
-    <p>Представь: в детстве ты хотела проявиться — высказать мнение, заявить о себе, быть заметной. А в ответ получила: «Не высовывайся», «Кто тебя спрашивал?», «Будешь так себя вести — никто тебя любить не будет». Мозг моментально связал два факта: «проявляться = опасно, будет больно». И теперь, во взрослой жизни, каждый раз когда ты хочешь сделать что-то важное — продать, выступить, сказать «нет» — внутри поднимается тревога. Ты не можешь прийти к своей цели, потому что мозг блокирует. Внутри — напряжение, разочарование, злость на себя. И чтобы хоть как-то снять это состояние и снова почувствовать себя хорошо — ты ешь. <span class="metaphor">Еда не помогает достичь цели. Она просто на время глушит боль от того, что ты к ней не пришла.</span></p>
-  </div>
-
-  <div class="mechanism-block">
-    <h3>🔗 Разъединить — и всё</h3>
-    <p>Не надо лезть в травму, раскапывать детство, простить всех обидчиков. <span class="metaphor">Достаточно разъединить связку «факт + чувство» в подсознании.</span> «Проявляться» снова станет просто действием, а не угрозой. Тревога уйдёт — и вместе с ней уйдёт потребность заедать. Не потому что «нельзя». А потому что больше не нужно.</p>
-  </div>
-</section>
-
-<div class="divider"><span>✦</span></div>
-
-<!-- CASES -->
-<section class="cases-section">
-  <h2>Они узнали себя — и&nbsp;изменили это</h2>
-
-  <div class="case-card">
-    <div class="case-quote">Вся жизнь крутилась вокруг дочки. Единственное удовольствие — чай с шоколадками, когда дочка спала. После сессии произошла замена ценностей: впечатления от еды теперь занимают не больше 15% от всех остальных.</div>
-    <div class="case-meta">
-      <div class="case-avatar" style="background:linear-gradient(135deg,var(--accent),var(--gold))">А</div>
-      <div class="case-meta-text">
-        <strong>Анна</strong>
-        мама в декрете · эмоциональный заедатель
-      </div>
-    </div>
-    <div class="case-result">Еда перестала быть главным удовольствием</div>
-  </div>
-
-  <div class="case-card">
-    <div class="case-quote">Я всю жизнь был сладкоежкой, все 60 лет. Вдруг изменюсь из-за психологии? Нереально! Однако — прошло полгода. С литров варенья — до ложки мёда. И только когда сильно захочется.</div>
-    <div class="case-meta">
-      <div class="case-avatar" style="background:linear-gradient(135deg,var(--green),#5A8E6E)">В</div>
-      <div class="case-meta-text">
-        <strong>Владимир, 60 лет</strong>
-        сладкоежка всю жизнь · голод-привычка
-      </div>
-    </div>
-    <div class="case-result">С литров варенья → ложка мёда за 1 сессию</div>
-  </div>
-
-  <div class="case-card">
-    <div class="case-quote">Питание перестало быть заполнением пустоты. Скорее как топливо. Я начала чувствовать, когда реально голодна, а когда просто нервничаю.</div>
-    <div class="case-meta">
-      <div class="case-avatar" style="background:linear-gradient(135deg,#8B7EC8,#6B5EA8)">С</div>
-      <div class="case-meta-text">
-        <strong>Светлана</strong>
-        заедала стресс · эмоциональный заедатель
-      </div>
-    </div>
-    <div class="case-result">Еда стала топливом, а не утешением</div>
-  </div>
-
-  <div class="case-card">
-    <div class="case-quote">Не могла есть, заставляла себя. После практик вернулся аппетит и, что самое удивительное, — радость от еды. Спокойная, без маниакальности.</div>
-    <div class="case-meta">
-      <div class="case-avatar" style="background:linear-gradient(135deg,var(--red-soft),#B86A60)">Т</div>
-      <div class="case-meta-text">
-        <strong>Татьяна</strong>
-        обратная проблема · отсутствие аппетита
-      </div>
-    </div>
-    <div class="case-result">Вернулся здоровый аппетит</div>
-  </div>
-
-  <div class="case-card">
-    <div class="case-quote">−11 кг за год. Без спорта. Без диет. Я просто перестал маниакально хотеть есть. Тело само пришло к нормальному весу.</div>
-    <div class="case-meta">
-      <div class="case-avatar" style="background:linear-gradient(135deg,var(--gold),#A08950)">Е</div>
-      <div class="case-meta-text">
-        <strong>Евгений</strong>
-        переедание · пружина запрета
-      </div>
-    </div>
-    <div class="case-result">−11 кг за год без диет и спорта</div>
-  </div>
-</section>
-
-<!-- CTA -->
-<section class="cta-section">
-  <h2>Узнала себя?<br>Вот что делать дальше</h2>
-  <p>Я записала видео-разбор, где показываю, как именно работает метод краткосрочной терапии и как убрать невротический голод за 1–2 сессии. Без диет, без силы воли, без копания в детских травмах.</p>
-  <p style="font-weight:600;color:var(--text);">Ты увидишь конкретный механизм и поймёшь, почему раньше ничего не работало.</p>
-  <a href="https://janeotabaeva.ru/intensiv" class="cta-btn">Смотреть видео-разбор →</a>
-  <div class="cta-sub">Бесплатно · Без подписок</div>
-
-  <div style="margin-top:40px;background:var(--bg-accent);border-radius:var(--radius);padding:28px;max-width:520px;margin-left:auto;margin-right:auto;text-align:left;">
-    <div style="font-size:14px;color:var(--text-light);margin-bottom:8px;">P.S.</div>
-    <div style="font-size:15px;line-height:1.7;">Мой результат — минус 17 кг без единой диеты. Без спорта. Просто потому что <em>перестало тянуть</em>. Не «нельзя», а «не хочу». Это совершенно другое ощущение. И я хочу, чтобы ты тоже его почувствовала. ❤️</div>
-    <div style="margin-top:12px;font-size:13px;color:var(--text-light);font-style:italic;">— Женя</div>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer class="footer">
-  Евгения Отабаева · Психолог · Краткосрочная терапия<br>
-  <a href="https://janeotabaeva.ru/intensiv">janeotabaeva.ru</a>
-</footer>
-
-<!-- STICKY BAR -->
-<div class="counter-bar" id="counter-bar" role="complementary" aria-live="polite">
-  <div class="counter-bar-text">Отмечено: <strong id="bar-count">0</strong>/20</div>
-  <a href="https://janeotabaeva.ru/intensiv" class="counter-bar-btn">Смотреть видео →</a>
-</div>
-
-<script>
-const checks = document.querySelectorAll('.sign-check');
-const resultCount = document.getElementById('result-count');
-const resultMessage = document.getElementById('result-message');
-const counterBar = document.getElementById('counter-bar');
-const barCount = document.getElementById('bar-count');
-
-function update() {
-  const n = document.querySelectorAll('.sign-check:checked').length;
-  resultCount.textContent = n;
-  barCount.textContent = n;
-
-  if (n === 0) {
-    resultMessage.textContent = 'Отмечай признаки выше — и здесь появится твой результат';
-    counterBar.classList.remove('is-visible');
-    document.body.classList.remove('has-counter-bar');
-  } else {
-    counterBar.classList.add('is-visible');
-    document.body.classList.add('has-counter-bar');
-    if (n <= 3) {
-      resultMessage.innerHTML = 'Невротический голод уже влияет на твою жизнь. Пока это «фоновый шум» — но именно он не даёт весу уходить. <strong>Одной сессии может быть достаточно.</strong>';
-    } else if (n <= 8) {
-      resultMessage.innerHTML = 'Несколько типов невротического голода работают одновременно. Диеты и сила воли здесь бессильны — причина глубже. <strong>Посмотри видео-разбор, чтобы понять механизм.</strong>';
-    } else if (n <= 14) {
-      resultMessage.innerHTML = 'Невротический голод управляет твоим питанием почти полностью. Ты не слабая — просто логикой невозможно победить инстинкты. <strong>Нужен другой подход. Он есть.</strong>';
-    } else {
-      resultMessage.innerHTML = 'Практически все типы — про тебя. Это значит, что причин несколько, и каждую можно убрать отдельной практикой за 1 сессию. <strong>Прямо сейчас посмотри видео — там ответ, почему ничего не работало.</strong>';
-    }
-  }
-}
-
-checks.forEach(c => c.addEventListener('change', update));
-</script>
-
-</body>
-</html>
+<!DOCTYPE html> <html> <head> <meta charset="utf-8" /> <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!--metatextblock--> <title>Евгения Отабаева</title> <meta property="og:url" content="https://janeotabaeva.ru" /> <meta property="og:title" content="Евгения Отабаева" /> <meta property="og:description" content="" /> <meta property="og:type" content="website" /> <meta property="og:image" content="images/tild3134-6563-4430-b234-663863363639__-__resize__504x__9e28d3c9-99cf-41a2-b.jpg" /> <link rel="canonical" href="index.html"> <!--/metatextblock--> <meta name="format-detection" content="telephone=no" /> <meta http-equiv="x-dns-prefetch-control" content="on"> <link rel="dns-prefetch" href="https://ws.tildacdn.com">  <meta name="robots" content="noindex,nofollow" /> <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" /> <!-- Assets --> <script src="https://neo.tildacdn.com/js/tilda-fallback-1.0.min.js" async charset="utf-8"></script> <link rel="stylesheet" href="css/tilda-grid-3.0.min.css" type="text/css" media="all" onerror="this.loaderr='y';"/> <link rel="stylesheet" href="css/tilda-blocks-page7447535.min.css?t=1768310437" type="text/css" media="all" onerror="this.loaderr='y';" /> <link rel="preconnect" href="https://fonts.gstatic.com"> <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100..900&subset=latin,cyrillic" rel="stylesheet"> <link rel="stylesheet" href="css/tilda-cover-1.0.min.css" type="text/css" media="all" onerror="this.loaderr='y';" /> <link rel="stylesheet" href="css/tilda-slds-1.4.min.css" type="text/css" media="print" onload="this.media='all';" onerror="this.loaderr='y';" /> <noscript><link rel="stylesheet" href="css/tilda-slds-1.4.min.css" type="text/css" media="all" /></noscript> <link rel="stylesheet" href="css/tilda-popup-1.1.min.css" type="text/css" media="print" onload="this.media='all';" onerror="this.loaderr='y';" /> <noscript><link rel="stylesheet" href="css/tilda-popup-1.1.min.css" type="text/css" media="all" /></noscript> <link rel="stylesheet" href="css/tilda-feed-1.1.min.css" type="text/css" media="all" onerror="this.loaderr='y';" /> <link rel="stylesheet" href="css/tilda-cards-1.0.min.css" type="text/css" media="all" onerror="this.loaderr='y';" /> <link rel="stylesheet" href="css/tilda-forms-1.0.min.css" type="text/css" media="all" onerror="this.loaderr='y';" /> <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Noto+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" type="text/css" /> <script nomodule src="js/tilda-polyfill-1.0.min.js" charset="utf-8"></script> <script type="text/javascript">function t_onReady(func) {if(document.readyState!='loading') {func();} else {document.addEventListener('DOMContentLoaded',func);}}
+function t_onFuncLoad(funcName,okFunc,time) {if(typeof window[funcName]==='function') {okFunc();} else {setTimeout(function() {t_onFuncLoad(funcName,okFunc,time);},(time||100));}}function t_throttle(fn,threshhold,scope) {return function() {fn.apply(scope||this,arguments);};}</script> <script src="js/jquery-1.10.2.min.js" charset="utf-8" onerror="this.loaderr='y';"></script> <script src="js/tilda-scripts-3.0.min.js" charset="utf-8" defer onerror="this.loaderr='y';"></script> <script src="js/tilda-blocks-page7447535.min.js?t=1768310437" charset="utf-8" async onerror="this.loaderr='y';"></script> <script src="js/lazyload-1.3.min.export.js" charset="utf-8" async onerror="this.loaderr='y';"></script> <script src="js/tilda-cover-1.0.min.js" charset="utf-8" async onerror="this.loaderr='y';"></script> <script src="js/tilda-feed-1.1.min.js" charset="utf-8" async onerror="this.loaderr='y';"></script> <script src="js/tilda-slds-1.4.min.js" charset="utf-8" async onerror="this.loaderr='y';"></script> <script src="js/hammer.min.js" charset="utf-8" async onerror="this.loaderr='y';"></script> <script src="js/tilda-popup-1.0.min.js" charset="utf-8" async onerror="this.loaderr='y';"></script> <script src="js/tilda-cards-1.0.min.js" charset="utf-8" async onerror="this.loaderr='y';"></script> <script src="js/tilda-forms-1.0.min.js" charset="utf-8" async onerror="this.loaderr='y';"></script> <script src="js/tilda-menu-1.0.min.js" charset="utf-8" async onerror="this.loaderr='y';"></script> <script src="js/tilda-skiplink-1.0.min.js" charset="utf-8" async onerror="this.loaderr='y';"></script> <script src="js/tilda-events-1.0.min.js" charset="utf-8" async onerror="this.loaderr='y';"></script> <script type="text/javascript">window.dataLayer=window.dataLayer||[];</script> <script type="text/javascript">(function() {if((/bot|google|yandex|baidu|bing|msn|duckduckbot|teoma|slurp|crawler|spider|robot|crawling|facebook/i.test(navigator.userAgent))===false&&typeof(sessionStorage)!='undefined'&&sessionStorage.getItem('visited')!=='y'&&document.visibilityState){var style=document.createElement('style');style.type='text/css';style.innerHTML='@media screen and (min-width: 980px) {.t-records {opacity: 0;}.t-records_animated {-webkit-transition: opacity ease-in-out .2s;-moz-transition: opacity ease-in-out .2s;-o-transition: opacity ease-in-out .2s;transition: opacity ease-in-out .2s;}.t-records.t-records_visible {opacity: 1;}}';document.getElementsByTagName('head')[0].appendChild(style);function t_setvisRecs(){var alr=document.querySelectorAll('.t-records');Array.prototype.forEach.call(alr,function(el) {el.classList.add("t-records_animated");});setTimeout(function() {Array.prototype.forEach.call(alr,function(el) {el.classList.add("t-records_visible");});sessionStorage.setItem("visited","y");},400);}
+document.addEventListener('DOMContentLoaded',t_setvisRecs);}})();</script></head> <body class="t-body" style="margin:0;"> <!--allrecords--> <div id="allrecords" data-tilda-export="yes" class="t-records" data-hook="blocks-collection-content-node" data-tilda-project-id="997326" data-tilda-page-id="7447535" data-tilda-page-alias="main" data-tilda-formskey="9e62bdb59dc2ec2a90d5a903251d128f" data-tilda-lazy="yes" data-tilda-root-zone="com" data-tilda-ts="y" data-tilda-project-country="RU"> <!--header--> <header id="t-header" class="t-records" data-hook="blocks-collection-content-node" data-tilda-project-id="997326" data-tilda-page-id="33096556" data-tilda-page-alias="menu" data-tilda-formskey="9e62bdb59dc2ec2a90d5a903251d128f" data-tilda-lazy="yes" data-tilda-root-zone="com" data-tilda-ts="y" data-tilda-project-country="RU"> <div id="rec661585140" class="r t-rec t-rec_pb_0" style="padding-bottom:0px; " data-animationappear="off" data-record-type="258"> <!-- T229 --> <div id="nav661585140marker"></div> <div class="tmenu-mobile"> <div class="tmenu-mobile__container"> <div class="tmenu-mobile__text t-name t-name_md" field="menu_mob_title">&nbsp;</div> <button type="button"
+class="t-menuburger t-menuburger_first "
+aria-label="Навигационное меню"
+aria-expanded="false"> <span style="background-color:#fff;"></span> <span style="background-color:#fff;"></span> <span style="background-color:#fff;"></span> <span style="background-color:#fff;"></span> </button> <script>function t_menuburger_init(recid) {var rec=document.querySelector('#rec' + recid);if(!rec) return;var burger=rec.querySelector('.t-menuburger');if(!burger) return;var isSecondStyle=burger.classList.contains('t-menuburger_second');if(isSecondStyle&&!window.isMobile&&!('ontouchend' in document)) {burger.addEventListener('mouseenter',function() {if(burger.classList.contains('t-menuburger-opened')) return;burger.classList.remove('t-menuburger-unhovered');burger.classList.add('t-menuburger-hovered');});burger.addEventListener('mouseleave',function() {if(burger.classList.contains('t-menuburger-opened')) return;burger.classList.remove('t-menuburger-hovered');burger.classList.add('t-menuburger-unhovered');setTimeout(function() {burger.classList.remove('t-menuburger-unhovered');},300);});}
+burger.addEventListener('click',function() {if(!burger.closest('.tmenu-mobile')&&!burger.closest('.t450__burger_container')&&!burger.closest('.t466__container')&&!burger.closest('.t204__burger')&&!burger.closest('.t199__js__menu-toggler')) {burger.classList.toggle('t-menuburger-opened');burger.classList.remove('t-menuburger-unhovered');}});var menu=rec.querySelector('[data-menu="yes"]');if(!menu) return;var menuLinks=menu.querySelectorAll('.t-menu__link-item');var submenuClassList=['t978__menu-link_hook','t978__tm-link','t966__tm-link','t794__tm-link','t-menusub__target-link'];Array.prototype.forEach.call(menuLinks,function(link) {link.addEventListener('click',function() {var isSubmenuHook=submenuClassList.some(function(submenuClass) {return link.classList.contains(submenuClass);});if(isSubmenuHook) return;burger.classList.remove('t-menuburger-opened');});});menu.addEventListener('clickedAnchorInTooltipMenu',function() {burger.classList.remove('t-menuburger-opened');});}
+t_onReady(function() {t_onFuncLoad('t_menuburger_init',function(){t_menuburger_init('661585140');});});</script> <style>.t-menuburger{position:relative;flex-shrink:0;width:28px;height:20px;padding:0;border:none;background-color:transparent;outline:none;-webkit-transform:rotate(0deg);transform:rotate(0deg);transition:transform .5s ease-in-out;cursor:pointer;z-index:999;}.t-menuburger span{display:block;position:absolute;width:100%;opacity:1;left:0;-webkit-transform:rotate(0deg);transform:rotate(0deg);transition:.25s ease-in-out;height:3px;background-color:#000;}.t-menuburger span:nth-child(1){top:0px;}.t-menuburger span:nth-child(2),.t-menuburger span:nth-child(3){top:8px;}.t-menuburger span:nth-child(4){top:16px;}.t-menuburger__big{width:42px;height:32px;}.t-menuburger__big span{height:5px;}.t-menuburger__big span:nth-child(2),.t-menuburger__big span:nth-child(3){top:13px;}.t-menuburger__big span:nth-child(4){top:26px;}.t-menuburger__small{width:22px;height:14px;}.t-menuburger__small span{height:2px;}.t-menuburger__small span:nth-child(2),.t-menuburger__small span:nth-child(3){top:6px;}.t-menuburger__small span:nth-child(4){top:12px;}.t-menuburger-opened span:nth-child(1){top:8px;width:0%;left:50%;}.t-menuburger-opened span:nth-child(2){-webkit-transform:rotate(45deg);transform:rotate(45deg);}.t-menuburger-opened span:nth-child(3){-webkit-transform:rotate(-45deg);transform:rotate(-45deg);}.t-menuburger-opened span:nth-child(4){top:8px;width:0%;left:50%;}.t-menuburger-opened.t-menuburger__big span:nth-child(1){top:6px;}.t-menuburger-opened.t-menuburger__big span:nth-child(4){top:18px;}.t-menuburger-opened.t-menuburger__small span:nth-child(1),.t-menuburger-opened.t-menuburger__small span:nth-child(4){top:6px;}@media (hover),(min-width:0\0){.t-menuburger_first:hover span:nth-child(1){transform:translateY(1px);}.t-menuburger_first:hover span:nth-child(4){transform:translateY(-1px);}.t-menuburger_first.t-menuburger__big:hover span:nth-child(1){transform:translateY(3px);}.t-menuburger_first.t-menuburger__big:hover span:nth-child(4){transform:translateY(-3px);}}.t-menuburger_second span:nth-child(2),.t-menuburger_second span:nth-child(3){width:80%;left:20%;right:0;}@media (hover),(min-width:0\0){.t-menuburger_second.t-menuburger-hovered span:nth-child(2),.t-menuburger_second.t-menuburger-hovered span:nth-child(3){animation:t-menuburger-anim 0.3s ease-out normal forwards;}.t-menuburger_second.t-menuburger-unhovered span:nth-child(2),.t-menuburger_second.t-menuburger-unhovered span:nth-child(3){animation:t-menuburger-anim2 0.3s ease-out normal forwards;}}.t-menuburger_second.t-menuburger-opened span:nth-child(2),.t-menuburger_second.t-menuburger-opened span:nth-child(3){left:0;right:0;width:100%!important;}.t-menuburger_third span:nth-child(4){width:70%;left:unset;right:0;}@media (hover),(min-width:0\0){.t-menuburger_third:not(.t-menuburger-opened):hover span:nth-child(4){width:100%;}}.t-menuburger_third.t-menuburger-opened span:nth-child(4){width:0!important;right:50%;}.t-menuburger_fourth{height:12px;}.t-menuburger_fourth.t-menuburger__small{height:8px;}.t-menuburger_fourth.t-menuburger__big{height:18px;}.t-menuburger_fourth span:nth-child(2),.t-menuburger_fourth span:nth-child(3){top:4px;opacity:0;}.t-menuburger_fourth span:nth-child(4){top:8px;}.t-menuburger_fourth.t-menuburger__small span:nth-child(2),.t-menuburger_fourth.t-menuburger__small span:nth-child(3){top:3px;}.t-menuburger_fourth.t-menuburger__small span:nth-child(4){top:6px;}.t-menuburger_fourth.t-menuburger__small span:nth-child(2),.t-menuburger_fourth.t-menuburger__small span:nth-child(3){top:3px;}.t-menuburger_fourth.t-menuburger__small span:nth-child(4){top:6px;}.t-menuburger_fourth.t-menuburger__big span:nth-child(2),.t-menuburger_fourth.t-menuburger__big span:nth-child(3){top:6px;}.t-menuburger_fourth.t-menuburger__big span:nth-child(4){top:12px;}@media (hover),(min-width:0\0){.t-menuburger_fourth:not(.t-menuburger-opened):hover span:nth-child(1){transform:translateY(1px);}.t-menuburger_fourth:not(.t-menuburger-opened):hover span:nth-child(4){transform:translateY(-1px);}.t-menuburger_fourth.t-menuburger__big:not(.t-menuburger-opened):hover span:nth-child(1){transform:translateY(3px);}.t-menuburger_fourth.t-menuburger__big:not(.t-menuburger-opened):hover span:nth-child(4){transform:translateY(-3px);}}.t-menuburger_fourth.t-menuburger-opened span:nth-child(1),.t-menuburger_fourth.t-menuburger-opened span:nth-child(4){top:4px;}.t-menuburger_fourth.t-menuburger-opened span:nth-child(2),.t-menuburger_fourth.t-menuburger-opened span:nth-child(3){opacity:1;}@keyframes t-menuburger-anim{0%{width:80%;left:20%;right:0;}50%{width:100%;left:0;right:0;}100%{width:80%;left:0;right:20%;}}@keyframes t-menuburger-anim2{0%{width:80%;left:0;}50%{width:100%;right:0;left:0;}100%{width:80%;left:20%;right:0;}}</style> </div> </div> <style>.tmenu-mobile{background-color:#111;display:none;width:100%;top:0;z-index:990;}.tmenu-mobile_positionfixed{position:fixed;}.tmenu-mobile__text{color:#fff;}.tmenu-mobile__container{min-height:64px;padding:20px;position:relative;box-sizing:border-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-ms-flex-align:center;align-items:center;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;}.tmenu-mobile__list{display:block;}.tmenu-mobile__burgerlogo{display:inline-block;font-size:24px;font-weight:400;white-space:nowrap;vertical-align:middle;}.tmenu-mobile__imglogo{height:auto;display:block;max-width:300px!important;box-sizing:border-box;padding:0;margin:0 auto;}@media screen and (max-width:980px){.tmenu-mobile__menucontent_hidden{display:none;height:100%;}.tmenu-mobile{display:block;}}@media screen and (max-width:980px){#rec661585140 .tmenu-mobile{background-color:#8c6868;}#rec661585140 .t-menuburger{-webkit-order:1;-ms-flex-order:1;order:1;}}</style> <div id="nav661585140" class="t229 t229__positionfixed tmenu-mobile__menucontent_hidden" style="background-color: rgba(140,104,104,0.70); height:50px; " data-bgcolor-hex="#8c6868" data-bgcolor-rgba="rgba(140,104,104,0.70)" data-navmarker="nav661585140marker" data-appearoffset="" data-bgopacity="0.70" data-menu="yes" data-menushadow="" data-menushadow-css=""> <div class="t229__maincontainer " style="height:50px;"> <div class="t229__padding40px"></div> <nav class="t229__centerside"> <ul role="list" class="t-menu__list"> <li class="t229__list_item"
+style="padding:0 15px 0 0;"> <a class="t-menu__link-item"
+href="index.html"
+target="_blank" data-menu-submenu-hook="">
+Главная</a> </li> <li class="t229__list_item"
+style="padding:0 15px;"> <a class="t-menu__link-item"
+href="peresborka.html"
+target="_blank" data-menu-submenu-hook="">
+Метод "Пересборка"</a> </li> <li class="t229__list_item"
+style="padding:0 15px;"> <a class="t-menu__link-item"
+href="diagnostic.html"
+target="_blank" data-menu-submenu-hook="">
+Диагностика</a> </li> <li class="t229__list_item"
+style="padding:0 15px;"> <a class="t-menu__link-item"
+href="about.html"
+target="_blank" data-menu-submenu-hook="">
+Обо мне</a> </li> <li class="t229__list_item"
+style="padding:0 15px;"> <a class="t-menu__link-item"
+href="intensivo.html"
+target="_blank" data-menu-submenu-hook="">
+Ближайший вебинар</a> </li> <li class="t229__list_item"
+style="padding:0 0 0 15px;"> <a class="t-menu__link-item"
+href="blog.html"
+target="_blank" data-menu-submenu-hook="">
+Блог</a> </li> </ul> </nav> <div class="t229__padding40px"></div> </div> </div> <script>t_onReady(function() {var rec=document.querySelector('#rec661585140');if(!rec) return;var burger=rec.querySelector('.t-menuburger');if(burger) {t_onFuncLoad('t_menu__createMobileMenu',function() {t_menu__createMobileMenu('661585140','.t229');});}
+t_onFuncLoad('t_menu__highlightActiveLinks',function() {t_menu__highlightActiveLinks('.t229__list_item a');});rec.querySelector('.t229').classList.remove('t229__beforeready');t_onFuncLoad('t_menu__findAnchorLinks',function() {t_menu__findAnchorLinks('661585140','.t229__list_item a');});});</script> <script>t_onReady(function() {t_onFuncLoad('t_menu__setBGcolor',function() {t_menu__setBGcolor('661585140','.t229');window.addEventListener('load',function() {t_menu__setBGcolor('661585140','.t229');});window.addEventListener('resize',t_throttle(function() {t_menu__setBGcolor('661585140','.t229');}));});t_onFuncLoad('t_menu__interactFromKeyboard',function() {t_menu__interactFromKeyboard('661585140');});});</script> <style>#rec661585140 .t-menu__link-item{-webkit-transition:color 0.3s ease-in-out,opacity 0.3s ease-in-out;transition:color 0.3s ease-in-out,opacity 0.3s ease-in-out;position:relative;}#rec661585140 .t-menu__link-item.t-active:not(.t978__menu-link){color:#ffffff !important;opacity:1 !important;}#rec661585140 .t-menu__link-item.t-active::after{content:'';position:absolute;left:0;-webkit-transition:all 0.3s ease;transition:all 0.3s ease;opacity:1;width:100%;height:100%;bottom:-0px;border-bottom:0px solid #ffffff;-webkit-box-shadow:inset 0px -1px 0px 0px #ffffff;-moz-box-shadow:inset 0px -1px 0px 0px #ffffff;box-shadow:inset 0px -1px 0px 0px #ffffff;}@supports (overflow:-webkit-marquee) and (justify-content:inherit){#rec661585140 .t-menu__link-item,#rec661585140 .t-menu__link-item.t-active{opacity:1 !important;}}</style> <style> #rec661585140 .t229__list_item .t-menu__link-item{font-size:14px;color:#ffffff;font-weight:700;}</style> </div> </header> <!--/header--> <div id="rec504719218" class="r t-rec t-screenmin-980px" style=" " data-record-type="542" data-screen-min="980px"> <!-- T542 --> <!-- cover --> <div class="t-cover" id="recorddiv504719218"bgimgfield="img"style="height:700px;background-image:url('images/tild3134-6563-4430-b234-663863363639__-__resize__20x__9e28d3c9-99cf-41a2-b.jpg');"> <div class="t-cover__carrier" id="coverCarry504719218"data-content-cover-id="504719218"data-content-cover-bg="images/tild3134-6563-4430-b234-663863363639__9e28d3c9-99cf-41a2-b.jpg"data-display-changed="true"data-content-cover-height="700px"data-content-cover-parallax=""data-content-use-image-for-mobile-cover=""style="height:700px;background-attachment:scroll; background-position:center top;"itemscope itemtype="http://schema.org/ImageObject"><meta itemprop="image" content="images/tild3134-6563-4430-b234-663863363639__9e28d3c9-99cf-41a2-b.jpg"></div> <div class="t-cover__filter" style="height:700px;background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0));"></div> <div class="t542"> <div class="t-container"> <div class="t-cover__wrapper t-valign_middle" style="height:;"> <div class="t-col t-col_5 t-align_left"> <div data-hook-content="covercontent"> <div
+class="t542__wrapper t542__wrapper_desktop t-align_left"> <div class="t542__title t-heading t-heading_lg t542__bottommargin_sm " field="title"><div style="font-size: 46px;" data-customstyle="yes"><span style="font-weight: 400; font-family: Lora;">Евгения Отабаева</span></div></div> <div class="t542__descr t-descr t-descr_sm t542__bottommargin_lg " field="descr"><div style="font-size: 22px;" data-customstyle="yes"><span style="font-family: Lora; font-weight: 400;">Психолог, гипнотерапевт</span></div></div> <div class="t542__text t-text t-text_sm " field="text"><div style="font-size: 20px; line-height: 28px;" data-customstyle="yes"><span style="font-weight: 300;">Помогаю убрать страхи, беспокойства, травмы и преграды на пути к нормальной, наполненной, счастливой и богатой жизни </span><br /><span style="font-weight: 300;">всего за 1 сеанс</span></div></div> </div> </div> </div> </div> </div> </div> </div> <div class="t542_mobile"> <div class="t-container"> <div class="t-col t-col_12"> <div class="t542__wrapper t-align_left"> <div class="t542__title t-heading t-heading_lg t542__bottommargin_sm" field="title"><div style="font-size: 46px;" data-customstyle="yes"><span style="font-weight: 400; font-family: Lora;">Евгения Отабаева</span></div></div> <div class="t542__descr t-descr t-descr_sm t542__bottommargin_lg" field="descr"><div style="font-size: 22px;" data-customstyle="yes"><span style="font-family: Lora; font-weight: 400;">Психолог, гипнотерапевт</span></div></div> <div class="t542__text t-text t-text_sm" field="text"><div style="font-size: 20px; line-height: 28px;" data-customstyle="yes"><span style="font-weight: 300;">Помогаю убрать страхи, беспокойства, травмы и преграды на пути к нормальной, наполненной, счастливой и богатой жизни </span><br /><span style="font-weight: 300;">всего за 1 сеанс</span></div></div> </div> </div> </div> </div> <style> #rec504719218 .t542__title{color:#faf5f5;}#rec504719218 .t542__descr{color:#faf5f5;}#rec504719218 .t542__text{color:#faf5f5;}</style> <script>t_onReady(function() {t_onFuncLoad('t542_init',function() {t542_init('#rec504719218');});});</script> <style>@media screen and (max-width:960px){#rec504719218 .t-cover,#rec504719218 .t-cover__carrier,#rec504719218 .t-cover__filter{height:500px !important;}}@media screen and (max-width:640px){#rec504719218 .t-cover,#rec504719218 .t-cover__carrier,#rec504719218 .t-cover__filter{height:360px !important;}}@media screen and (max-width:480px){#rec504719218 .t-cover,#rec504719218 .t-cover__carrier,#rec504719218 .t-cover__filter{height:240px !important;}}</style> </div> <div id="rec541052308" class="r t-rec t-rec_pt_75 t-rec_pb_30 t-screenmax-980px" style="padding-top:75px;padding-bottom:30px;background-color:#faf5f5; " data-record-type="487" data-screen-max="980px" data-bg-color="#faf5f5"> <!-- t487 --> <div class="t487"> <div class="t-container t-align_center"> <div class="t-col t-col_8 t-prefix_2"> <img class="t487__img t-margin_auto t-img"
+src="images/tild3437-6463-4563-b339-326266613066__-__empty__noroot.png" data-original="images/tild3437-6463-4563-b339-326266613066__noroot.png"
+imgfield="img"
+style="width:500px;"
+alt=""> <div class="t487__title t-title t-title_xxs t-margin_auto" field="title"><div style="font-size: 46px;" data-customstyle="yes"><span style="font-weight: 400;">Евгения Отабаева</span></div></div> <div class="t487__uptitle t-descr t-descr_xs t-margin_auto" field="subtitle"><div style="font-size: 22px;" data-customstyle="yes"><span style="font-weight: 400;">Краткосрочный психолог, гипнотерапевт</span></div></div> <div class="t487__descr t-descr t-descr_sm t-margin_auto" field="descr"><span style="font-weight: 300; font-family: &quot;Noto Sans&quot;;">Помогаю убрать страхи, беспокойства, травмы и преграды на пути к нормальной, наполненной, счастливой и богатой жизни всего за 1-10 сеансов</span></div> </div> </div> </div> <style> #rec541052308 .t487__title{color:#7a5858;}@media screen and (min-width:900px){#rec541052308 .t487__title{font-size:46px;}}#rec541052308 .t487__uptitle{font-size:22px;color:#7a5858;}#rec541052308 .t487__descr{font-size:20px;color:#666666;}</style> </div> <div id="rec522830399" class="r t-rec t-rec_pt_75 t-rec_pb_90 t-screenmin-980px" style="padding-top:75px;padding-bottom:90px;background-color:#faf5f5; " data-animationappear="off" data-record-type="1004" data-screen-min="980px" data-bg-color="#faf5f5"> <!-- t1004 --> <!-- @classes t-descr t-descr_xxs t-descr_sm t-title t-title_xxs t-text t-text_md t-heading t-heading_lg t-name t-uptitle t-uptitle_sm t-uptitle_xs t-name_md t-btn t-btn_xs t-btn_sm t-btn_md t-align_center t-align_left --> <div class="t1004"> <div class="t-section__container t-container t-container_flex"> <div class="t-col t-col_12 "> <div
+class="t-section__title t-title t-title_xs t-align_center t-margin_auto"
+field="btitle"> <span style="font-weight: 400; color: rgb(122, 88, 88); font-family: Lora;">Результаты клиентов</span> </div> </div> </div> <style>.t-section__descr {max-width:560px;}#rec522830399 .t-section__title {margin-bottom:90px;}#rec522830399 .t-section__descr {}@media screen and (max-width:960px) {#rec522830399 .t-section__title {margin-bottom:45px;}}</style> <!-- grid container start --> <div class="js-feed t-feed t-feed_col" data-feed-grid-type="slider" data-feed-col-modification="bg" data-feed-recid="522830399"> <div class="t-feed__container t1004__feed-parts-container"> <div class="js-feed-parts-select-container t-feed__container t-col t-col_12"></div> </div> <div class="t1004__scroll-icon-wrapper" style="mix-blend-mode: multiply;"> <svg role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 300" height="42" width="42"> <rect class="tooltip-horizontal-scroll-icon_card" x="480" width="200" height="200" rx="5" fill="rgba(190,190,190,0.3)"></rect> <rect class="tooltip-horizontal-scroll-icon_card" y="0" width="200" height="200" rx="5" fill="rgba(190,190,190,0.3)"></rect> <rect class="tooltip-horizontal-scroll-icon_card" x="240" width="200" height="200" rx="5" fill="rgba(190,190,190,0.3)"></rect> <path class="tooltip-horizontal-scroll-icon_hand" d="M78.9579 285.7C78.9579 285.7 37.8579 212.5 20.5579 180.8C-2.44209 138.6 -6.2422 120.8 9.6579 112C19.5579 106.5 33.2579 108.8 41.6579 123.4L61.2579 154.6V32.3C61.2579 32.3 60.0579 0 83.0579 0C107.558 0 105.458 32.3 105.458 32.3V91.7C105.458 91.7 118.358 82.4 133.458 86.6C141.158 88.7 150.158 92.4 154.958 104.6C154.958 104.6 185.658 89.7 200.958 121.4C200.958 121.4 236.358 114.4 236.358 151.1C236.358 187.8 192.158 285.7 192.158 285.7H78.9579Z" fill="rgba(190,190,190,1)"></path> <style>.tooltip-horizontal-scroll-icon_hand{animation:tooltip-horizontal-scroll-icon_anim-scroll-hand 2s infinite}.tooltip-horizontal-scroll-icon_card{animation:tooltip-horizontal-scroll-icon_anim-scroll-card 2s infinite}@keyframes tooltip-horizontal-scroll-icon_anim-scroll-hand{0%{transform:translateX(80px) scale(1);opacity:0}10%{transform:translateX(80px) scale(1);opacity:1}20%,60%{transform:translateX(175px) scale(.6);opacity:1}80%{transform:translateX(5px) scale(.6);opacity:1}to{transform:translateX(5px) scale(.6);opacity:0}}@keyframes tooltip-horizontal-scroll-icon_anim-scroll-card{0%,60%{transform:translateX(0)}80%,to{transform:translateX(-240px)}}</style> </svg> </div> <div class="t-slds" style="visibility: hidden;" aria-roledescription="carousel" aria-label="Слайдер"> <div class="t-slds__main t-container"> <ul role="list" class="t-slds__arrow_container t-slds__nocycle"> <li class="t-slds__arrow_wrapper t-slds__arrow_wrapper-left" data-slide-direction="left"> <button
+type="button"
+class="t-slds__arrow t-slds__arrow-left t-slds__arrow-withbg"
+aria-controls="carousel_522830399"
+aria-disabled="false"
+aria-label="Предыдущий слайд"
+style="width: 40px; height: 40px;background-color: rgba(0,0,0,1);"> <div class="t-slds__arrow_body t-slds__arrow_body-left" style="width: 10px;"> <svg role="presentation" focusable="false" style="display: block" viewBox="0 0 10.6 18" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"> <polyline
+fill="none"
+stroke="#ffffff"
+stroke-linejoin="butt"
+stroke-linecap="butt"
+stroke-width="2"
+points="1,1 9,9 1,17"
+/> </svg> </div> </button> </li> <li class="t-slds__arrow_wrapper t-slds__arrow_wrapper-right" data-slide-direction="right"> <button
+type="button"
+class="t-slds__arrow t-slds__arrow-right t-slds__arrow-withbg"
+aria-controls="carousel_522830399"
+aria-disabled="false"
+aria-label="Следующий слайд"
+style="width: 40px; height: 40px;background-color: rgba(0,0,0,1);"> <div class="t-slds__arrow_body t-slds__arrow_body-right" style="width: 10px;"> <svg role="presentation" focusable="false" style="display: block" viewBox="0 0 10.6 18" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"> <polyline
+fill="none"
+stroke="#ffffff"
+stroke-linejoin="butt"
+stroke-linecap="butt"
+stroke-width="2"
+points="1,1 9,9 1,17"
+/> </svg> </div> </button> </li> </ul> <div class="t-slds__container"> <div class="js-feed-container t-feed__container t1004__container t1004__container_mobile-flex t-feed__container_mobile-grid t-slds__items-wrapper t-slds__nocycle"
+id="carousel_522830399" data-slider-items-in-row="3" data-slider-with-cycle="false" data-slider-correct-height="true" data-auto-correct-mobile-width="false"
+aria-live="off" data-feed-show-count="3" data-feed-show-slice="1"> </div> </div> <script>t_onReady(function() {t_onFuncLoad('t_sldsInit',function() {t_sldsInit('522830399',{});});});</script> <style>#rec522830399 .t-slds__bullet_active .t-slds__bullet_body{background-color:#222 !important;}#rec522830399 .t-slds__bullet:hover .t-slds__bullet_body{background-color:#222 !important;}</style> <!-- preloader els --> <div class="js-feed-preloader t-feed__post-preloader_col t-feed__post-preloader__container_hidden t1004__container t-feed__container_mobile-grid"> <div class="t-feed__post-preloader t-feed__grid-col t-col t-col_4"> <div class="t-feed__post-preloader__img"></div> <div class="t-feed__post-preloader__text"></div> <div class="t-feed__post-preloader__text"></div> <div class="t-feed__post-preloader__text"></div> </div> <div class="t-feed__post-preloader t-feed__grid-col t-col t-col_4"> <div class="t-feed__post-preloader__img"></div> <div class="t-feed__post-preloader__text"></div> <div class="t-feed__post-preloader__text"></div> <div class="t-feed__post-preloader__text"></div> </div> <div class="t-feed__post-preloader t-feed__grid-col t-col t-col_4"> <div class="t-feed__post-preloader__img"></div> <div class="t-feed__post-preloader__text"></div> <div class="t-feed__post-preloader__text"></div> <div class="t-feed__post-preloader__text"></div> </div> </div> <!-- preloader els end --> </div> </div> </div> <!-- grid container end --> </div> <style>#rec522830399 .t-feed__parts-switch-btn{border:1px solid #000000;border-radius:40px;}#rec522830399 .t-feed__parts-switch-btn:not(.t-feed__parts-switch-btn_hide){display:inline-block;}#rec522830399 .t-feed__parts-switch-btn span,#rec522830399 .t-feed__parts-switch-btn a{color:#000000;padding:6px 18px 6px;border-radius:40px;}#rec522830399 .t-feed__parts-switch-btn.t-active{background-color:#000000;}#rec522830399 .t-feed__parts-switch-btn.t-active span,#rec522830399 .t-feed__parts-switch-btn.t-active a{color:#ffffff !important;}#rec522830399 .t-feed__post-popup__cover-wrapper .t-slds__arrow{background-color:rgba(0,0,0,1);}#rec522830399 .t-feed__post-popup__cover-wrapper .t-slds__bullet_active .t-slds__bullet_body,#rec522830399 .t-feed__post-popup__cover-wrapper .t-slds__bullet:hover .t-slds__bullet_body{background-color:#222!important;}</style> <style> #rec522830399 .t-feed__post-title{color:#666666;}#rec522830399 .t-feed__post-descr{color:#666666;}#rec522830399 .t-feed__parts-switch-btn{color:#000000;font-weight:400;}</style> <script>t_onReady(function() {var separator_optsObj={height:'',color:'',opacity:'',hideSeparator:false};var popup_optsObj={popupBgColor:'',overlayBgColorRgba:'',closeText:'',iconColor:'',popupStat:'',titleColor:'',textColor:'',subtitleColor:'',datePos:'aftertitle',partsPos:'aftertitle',imagePos:'aftertitle',inTwoColumns:false,zoom:false,styleRelevants:'',methodRelevants:'random',titleRelevants:'',showRelevants:'',shareStyle:'',shareBg:'',isShare:false,shareServices:'',shareFBToken:'',showDate:true,bgSize:'cover',titleFontFamily:'',descrFontFamily:'',subtitleFontFamily:''};var arrowtop_optsObj={isShow:false,style:'',color:'',bottom:'',left:'',right:''};var parts_optsObj={partsBgColor:'',partsBorderSize:'1px',partsBorderColor:'#000000',align:'center'};var gallery_optsObj={control:'',arrowSize:'',arrowBorderSize:'2px',arrowColor:'#ffffff',arrowColorHover:'',arrowBg:'#000000',arrowBgHover:'',arrowBgOpacity:'',arrowBgOpacityHover:'',showBorder:'',dotsWidth:'',dotsBg:'',dotsActiveBg:'',dotsBorderSize:''};var colWithBg_optsObj={paddingSize:'t-feed__grid-col_paddingbig',background:'#ffffff',borderRadius:'',shadow:'',shadowSize:'',shadowOpacity:'',shadowHover:'',shadowSizeHover:'',shadowOpacityHover:'',shadowShiftyHover:''};var options={recid:'522830399',feeduid:'362649016871',previewmode:'yes',align:'left',amountOfPosts:'',reverse:'asc',blocksInRow:'3',blocksClass:'t-feed__grid-col',blocksWidth:'360',colClass:'',prefixClass:'',vindent:'',dateFormat:'4',timeFormat:'',imageRatio:'75',hasOriginalAspectRatio:false,imageHeight:'',imageWidth:'',dateFilter:'all',showPartAll:true,showImage:true,showShortDescr:true,showParts:true,showDate:false,hideFeedParts:false,parts_opts:parts_optsObj,btnsAlign:true,colWithBg:colWithBg_optsObj,separator:separator_optsObj,btnAllPostsText:'',popup_opts:popup_optsObj,arrowtop_opts:arrowtop_optsObj,gallery:gallery_optsObj,amountOfSymbols:'',btnText:'',isHorizOnMob:true,itemsAnim:'',datePosPs:'beforetitle',partsPosPs:'beforetitle',imagePosPs:'beforetitle',datePos:'afterdescr',partsPos:'onimage',imagePos:'beforetitle'};t_onFuncLoad('t_feed_init',function() {t_feed_init('522830399',options);});});</script> <script>t_onReady(function() {document.addEventListener('feedsLoadPosts',function() {var rec=document.getElementById('rec522830399');if(!rec) return;var mobileFlexContainer=rec.querySelector('.t1004__container_mobile-flex');if(!mobileFlexContainer) return;var isLoaded=false;var totalSlides=parseFloat(mobileFlexContainer.getAttribute('data-slider-totalslides'));var sliderItems=mobileFlexContainer.querySelectorAll('.t-slds__item:not(.t-slds__item_dummy)');mobileFlexContainer.addEventListener('scroll',t_throttle(function() {var lastSlide=sliderItems[sliderItems.length - 2];if(!lastSlide) return;var lastSlidePos=lastSlide.getBoundingClientRect().left;lastSlidePos=lastSlide.getBoundingClientRect().left;var lastSlideIndex=parseInt(lastSlide.getAttribute('data-slide-index'),10);if(lastSlidePos<=window.innerWidth&&lastSlideIndex<totalSlides - 1) {var lastSlideEvent=document.createEvent('Event');lastSlideEvent.initEvent('feedsLastSlide',true,true);mobileFlexContainer.dispatchEvent(lastSlideEvent);document.addEventListener('feedsLoadSlide',function() {sliderItems=mobileFlexContainer.querySelectorAll('.t-slds__item:not(.t-slds__item_dummy)');lastSlide=sliderItems[sliderItems.length - 2];lastSlideIndex=parseInt(lastSlide.getAttribute('data-slide-index'),10);});}
+var tildaMode=document.querySelector('.t-records').getAttribute('data-tilda-mode');if(tildaMode) return;var tildaLazy=document.querySelector('#allrecords').getAttribute('data-tilda-lazy');if(window.lazy==='y'||tildaLazy==='yes') {t_onFuncLoad('t_lazyload_update',function() {t_lazyload_update();});}},300));});});</script> </div> <div id="rec541053899" class="r t-rec t-rec_pt_75 t-rec_pb_15 t-screenmax-980px" style="padding-top:75px;padding-bottom:15px;background-color:#faf5f5; " data-animationappear="off" data-record-type="896" data-screen-max="980px" data-bg-color="#faf5f5"> <!-- t896 --> <!-- @classes t-descr t-descr_xxs t-descr_sm t-title t-title_xxs t-text t-text_md t-heading t-heading_lg t-name t-uptitle t-uptitle_sm t-uptitle_xs t-name_md --> <div class="t896"> <div class="t-section__container t-container t-container_flex"> <div class="t-col t-col_12 "> <div
+class="t-section__title t-title t-title_xs t-align_center t-margin_auto"
+field="btitle"> <div style="font-size: 38px;" data-customstyle="yes"><span style="font-weight: 400; color: rgb(122, 88, 88); font-family: Lora;">Результаты клиентов</span></div> </div> </div> </div> <style>.t-section__descr {max-width:560px;}#rec541053899 .t-section__title {margin-bottom:90px;}#rec541053899 .t-section__descr {}@media screen and (max-width:960px) {#rec541053899 .t-section__title {margin-bottom:45px;}}</style> <!-- grid container start --> <div class="js-feed t-feed t-feed_row" data-feed-grid-type="row" data-feed-recid="541053899"> <div class="t-feed__container t-container"> <div class="js-feed-parts-select-container t-col t-col_8 t-prefix_2"></div> </div> <!-- preloader els --> <div class="js-feed-preloader t-feed__post-preloader_row t-feed__post-preloader__container_hidden t-container"> <div class="t-feed__post-preloader t-col t-col_8 t-prefix_2"> <div class="t-feed__post-preloader__wrapper"> <div class="t-feed__post-preloader__img"></div> <div class="t-feed__post-preloader__textwrapper"> <div class="t-feed__post-preloader__text"></div> <div class="t-feed__post-preloader__text"></div> <div class="t-feed__post-preloader__text"></div> <div class="t-feed__post-preloader__text"></div> <div class="t-feed__post-preloader__text"></div> </div> </div> </div> <div class="t-feed__post-preloader t-col t-col_8 t-prefix_2"> <div class="t-feed__post-preloader__wrapper"> <div class="t-feed__post-preloader__img"></div> <div class="t-feed__post-preloader__textwrapper"> <div class="t-feed__post-preloader__text"></div> <div class="t-feed__post-preloader__text"></div> <div class="t-feed__post-preloader__text"></div> <div class="t-feed__post-preloader__text"></div> <div class="t-feed__post-preloader__text"></div> </div> </div> </div> <div class="t-feed__post-preloader t-col t-col_8 t-prefix_2"> <div class="t-feed__post-preloader__wrapper"> <div class="t-feed__post-preloader__img"></div> <div class="t-feed__post-preloader__textwrapper"> <div class="t-feed__post-preloader__text"></div> <div class="t-feed__post-preloader__text"></div> <div class="t-feed__post-preloader__text"></div> <div class="t-feed__post-preloader__text"></div> <div class="t-feed__post-preloader__text"></div> </div> </div> </div> </div> <!-- preloader els end --> <ul role="list" class="js-feed-container t-feed__container t-container" data-feed-show-count="5" data-feed-show-slice="1"></ul> </div> <!-- grid container end --> </div> <style>#rec541053899 .t-feed__parts-switch-btn{border:1px solid #000000;border-radius:40px;}#rec541053899 .t-feed__parts-switch-btn span,#rec541053899 .t-feed__parts-switch-btn a{color:#000000;padding:6px 18px 6px;border-radius:40px;}#rec541053899 .t-feed__parts-switch-btn.t-active{background-color:#000000;}#rec541053899 .t-feed__parts-switch-btn.t-active span,#rec541053899 .t-feed__parts-switch-btn.t-active a{color:#ffffff !important;}#rec541053899 .t-feed__post-popup__cover-wrapper .t-slds__arrow{background-color:rgba(0,0,0,1);}#rec541053899 .t-feed__post-popup__cover-wrapper .t-slds__bullet_active .t-slds__bullet_body,#rec541053899 .t-feed__post-popup__cover-wrapper .t-slds__bullet:hover .t-slds__bullet_body{background-color:#222 !important;}</style> <style> #rec541053899 .t-feed__post-title{color:#666666;}#rec541053899 .t-feed__post-descr{color:#666666;}#rec541053899 .t-feed__parts-switch-btn{color:#000000;font-weight:400;}</style> <script>t_onReady(function() {var separator_optsObj={height:'',color:'',opacity:'',hideSeparator:false};var popup_optsObj={popupBgColor:'',overlayBgColorRgba:'',closeText:'',iconColor:'',popupStat:'',titleColor:'',textColor:'',subtitleColor:'',datePos:'aftertitle',partsPos:'aftertitle',imagePos:'aftertitle',inTwoColumns:false,zoom:false,styleRelevants:'',methodRelevants:'random',titleRelevants:'',showRelevants:'',shareStyle:'',shareBg:'',isShare:false,shareServices:'',shareFBToken:'',showDate:true,bgSize:'cover',titleFontFamily:'',descrFontFamily:'',subtitleFontFamily:''};var arrowtop_optsObj={isShow:false,style:'',color:'',bottom:'',left:'',right:''};var parts_optsObj={partsBgColor:'',partsBorderSize:'1px',partsBorderColor:'#000000',align:'center'};var gallery_optsObj={control:'',arrowSize:'',arrowBorderSize:'2px',arrowColor:'#ffffff',arrowColorHover:'',arrowBg:'#000000',arrowBgHover:'',arrowBgOpacity:'',arrowBgOpacityHover:'',showBorder:'',dotsWidth:'',dotsBg:'',dotsActiveBg:'',dotsBorderSize:''};var colWithBg_optsObj={paddingSize:'t-feed__grid-col_paddingbig',background:'#ffffff',borderRadius:'',shadow:'',shadowSize:'',shadowOpacity:'',shadowHover:'',shadowSizeHover:'',shadowOpacityHover:'',shadowShiftyHover:''};var options={recid:'541053899',feeduid:'362649016871',previewmode:'yes',align:'left',amountOfPosts:'5',reverse:'asc',blocksInRow:'3',blocksClass:'t-feed__grid-col t-col t-col_4',blocksWidth:'360',colClass:'8',prefixClass:'2',vindent:'',dateFormat:'4',timeFormat:'',imageRatio:'75',hasOriginalAspectRatio:false,imageHeight:'',imageWidth:'',dateFilter:'all',showPartAll:true,showImage:true,showShortDescr:true,showParts:true,showDate:false,hideFeedParts:false,parts_opts:parts_optsObj,btnsAlign:true,colWithBg:colWithBg_optsObj,separator:separator_optsObj,btnAllPostsText:'',popup_opts:popup_optsObj,arrowtop_opts:arrowtop_optsObj,gallery:gallery_optsObj,amountOfSymbols:'',btnText:'Загрузить еще',isHorizOnMob:false,itemsAnim:'',datePosPs:'beforetitle',partsPosPs:'beforetitle',imagePosPs:'beforetitle',datePos:'afterdescr',partsPos:'onimage',imagePos:'beforetitle'};t_onFuncLoad('t_feed_init',function() {t_feed_init('541053899',options);});});</script> <template id="button_showmore_541053899"> <button
+class="t-btn t-btnflex t-btnflex_type_bbutton t-btnflex_md js-feed-btn-show-more t-feed__showmore-btn"
+type="button"><span class="t-btnflex__text">Загрузить еще</span> <style>#rec541053899 .t-btnflex.t-btnflex_type_bbutton {color:#8c6868;border-style:solid !important;border-color:#8c6868 !important;--border-width:2px;border-radius:5px;box-shadow:none !important;transition-duration:0.2s;transition-property:background-color,color,border-color,box-shadow,opacity,transform,gap;transition-timing-function:ease-in-out;}</style></button> </template> </div> <div id="rec527868531" class="r t-rec t-rec_pt_45 t-rec_pb_30" style="padding-top:45px;padding-bottom:30px;background-color:#faf5f5; " data-record-type="255" data-bg-color="#faf5f5"> <!-- T225 --> <div class="t225"> <div class="t-container t-align_center"> <div class="t-col t-col_8 t-prefix_2"> <div class="t225__title t-title t-title_md" field="title"><div style="font-size: 38px;" data-customstyle="yes"><span style="font-family: Lora; color: rgb(122, 88, 88); font-weight: 400;">В каких ситуациях ко мне обращаются</span></div></div> <div class="t225__descr t-descr t-descr_xxl" field="descr"><div style="font-size: 20px;" data-customstyle="yes"><p style="text-align: left;"><span style="font-family: &quot;Noto Sans&quot;;">Ко мне чаще всего приходят в двух случаях:</span></p></div></div> </div> </div> </div> <style> #rec527868531 .t225__uptitle{text-transform:uppercase;}#rec527868531 .t225__title{color:#7a5858;}#rec527868531 .t225__descr{color:#666666;}</style> </div> <div id="rec528173997" class="r t-rec t-rec_pt_15 t-rec_pb_15" style="padding-top:15px;padding-bottom:15px;background-color:#faf5f5; " data-record-type="373" data-bg-color="#faf5f5"> <!-- T373 --> <div class="t373"> <div class="t-container"> <div class="t-col t-col_8 t-prefix_2"> <div class="t373__wrapper"> <div class="t373__col"> <div class="t373__circle " style="border: 0px solid #000; background-color: #b59393; "> <div class="t373__title t-title" field="number" style=""></div> </div> </div> <div class="t373__col"> <div class="t373__text t-text t-text_md" field="text">Когда человек не согласен, что для хорошего результата придется ходить к психологу на протяжении долгих месяцев или лет, изливая ему весь свой внутренний мир. И поэтому ищет способы быстрых, но глубинных изменений.</div> </div> </div> </div> </div> </div> <style> #rec528173997 .t373__text{color:#666666;}</style> </div> <div id="rec528176571" class="r t-rec t-rec_pt_15 t-rec_pb_30" style="padding-top:15px;padding-bottom:30px;background-color:#faf5f5; " data-record-type="373" data-bg-color="#faf5f5"> <!-- T373 --> <div class="t373"> <div class="t-container"> <div class="t-col t-col_8 t-prefix_2"> <div class="t373__wrapper"> <div class="t373__col"> <div class="t373__circle " style="border: 0px solid #000; background-color: #b59393; "> <div class="t373__title t-title" field="number" style=""></div> </div> </div> <div class="t373__col"> <div class="t373__text t-text t-text_md" field="text">И когда он уже долго ходит к разным психологам и другим специалистам, и осознали, что проблема то так и не решена. И появляется ощущение, что уже ничего не поможет и придется с этой проблемой как-то жить и мириться.</div> </div> </div> </div> </div> </div> <style> #rec528176571 .t373__text{color:#666666;}</style> </div> <div id="rec504724000" class="r t-rec t-rec_pt_60 t-rec_pb_60" style="padding-top:60px;padding-bottom:60px;background-color:#faf5f5; " data-record-type="480" data-bg-color="#faf5f5"> <!-- T480 --> <div style="width: 0; height: 0; overflow: hidden;"> <div class="t480__sizer t-col t-col_6" data-auto-correct-mobile-width="false" style="height:560px;"></div> </div> <div class="t480"> <div class="t-container"> <div class="t480__top t480__col t-col t-col_6 " itemscope itemtype="http://schema.org/ImageObject"> <meta itemprop="image" content="images/tild6264-6639-4466-b465-326336663066__noroot.png"> <div class="t480__blockimg t-bgimg" data-original="images/tild6264-6639-4466-b465-326336663066__noroot.png"
+bgimgfield="img"
+style="background-image:url('images/tild6264-6639-4466-b465-326336663066__-__resizeb__20x__noroot.png'); height:560px;"> </div> </div> <div class="t480__col t-col t-col_6 "> <div class="t480__textwrapper t-align_left" style="height:560px;"> <div class="t480__content t-valign_middle"> <div class="t480__title t-title t-title_xs " field="title"><div style="font-size: 38px;" data-customstyle="yes"><span style="color: rgb(122, 88, 88); font-weight: 400; font-family: Lora;">Евгения Отабаева</span></div></div> <div class="t480__uptitle t-descr t-descr_xs " field="subtitle"><div style="font-size: 20px;" data-customstyle="yes"><span style="color: rgb(122, 88, 88);">Краткосрочный психолог, гипнотерапевт</span></div></div> <div class="t-divider t480__line " style="background-color: #b59f9f;"></div> <div class="t480__descr t-descr t-descr_md " field="descr"><p style="text-align: left;"><span style="font-family: &quot;Noto Sans&quot;; font-weight: 300;">Работаю по методу "Пересборка"</span></p><p style="text-align: left;"><span style="font-family: &quot;Noto Sans&quot;; font-weight: 300;">За 1-2 консультации помогаю решить то, что не получается решить годами.</span></p><br /><p style="text-align: left;"><span style="font-family: &quot;Noto Sans&quot;; font-weight: 300;">Мои клиенты: </span></p><ul><li style="text-align: left;"><span style="font-family: &quot;Noto Sans&quot;; font-weight: 300;">перестают прокрастинировать</span></li><li style="text-align: left;"><span style="font-family: &quot;Noto Sans&quot;; font-weight: 300;">в 2-3 раза увеличивают свой доход и сокращают время работы</span></li><li style="text-align: left;"><span style="font-family: &quot;Noto Sans&quot;; font-weight: 300;">меньше стрессуют и крепче спят</span></li><li style="text-align: left;"><span style="font-family: &quot;Noto Sans&quot;; font-weight: 300;">выходят из апатии и депрессии</span></li></ul><p style="text-align: left;"><span style="font-family: &quot;Noto Sans&quot;; font-weight: 300;">Сертифицированный специалист по Эриксоновскому гипнозу, ICF коучингу, телесно-ориентированной психотерапии, психосоматике, когнитивно-поведенческой терапии</span></p></div> </div> </div> </div> </div> </div> <script>t_onReady(function() {t_onFuncLoad('t480_init',function() {t480_init('504724000');});});</script> <style> #rec504724000 .t480__title{color:#7a5858;}#rec504724000 .t480__uptitle{color:#7a5858;max-width:400px;}#rec504724000 .t480__descr{color:#666666;}</style> </div> <div id="rec528183459" class="r t-rec t-rec_pt_45 t-rec_pb_0" style="padding-top:45px;padding-bottom:0px;background-color:#faf5f5; " data-record-type="255" data-bg-color="#faf5f5"> <!-- T225 --> <div class="t225"> <div class="t-container t-align_center"> <div class="t-col t-col_8 t-prefix_2"> <div class="t225__title t-title t-title_md" field="title"><div style="font-size: 38px;" data-customstyle="yes"><span style="font-weight: 400;">Какие проблемы я помогаю решать</span></div></div> <div class="t225__descr t-descr t-descr_xxl" field="descr"><div style="font-size: 18px;" data-customstyle="yes"><span style="font-family: &quot;Noto Sans&quot;; font-weight: 400; color: rgb(102, 102, 102);">Большинство проблем можно решить всего за 1 сессию и только некоторые сложные случаи требуют больше усилий, но это становится известно на первичной психологической консультации</span><br /><br /><p style="text-align: center;"><span style="font-family: &quot;Noto Sans&quot;; font-weight: 400; color: rgb(102, 102, 102);">Вот некоторые примеры, с которыми ко мне обращались:</span></p></div></div> </div> </div> </div> <style> #rec528183459 .t225__uptitle{color:#666666;text-transform:uppercase;}#rec528183459 .t225__title{color:#7a5858;opacity:1;}#rec528183459 .t225__descr{color:#666666;font-family:'Noto Sans';}</style> </div> <div id="rec130407725" class="r t-rec t-rec_pt_0 t-rec_pb_60 t-screenmin-980px" style="padding-top:0px;padding-bottom:60px;background-color:#faf5f5; " data-animationappear="off" data-record-type="850" data-screen-min="980px" data-bg-color="#faf5f5"> <!-- t850 --> <div class="t850"> <div class="t-section__container t-container t-container_flex"> <div class="t-col t-col_12 "> <div
+class="t-section__title t-title t-title_xs t-align_center t-margin_auto"
+field="btitle"> <div style="font-size: 38px;" data-customstyle="yes"></div> </div> <div
+class="t-section__descr t-descr t-descr_xl t-align_center t-margin_auto"
+field="bdescr"> <div style="font-size: 20px;" data-customstyle="yes"></div> </div> </div> </div> <style>.t-section__descr {max-width:560px;}#rec130407725 .t-section__title {margin-bottom:40px;}#rec130407725 .t-section__descr {margin-bottom:90px;}@media screen and (max-width:960px) {#rec130407725 .t-section__title {margin-bottom:20px;}#rec130407725 .t-section__descr {margin-bottom:45px;}}</style> <ul
+class="t850__container t-card__container t-container t-container_flex"
+role="list" data-columns-in-row="3"> <li
+class="t850__col t-item
+t-card__col
+t-card__col_withoutbtn
+t-col t-col_4 t-align_left
+"> <div class="t850__inner-col"
+style="background-color:#fcfcfc;"> <div class="t850__wrap"> <style> #rec130407725 .t-card__title{color:#7a5858;}#rec130407725 .t-card__descr{color:#666666;font-family:'Noto Sans';}</style> <div class="t-card__title t-name t-name_lg t850__bottommargin" field="li_title__1531225385233"> <span style="color: rgb(122, 88, 88);">Бессоница</span> </div> <div class="t-card__descr t-descr t-descr_sm" field="li_descr__1531225385233">
+Просыпаюсь вместе с ребенком, когда муж с работы ночью приходит, и больше уже не могу заснуть. Мучаюсь по полночи. Приходится пить 3 вида таблеток, чтобы хоть как-то спать...
+</div> </div> </div> </li> <li
+class="t850__col t-item
+t-card__col
+t-card__col_withoutbtn
+t-col t-col_4 t-align_left
+"> <div class="t850__inner-col"
+style="background-color:#fcfcfc;"> <div class="t850__wrap"> <style> #rec130407725 .t-card__title{color:#7a5858;}#rec130407725 .t-card__descr{color:#666666;font-family:'Noto Sans';}</style> <div class="t-card__title t-name t-name_lg t850__bottommargin" field="li_title__1531225412783">
+Депрессия
+</div> <div class="t-card__descr t-descr t-descr_sm" field="li_descr__1531225412783">
+Ничего не выходит, глубокое разочарование и ощущение что никогда не выберусь из этого болота. Не понимаю что делать, чтобы хоть как-то изменить свою жизнь
+</div> </div> </div> </li> <li
+class="t850__col t-item
+t-card__col
+t-card__col_withoutbtn
+t-col t-col_4 t-align_left
+"> <div class="t850__inner-col"
+style="background-color:#fcfcfc;"> <div class="t850__wrap"> <style> #rec130407725 .t-card__title{color:#7a5858;}#rec130407725 .t-card__descr{color:#666666;font-family:'Noto Sans';}</style> <div class="t-card__title t-name t-name_lg t850__bottommargin" field="li_title__1531225426944">
+Выгорание
+</div> <div class="t-card__descr t-descr t-descr_sm" field="li_descr__1531225426944">
+Нет сил что-либо делать, исчезло все вдохновение. Цели больше не зажигают, просыпаюсь уже уставшая. Целый день уходит на то, чтобы просто собрать себя. Приходится заставлять себя что-либо делать.
+</div> </div> </div> </li> <li
+class="t850__col t-item
+t-card__col
+t-card__col_withoutbtn
+t-col t-col_4 t-align_left
+"> <div class="t850__inner-col"
+style="background-color:#fcfcfc;"> <div class="t850__wrap"> <style> #rec130407725 .t-card__title{color:#7a5858;}#rec130407725 .t-card__descr{color:#666666;font-family:'Noto Sans';}</style> <div class="t-card__title t-name t-name_lg t850__bottommargin" field="li_title__1531225399444"> <span style="font-weight: 600;">Синдром самозванца</span> </div> <div class="t-card__descr t-descr t-descr_sm" field="li_descr__1531225399444"> <span style="color: rgba(0, 0, 0, 0.7);">Каждый раз когда получаю отказ в деятельности, появляется неуверенность, что я непрофессионал. Когда клиент сливается, злюсь и ощущаю себя хреновым продажником</span><br /><br /><span style="color: rgba(0, 0, 0, 0.7);">Мысли постоянно вращаются вокруг того, что "у меня мало опыта, чтобы начать это делать", "я не соответствую требованиям вакансии", "меня не выберет заказчик, потому что нет портфолио", "я не справлюсь с этой задачей и потерплю неудачу" и т.д.</span> </div> </div> </div> </li> <li
+class="t850__col t-item
+t-card__col
+t-card__col_withoutbtn
+t-col t-col_4 t-align_left
+"> <div class="t850__inner-col"
+style="background-color:#fcfcfc;"> <div class="t850__wrap"> <style> #rec130407725 .t-card__title{color:#7a5858;}#rec130407725 .t-card__descr{color:#666666;font-family:'Noto Sans';}</style> <div class="t-card__title t-name t-name_lg t850__bottommargin" field="li_title__1531225439554">
+Денежные блоки
+</div> <div class="t-card__descr t-descr t-descr_sm" field="li_descr__1531225439554">
+Чувствую денежный потолок.<br /><br />Начинаю бояться продвигаться, так как последние 2 года были неудачи в продвижении. Будто не могу поверить в успех.<br /><br />Еще есть убеждение, что мой успех зависит от того, как активно веду блог. Чем больше лайков и подписчиков, тем больше денег. И когда нет быстрого результата, опускаются руки и не хочется вести блог.
+</div> </div> </div> </li> <li
+class="t850__col t-item
+t-card__col
+t-card__col_withoutbtn
+t-col t-col_4 t-align_left
+"> <div class="t850__inner-col"
+style="background-color:#fcfcfc;"> <div class="t850__wrap"> <style> #rec130407725 .t-card__title{color:#7a5858;}#rec130407725 .t-card__descr{color:#666666;font-family:'Noto Sans';}</style> <div class="t-card__title t-name t-name_lg t850__bottommargin" field="li_title__1531225453311">
+Прокрастинация
+</div> <div class="t-card__descr t-descr t-descr_sm" field="li_descr__1531225453311">
+Начала заедать время, которое прокрастинирую. Ощущение, что я не вывезу другой уровень жизни, страх перед успехом,<br />ожидание подвоха, боюсь поверить в себя и разочароваться.<br /><br />Прокрастинация из-за того что не хочу начинать то, что потребует непосильных энергозатрат.
+</div> </div> </div> </li> <li
+class="t850__col t-item
+t-card__col
+t-card__col_withoutbtn
+t-col t-col_4 t-align_left
+"> <div class="t850__inner-col"
+style="background-color:#fcfcfc;"> <div class="t850__wrap"> <style> #rec130407725 .t-card__title{color:#7a5858;}#rec130407725 .t-card__descr{color:#666666;font-family:'Noto Sans';}</style> <div class="t-card__title t-name t-name_lg t850__bottommargin" field="li_title__1670181735645">
+Страхи и панические атаки
+</div> <div class="t-card__descr t-descr t-descr_sm" field="li_descr__1670181735645">
+Меня уволили с работы и подработки, которые были, тоже пропали. Плюс, знакомые все уехали на фоне политических событий.<br /><br />Из-за этого всего и непонимания со стороны близких случилась паническая атака. Была истерика, было страшно, что аж чуть не задохнулась.
+</div> </div> </div> </li> <li
+class="t850__col t-item
+t-card__col
+t-card__col_withoutbtn
+t-col t-col_4 t-align_left
+"> <div class="t850__inner-col"
+style="background-color:#fcfcfc;"> <div class="t850__wrap"> <style> #rec130407725 .t-card__title{color:#7a5858;}#rec130407725 .t-card__descr{color:#666666;font-family:'Noto Sans';}</style> <div class="t-card__title t-name t-name_lg t850__bottommargin" field="li_title__1670181772993">
+Сопротивление
+</div> <div class="t-card__descr t-descr t-descr_sm" field="li_descr__1670181772993"> <p style="text-align: left;">Я понимаю, что есть сопротивление на психологические проработки и на работу.</p><br /><p style="text-align: left;">Ощущение, что если я все проработаю, то больше не будет причин не делать. И тогда придётся много работать и будет меньше времени на отдых.</p><br /><p style="text-align: left;">В итоге я ничего не делаю.</p> </div> </div> </div> </li> <li
+class="t850__col t-item
+t-card__col
+t-card__col_withoutbtn
+t-col t-col_4 t-align_left
+"> <div class="t850__inner-col"
+style="background-color:#fcfcfc;"> <div class="t850__wrap"> <style> #rec130407725 .t-card__title{color:#7a5858;}#rec130407725 .t-card__descr{color:#666666;font-family:'Noto Sans';}</style> <div class="t-card__title t-name t-name_lg t850__bottommargin" field="li_title__1670181787765">
+Личные границы
+</div> <div class="t-card__descr t-descr t-descr_sm" field="li_descr__1670181787765">
+Худ. руководитель моего коллектива говорит мне, своей начальнице: «я не хочу, чтобы ты больше участвовала в номерах, хочу чтобы ты занималась продажами». Но это я решаю, участвовать мне или нет.<br /><br />В дополнение получила от коллектива рекомендацию, что мне нужно быть менее властной, что не даю им развиваться.
+</div> </div> </div> </li> </ul> </div> <script type="text/javascript">t_onReady(function() {t_onFuncLoad('t850_init',function()
+{t850_init('130407725');});});</script> <style>#rec130407725 .t850__inner-col {box-shadow:0px 0px 1px rgba(0,0,0,0.3);}</style> <style> #rec130407725 .t850__inner-col{border-radius:5px;}</style> </div> <div id="rec541057186" class="r t-rec t-rec_pt_0 t-rec_pb_60 t-screenmax-980px" style="padding-top:0px;padding-bottom:60px;background-color:#faf5f5; " data-animationappear="off" data-record-type="850" data-screen-max="980px" data-bg-color="#faf5f5"> <!-- t850 --> <div class="t850"> <div class="t-section__container t-container t-container_flex"> <div class="t-col t-col_12 "> <div
+class="t-section__title t-title t-title_xs t-align_center t-margin_auto"
+field="btitle"> <div style="font-size: 38px;" data-customstyle="yes"></div> </div> <div
+class="t-section__descr t-descr t-descr_xl t-align_center t-margin_auto"
+field="bdescr"> <div style="font-size: 20px;" data-customstyle="yes"></div> </div> </div> </div> <style>.t-section__descr {max-width:560px;}#rec541057186 .t-section__title {margin-bottom:40px;}#rec541057186 .t-section__descr {margin-bottom:90px;}@media screen and (max-width:960px) {#rec541057186 .t-section__title {margin-bottom:20px;}#rec541057186 .t-section__descr {margin-bottom:45px;}}</style> <ul
+class="t850__container t-card__container t-container t-container_flex"
+role="list" data-columns-in-row="3"> <li
+class="t850__col t-item
+t-card__col
+t-card__col_withoutbtn
+t-col t-col_4 t-align_left
+"> <div class="t850__inner-col"
+style="background-color:#fcfcfc;"> <div class="t850__wrap"> <style> #rec541057186 .t-card__title{color:#7a5858;}#rec541057186 .t-card__descr{font-size:16px;color:#666666;font-family:'Noto Sans';}</style> <div class="t-card__title t-name t-name_lg t850__bottommargin" field="li_title__1531225385233"> <span style="color: rgb(122, 88, 88);">Бессоница</span> </div> <div class="t-card__descr t-descr t-descr_sm" field="li_descr__1531225385233">
+Просыпаюсь вместе с ребенком, когда муж с работы ночью приходит, и больше уже не могу заснуть. Мучаюсь по полночи. Приходится пить 3 вида таблеток, чтобы хоть как-то спать...
+</div> </div> </div> </li> <li
+class="t850__col t-item
+t-card__col
+t-card__col_withoutbtn
+t-col t-col_4 t-align_left
+"> <div class="t850__inner-col"
+style="background-color:#fcfcfc;"> <div class="t850__wrap"> <style> #rec541057186 .t-card__title{color:#7a5858;}#rec541057186 .t-card__descr{font-size:16px;color:#666666;font-family:'Noto Sans';}</style> <div class="t-card__title t-name t-name_lg t850__bottommargin" field="li_title__1531225412783">
+Депрессия
+</div> <div class="t-card__descr t-descr t-descr_sm" field="li_descr__1531225412783">
+Ничего не выходит, глубокое разочарование и ощущение что никогда не выберусь из этого болота. Не понимаю что делать, чтобы хоть как-то изменить свою жизнь
+</div> </div> </div> </li> <li
+class="t850__col t-item
+t-card__col
+t-card__col_withoutbtn
+t-col t-col_4 t-align_left
+"> <div class="t850__inner-col"
+style="background-color:#fcfcfc;"> <div class="t850__wrap"> <style> #rec541057186 .t-card__title{color:#7a5858;}#rec541057186 .t-card__descr{font-size:16px;color:#666666;font-family:'Noto Sans';}</style> <div class="t-card__title t-name t-name_lg t850__bottommargin" field="li_title__1531225426944">
+Выгорание
+</div> <div class="t-card__descr t-descr t-descr_sm" field="li_descr__1531225426944">
+Нет сил что-либо делать, исчезло все вдохновение. Цели больше не зажигают, просыпаюсь уже уставшая. Целый день уходит на то, чтобы просто собрать себя. Приходится заставлять себя что-либо делать.
+</div> </div> </div> </li> <li
+class="t850__col t-item
+t-card__col
+t-card__col_withoutbtn
+t-col t-col_4 t-align_left
+"> <div class="t850__inner-col"
+style="background-color:#fcfcfc;"> <div class="t850__wrap"> <style> #rec541057186 .t-card__title{color:#7a5858;}#rec541057186 .t-card__descr{font-size:16px;color:#666666;font-family:'Noto Sans';}</style> <div class="t-card__title t-name t-name_lg t850__bottommargin" field="li_title__1531225399444"> <span style="font-weight: 600;">Синдром самозванца</span> </div> <div class="t-card__descr t-descr t-descr_sm" field="li_descr__1531225399444"> <span style="color: rgba(0, 0, 0, 0.7);">Каждый раз когда получаю отказ в деятельности, появляется неуверенность, что я непрофессионал. Когда клиент сливается, злюсь и ощущаю себя хреновым продажником</span><br /><br /><span style="color: rgba(0, 0, 0, 0.7);">Мысли постоянно вращаются вокруг того, что "у меня мало опыта, чтобы начать это делать", "я не соответствую требованиям вакансии", "меня не выберет заказчик, потому что нет портфолио", "я не справлюсь с этой задачей и потерплю неудачу" и т.д.</span> </div> </div> </div> </li> <li
+class="t850__col t-item
+t-card__col
+t-card__col_withoutbtn
+t-col t-col_4 t-align_left
+"> <div class="t850__inner-col"
+style="background-color:#fcfcfc;"> <div class="t850__wrap"> <style> #rec541057186 .t-card__title{color:#7a5858;}#rec541057186 .t-card__descr{font-size:16px;color:#666666;font-family:'Noto Sans';}</style> <div class="t-card__title t-name t-name_lg t850__bottommargin" field="li_title__1531225439554">
+Денежные блоки
+</div> <div class="t-card__descr t-descr t-descr_sm" field="li_descr__1531225439554">
+Чувствую денежный потолок.<br /><br />Начинаю бояться продвигаться, так как последние 2 года были неудачи в продвижении. Будто не могу поверить в успех.<br /><br />Еще есть убеждение, что мой успех зависит от того, как активно веду блог. Чем больше лайков и подписчиков, тем больше денег. И когда нет быстрого результата, опускаются руки и не хочется вести блог.
+</div> </div> </div> </li> <li
+class="t850__col t-item
+t-card__col
+t-card__col_withoutbtn
+t-col t-col_4 t-align_left
+"> <div class="t850__inner-col"
+style="background-color:#fcfcfc;"> <div class="t850__wrap"> <style> #rec541057186 .t-card__title{color:#7a5858;}#rec541057186 .t-card__descr{font-size:16px;color:#666666;font-family:'Noto Sans';}</style> <div class="t-card__title t-name t-name_lg t850__bottommargin" field="li_title__1531225453311">
+Прокрастинация
+</div> <div class="t-card__descr t-descr t-descr_sm" field="li_descr__1531225453311">
+Начала заедать время, которое прокрастинирую. Ощущение, что я не вывезу другой уровень жизни, страх перед успехом,<br />ожидание подвоха, боюсь поверить в себя и разочароваться.<br /><br />Прокрастинация из-за того что не хочу начинать то, что потребует непосильных энергозатрат.
+</div> </div> </div> </li> <li
+class="t850__col t-item
+t-card__col
+t-card__col_withoutbtn
+t-col t-col_4 t-align_left
+"> <div class="t850__inner-col"
+style="background-color:#fcfcfc;"> <div class="t850__wrap"> <style> #rec541057186 .t-card__title{color:#7a5858;}#rec541057186 .t-card__descr{font-size:16px;color:#666666;font-family:'Noto Sans';}</style> <div class="t-card__title t-name t-name_lg t850__bottommargin" field="li_title__1670181735645">
+Страхи и панические атаки
+</div> <div class="t-card__descr t-descr t-descr_sm" field="li_descr__1670181735645">
+Меня уволили с работы и подработки, которые были, тоже пропали. Плюс, знакомые все уехали на фоне политических событий.<br /><br />Из-за этого всего и непонимания со стороны близких случилась паническая атака. Была истерика, было страшно, что аж чуть не задохнулась.
+</div> </div> </div> </li> <li
+class="t850__col t-item
+t-card__col
+t-card__col_withoutbtn
+t-col t-col_4 t-align_left
+"> <div class="t850__inner-col"
+style="background-color:#fcfcfc;"> <div class="t850__wrap"> <style> #rec541057186 .t-card__title{color:#7a5858;}#rec541057186 .t-card__descr{font-size:16px;color:#666666;font-family:'Noto Sans';}</style> <div class="t-card__title t-name t-name_lg t850__bottommargin" field="li_title__1670181772993">
+Сопротивление
+</div> <div class="t-card__descr t-descr t-descr_sm" field="li_descr__1670181772993"> <p style="text-align: left;">Я понимаю, что есть сопротивление на психологические проработки и на работу.</p><br /><p style="text-align: left;">Ощущение, что если я все проработаю, то больше не будет причин не делать. И тогда придётся много работать и будет меньше времени на отдых.</p><br /><p style="text-align: left;">В итоге я ничего не делаю.</p> </div> </div> </div> </li> <li
+class="t850__col t-item
+t-card__col
+t-card__col_withoutbtn
+t-col t-col_4 t-align_left
+"> <div class="t850__inner-col"
+style="background-color:#fcfcfc;"> <div class="t850__wrap"> <style> #rec541057186 .t-card__title{color:#7a5858;}#rec541057186 .t-card__descr{font-size:16px;color:#666666;font-family:'Noto Sans';}</style> <div class="t-card__title t-name t-name_lg t850__bottommargin" field="li_title__1670181787765">
+Личные границы
+</div> <div class="t-card__descr t-descr t-descr_sm" field="li_descr__1670181787765">
+Худ. руководитель моего коллектива говорит мне, своей начальнице: «я не хочу, чтобы ты больше участвовала в номерах, хочу чтобы ты занималась продажами». Но это я решаю, участвовать мне или нет.<br /><br />В дополнение получила от коллектива рекомендацию, что мне нужно быть менее властной, что не даю им развиваться.
+</div> </div> </div> </li> </ul> </div> <script type="text/javascript">t_onReady(function() {t_onFuncLoad('t850_init',function()
+{t850_init('541057186');});});</script> <style>#rec541057186 .t850__inner-col {box-shadow:0px 0px 1px rgba(0,0,0,0.3);}</style> <style> #rec541057186 .t850__inner-col{border-radius:5px;}</style> </div> <div id="rec130409289" class="r t-rec t-rec_pt_15 t-rec_pb_105" style="padding-top:15px;padding-bottom:105px;background-color:#faf5f5; " data-animationappear="off" data-record-type="774" data-bg-color="#faf5f5"> <!-- T774 --> <div class="t774 "> <div class="t-section__container t-container t-container_flex"> <div class="t-col t-col_12 "> <div
+class="t-section__title t-title t-title_xs t-align_center t-margin_auto"
+field="btitle"> <div style="font-size:38px;" data-customstyle="yes"><span style="font-weight: 400; color: rgb(122, 88, 88);">Вот как я могу вам помочь</span></div> </div> <div
+class="t-section__descr t-descr t-descr_xl t-align_center t-margin_auto"
+field="bdescr"> <div style="font-size: 20px;" data-customstyle="yes"><span style="color: rgb(102, 102, 102); font-weight: 400;">Работаем по методу "Пересборка"</span></div> </div> </div> </div> <style>.t-section__descr {max-width:560px;}#rec130409289 .t-section__title {margin-bottom:40px;}#rec130409289 .t-section__descr {margin-bottom:90px;}@media screen and (max-width:960px) {#rec130409289 .t-section__title {margin-bottom:20px;}#rec130409289 .t-section__descr {margin-bottom:60px;}}</style> <div
+class="t-card__container t774__container
+t774__container_mobile-grid " data-blocks-per-row="3"> <div
+class="t-card__col t774__col t-col t-col_4 t-align_left t-item
+t774__col_mobile-grid "> <div
+class="t774__wrapper"
+style="
+background-color: #fcfcfc; box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.50); "> <div
+class="t774__imgwrapper"
+style="padding-bottom:111.11111111111%;" itemscope itemtype="http://schema.org/ImageObject"
+bgimgfield="li_img__1495010928665"> <meta itemprop="image" content="images/tild6134-3765-4064-b034-393166373339__jeremy-bishop-ewkxn5.jpg"> <div
+class="t774__bgimg t-bgimg
+" data-original="images/tild6134-3765-4064-b034-393166373339__jeremy-bishop-ewkxn5.jpg"
+style="background-image:url('images/tild6134-3765-4064-b034-393166373339__-__resizeb__20x__jeremy-bishop-ewkxn5.jpg');"> </div> </div> <div class="t774__content"> <div class="t774__textwrapper "> <style> #rec130409289 .t-card__title{font-size:20px;color:#7a5858;}#rec130409289 .t-card__descr{font-size:16px;color:#666666;font-family:'Noto Sans';}</style> <div class="t-card__title t-name t-name_md" field="li_title__1495010928665"> <a
+href="peresborka.html"
+class="t-card__link"
+id="cardtitle1_130409289"
+target="_blank" aria-labelledby="cardtitle1_130409289 cardbtn1_130409289">
+Пересборка личности
+</a> </div> <div class="t-card__descr t-descr t-descr_xxs" field="li_descr__1495010928665">
+Пакет из 10 сессий по методу "Пересборка"<br /><br />Это комплексная трансформация, в процессе которой мы работаем над кластером первопричин, способных полностью изменить поведение, чувства, эмоции и получить невероятные результаты по ряду запросов для перехода на новый уровень жизни.<br /><br /><strong>75 000 рублей за пакет из 10 сессий </strong> </div> </div> <div class="t-card__btn-wrapper"> <div
+class="t-btn t-btnflex t-btnflex_type_button t-btnflex_sm t-card__btn t-card__btn_first"
+type="button"
+id="cardbtn1_130409289" data-lid="1495010928665"><span class="t-btnflex__text">это что за метод такой? &gt;&gt;</span> <style>#rec130409289 .t-btnflex.t-btnflex_type_button {color:#c2a3a3;border-style:solid !important;border-color:#c2a3a3 !important;--border-width:1px;border-radius:5px;box-shadow:none !important;transition-duration:0.2s;transition-property:background-color,color,border-color,box-shadow,opacity,transform,gap;transition-timing-function:ease-in-out;}</style></div> <a
+class="t-btn t-btnflex t-btnflex_type_button2 t-btnflex_sm t-card__btn t-card__btn_second t-card__link_second"
+href="#popup:myform" data-lid="1495010928665"><span class="t-btnflex__text">Записаться</span> <style>#rec130409289 .t-btnflex.t-btnflex_type_button2 {color:#ffffff;background-color:#8c6868;--border-width:0px;border-style:none !important;border-radius:5px;box-shadow:none !important;transition-duration:0.2s;transition-property:background-color,color,border-color,box-shadow,opacity,transform,gap;transition-timing-function:ease-in-out;}</style></a> </div> </div> </div> </div> <div
+class="t-card__col t774__col t-col t-col_4 t-align_left t-item
+t774__col_mobile-grid "> <div
+class="t774__wrapper"
+style="
+background-color: #fcfcfc; box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.50); "> <div
+class="t774__imgwrapper"
+style="padding-bottom:111.11111111111%;" itemscope itemtype="http://schema.org/ImageObject"
+bgimgfield="li_img__1495010946049"> <meta itemprop="image" content="images/tild6237-3133-4635-b239-363662663562__devin-h-paewrnasovy-.jpg"> <div
+class="t774__bgimg t-bgimg
+" data-original="images/tild6237-3133-4635-b239-363662663562__devin-h-paewrnasovy-.jpg"
+style="background-image:url('images/tild6237-3133-4635-b239-363662663562__-__resizeb__20x__devin-h-paewrnasovy-.jpg');"> </div> </div> <div class="t774__content"> <div class="t774__textwrapper "> <style> #rec130409289 .t-card__title{font-size:20px;color:#7a5858;}#rec130409289 .t-card__descr{font-size:16px;color:#666666;font-family:'Noto Sans';}</style> <div class="t-card__title t-name t-name_md" field="li_title__1495010946049"> <a
+href="peresborka.html"
+class="t-card__link"
+id="cardtitle2_130409289"
+target="_blank" aria-labelledby="cardtitle2_130409289 cardbtn2_130409289">
+Второе дыхание
+</a> </div> <div class="t-card__descr t-descr t-descr_xxs" field="li_descr__1495010946049">
+Пакет из 5 сессий по методу "Пересборка"<br /><br />Проработка наиболее острых и волнующих проблем.<br />Помогает снизить уровень тревоги в важных для вас ситуациях и найти второе дыхание, чтобы собраться и двигаться дальше к своим целям и задачам.<br /><br /><br /><strong>40 000 рублей за пакет из 5 сессий</strong> </div> </div> <div class="t-card__btn-wrapper"> <div
+class="t-btn t-btnflex t-btnflex_type_button t-btnflex_sm t-card__btn t-card__btn_first"
+type="button"
+id="cardbtn2_130409289" data-lid="1495010946049"><span class="t-btnflex__text">это что за метод такой? &gt;&gt;</span> <style>#rec130409289 .t-btnflex.t-btnflex_type_button {color:#c2a3a3;border-style:solid !important;border-color:#c2a3a3 !important;--border-width:1px;border-radius:5px;box-shadow:none !important;transition-duration:0.2s;transition-property:background-color,color,border-color,box-shadow,opacity,transform,gap;transition-timing-function:ease-in-out;}</style></div> <a
+class="t-btn t-btnflex t-btnflex_type_button2 t-btnflex_sm t-card__btn t-card__btn_second t-card__link_second"
+href="#popup:myform" data-lid="1495010946049"><span class="t-btnflex__text">Записаться</span> <style>#rec130409289 .t-btnflex.t-btnflex_type_button2 {color:#ffffff;background-color:#8c6868;--border-width:0px;border-style:none !important;border-radius:5px;box-shadow:none !important;transition-duration:0.2s;transition-property:background-color,color,border-color,box-shadow,opacity,transform,gap;transition-timing-function:ease-in-out;}</style></a> </div> </div> </div> </div> <div
+class="t-card__col t774__col t-col t-col_4 t-align_left t-item
+t774__col_mobile-grid "> <div
+class="t774__wrapper"
+style="
+background-color: #fcfcfc; box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.50); "> <div
+class="t774__imgwrapper"
+style="padding-bottom:111.11111111111%;" itemscope itemtype="http://schema.org/ImageObject"
+bgimgfield="li_img__1499960678558"> <meta itemprop="image" content="images/tild6637-3233-4432-a138-386133326665__877707d5f7f84893bb504b3824d9ebda.jpg"> <div
+class="t774__bgimg t-bgimg
+" data-original="images/tild6637-3233-4432-a138-386133326665__877707d5f7f84893bb504b3824d9ebda.jpg"
+style="background-image:url('images/tild6637-3233-4432-a138-386133326665__-__resizeb__20x__877707d5f7f84893bb504b3824d9ebda.jpg');"> </div> </div> <div class="t774__content"> <div class="t774__textwrapper "> <style> #rec130409289 .t-card__title{font-size:20px;color:#7a5858;}#rec130409289 .t-card__descr{font-size:16px;color:#666666;font-family:'Noto Sans';}</style> <div class="t-card__title t-name t-name_md" field="li_title__1499960678558"> <a
+href="diagnostic.html"
+class="t-card__link"
+id="cardtitle3_130409289"
+target="_blank" aria-labelledby="cardtitle3_130409289 cardbtn3_130409289">
+Психологическая диагностика
+</a> </div> <div class="t-card__descr t-descr t-descr_xxs" field="li_descr__1499960678558">
+1-1,5 часовая диагностика, целью которой является разобраться в запросе, выявить стратегию решения запроса и продиагностировать кластер корневых причин волнующих вас проблем.<br /><br /><br /><br /><br /><br /><strong>5000 рублей за сессию</strong> </div> </div> <div class="t-card__btn-wrapper"> <div
+class="t-btn t-btnflex t-btnflex_type_button t-btnflex_sm t-card__btn t-card__btn_first"
+type="button"
+id="cardbtn3_130409289" data-lid="1499960678558"><span class="t-btnflex__text">подробнее о диагностике &gt;&gt;</span> <style>#rec130409289 .t-btnflex.t-btnflex_type_button {color:#c2a3a3;border-style:solid !important;border-color:#c2a3a3 !important;--border-width:1px;border-radius:5px;box-shadow:none !important;transition-duration:0.2s;transition-property:background-color,color,border-color,box-shadow,opacity,transform,gap;transition-timing-function:ease-in-out;}</style></div> <a
+class="t-btn t-btnflex t-btnflex_type_button2 t-btnflex_sm t-card__btn t-card__btn_second t-card__link_second"
+href="#popup:myform" data-lid="1499960678558"><span class="t-btnflex__text">Записаться</span> <style>#rec130409289 .t-btnflex.t-btnflex_type_button2 {color:#ffffff;background-color:#8c6868;--border-width:0px;border-style:none !important;border-radius:5px;box-shadow:none !important;transition-duration:0.2s;transition-property:background-color,color,border-color,box-shadow,opacity,transform,gap;transition-timing-function:ease-in-out;}</style></a> </div> </div> </div> </div> </div> </div> <style></style> <script>t_onReady(function() {t_onFuncLoad('t774_init',function() {t774_init('130409289');});});</script> <style> #rec130409289 .t774__wrapper{border-radius:3px;}</style> </div> <div id="rec1782125421" class="r t-rec" style=" " data-animationappear="off" data-record-type="702"> <!-- T702 --> <div class="t702"> <div
+class="t-popup" data-tooltip-hook="#popup:myform"
+role="dialog"
+aria-modal="true"
+tabindex="-1"
+aria-label="Оставить заявку"> <div class="t-popup__close t-popup__block-close"> <button
+type="button"
+class="t-popup__close-wrapper t-popup__block-close-button"
+aria-label="Закрыть диалоговое окно"> <svg role="presentation" class="t-popup__close-icon" width="23px" height="23px" viewBox="0 0 23 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"> <g stroke="none" stroke-width="1" fill="#fff" fill-rule="evenodd"> <rect transform="translate(11.313708, 11.313708) rotate(-45.000000) translate(-11.313708, -11.313708) " x="10.3137085" y="-3.6862915" width="2" height="30"></rect> <rect transform="translate(11.313708, 11.313708) rotate(-315.000000) translate(-11.313708, -11.313708) " x="10.3137085" y="-3.6862915" width="2" height="30"></rect> </g> </svg> </button> </div> <style>@media screen and (max-width:560px){#rec1782125421 .t-popup__close-icon g{fill:#ffffff !important;}}</style> <div class="t-popup__container t-width t-width_6" data-popup-type="702"> <div class="t702__wrapper"> <div class="t702__text-wrapper t-align_center"> <div class="t702__title t-title t-title_xxs" id="popuptitle_1782125421">Оставить заявку</div> </div> <form
+id="form1782125421" name='form1782125421' role="form" action='' method='POST' data-formactiontype="2" data-inputbox=".t-input-group" 
+class="t-form js-form-proccess t-form_inputs-total_3 " data-success-callback="t702_onSuccess"> <input type="hidden" name="formservices[]" value="1d12c27b7df9c2a166ae6d0e015d23f6" class="js-formaction-services"> <input type="hidden" name="formservices[]" value="59a8ac98ed8c3b1590261827bcf082bc" class="js-formaction-services"> <input type="hidden" name="formservices[]" value="910486b0e91037f66dbba4cbd5e1d363" class="js-formaction-services"> <input type="hidden" name="formservices[]" value="0c4ae7399cb0e5274ca0ff95f429055d" class="js-formaction-services"> <input type="hidden" name="formservices[]" value="9a592e797f66c1f20946899936341033" class="js-formaction-services"> <input type="hidden" name="formservices[]" value="8ce761a37a82ac95ceb0e7f210b3b89d" class="js-formaction-services"> <input type="hidden" name="formservices[]" value="52ab18af4d79593262f02df7354a3897" class="js-formaction-services"> <input type="hidden" name="formservices[]" value="dd938ef07be82b21635ec90a4c352af5" class="js-formaction-services"> <!-- @classes t-title t-text t-btn --> <div class="js-successbox t-form__successbox t-text t-text_md"
+aria-live="polite"
+style="display:none;"></div> <div
+class="t-form__inputsbox
+t-form__inputsbox_vertical-form t-form__inputsbox_inrow "> <div
+class=" t-input-group t-input-group_em " data-input-lid="3411158238960" data-field-type="em" data-field-name="Email"> <div class="t-input-block " style="border-radius:5px;"> <input
+type="email"
+autocomplete="email"
+name="Email"
+id="input_3411158238960"
+class="t-input js-tilda-rule"
+value=""
+placeholder="Email" data-tilda-req="1" aria-required="true" data-tilda-rule="email"
+aria-describedby="error_3411158238960"
+style="color:#000000;border:1px solid #c9c9c9;border-radius:5px;"> </div> <div class="t-input-error" aria-live="polite" id="error_3411158238960"></div> </div> <div
+class=" t-input-group t-input-group_nm " data-input-lid="3411158238961" data-field-type="nm" data-field-name="Name"> <div class="t-input-block " style="border-radius:5px;"> <input
+type="text"
+autocomplete="name"
+name="Name"
+id="input_3411158238961"
+class="t-input js-tilda-rule"
+value=""
+placeholder="Имя" data-tilda-req="1" aria-required="true" data-tilda-rule="name"
+aria-describedby="error_3411158238961"
+style="color:#000000;border:1px solid #c9c9c9;border-radius:5px;"> </div> <div class="t-input-error" aria-live="polite" id="error_3411158238961"></div> </div> <div
+class=" t-input-group t-input-group_ph " data-input-lid="3411158238962" data-field-async="true" data-field-type="ph" data-field-name="Phone"> <div class="t-input-block " style="border-radius:5px;"> <input
+type="tel"
+autocomplete="tel"
+name="Phone"
+id="input_3411158238962" data-phonemask-init="no" data-phonemask-id="1782125421" data-phonemask-lid="3411158238962"
+class="t-input js-phonemask-input js-tilda-rule"
+value=""
+placeholder="+1(000)000-0000" data-tilda-req="1" aria-required="true" aria-describedby="error_3411158238962"
+style="color:#000000;border:1px solid #c9c9c9;border-radius:5px;"> <script type="text/javascript">t_onReady(function() {t_onFuncLoad('t_loadJsFile',function() {t_loadJsFile('js/tilda-phone-mask-1.1.min.js',function() {t_onFuncLoad('t_form_phonemask_load',function() {var phoneMasks=document.querySelectorAll('#rec1782125421 [data-phonemask-lid="3411158238962"]');t_form_phonemask_load(phoneMasks);});})})});</script> </div> <div class="t-input-error" aria-live="polite" id="error_3411158238962"></div> </div> <div class="t-form__errorbox-middle"> <!--noindex--> <div
+class="js-errorbox-all t-form__errorbox-wrapper"
+style="display:none;" data-nosnippet
+tabindex="-1"
+aria-label="Ошибки при заполнении формы"> <ul
+role="list"
+class="t-form__errorbox-text t-text t-text_md"> <li class="t-form__errorbox-item js-rule-error js-rule-error-all"></li> <li class="t-form__errorbox-item js-rule-error js-rule-error-req"></li> <li class="t-form__errorbox-item js-rule-error js-rule-error-email"></li> <li class="t-form__errorbox-item js-rule-error js-rule-error-name"></li> <li class="t-form__errorbox-item js-rule-error js-rule-error-phone"></li> <li class="t-form__errorbox-item js-rule-error js-rule-error-minlength"></li> <li class="t-form__errorbox-item js-rule-error js-rule-error-string"></li> </ul> </div> <!--/noindex--> </div> <div class="t-form__submit"> <button
+class="t-submit t-btnflex t-btnflex_type_submit t-btnflex_md"
+type="submit"><span class="t-btnflex__text">Оставить заявку</span> <style>#rec1782125421 .t-btnflex.t-btnflex_type_submit {color:#ffffff;background-color:#000000;--border-width:0px;border-style:none !important;border-radius:5px;box-shadow:none !important;transition-duration:0.2s;transition-property:background-color,color,border-color,box-shadow,opacity,transform,gap;transition-timing-function:ease-in-out;}</style></button> </div> </div> <div class="t-form__errorbox-bottom"> <!--noindex--> <div
+class="js-errorbox-all t-form__errorbox-wrapper"
+style="display:none;" data-nosnippet
+tabindex="-1"
+aria-label="Ошибки при заполнении формы"> <ul
+role="list"
+class="t-form__errorbox-text t-text t-text_md"> <li class="t-form__errorbox-item js-rule-error js-rule-error-all"></li> <li class="t-form__errorbox-item js-rule-error js-rule-error-req"></li> <li class="t-form__errorbox-item js-rule-error js-rule-error-email"></li> <li class="t-form__errorbox-item js-rule-error js-rule-error-name"></li> <li class="t-form__errorbox-item js-rule-error js-rule-error-phone"></li> <li class="t-form__errorbox-item js-rule-error js-rule-error-minlength"></li> <li class="t-form__errorbox-item js-rule-error js-rule-error-string"></li> </ul> </div> <!--/noindex--> </div> </form> <style>#rec1782125421 input::-webkit-input-placeholder {color:#000000;opacity:0.5;}#rec1782125421 input::-moz-placeholder{color:#000000;opacity:0.5;}#rec1782125421 input:-moz-placeholder {color:#000000;opacity:0.5;}#rec1782125421 input:-ms-input-placeholder{color:#000000;opacity:0.5;}#rec1782125421 textarea::-webkit-input-placeholder {color:#000000;opacity:0.5;}#rec1782125421 textarea::-moz-placeholder{color:#000000;opacity:0.5;}#rec1782125421 textarea:-moz-placeholder {color:#000000;opacity:0.5;}#rec1782125421 textarea:-ms-input-placeholder{color:#000000;opacity:0.5;}</style> </div> </div> </div> </div> <script>t_onReady(function() {t_onFuncLoad('t702_initPopup',function() {t702_initPopup('1782125421');});});</script> </div> <div id="rec603384117" class="r t-rec t-rec_pt_0 t-rec_pb_165" style="padding-top:0px;padding-bottom:165px;background-color:#faf5f5; " data-animationappear="off" data-record-type="849" data-bg-color="#faf5f5"> <!-- t849--> <div class="t849"> <div class="t-section__container t-container t-container_flex"> <div class="t-col t-col_12 "> <div
+class="t-section__title t-title t-title_xs t-align_center t-margin_auto"
+field="btitle"> <div style="font-size: 38px;" data-customstyle="yes"><span style="color: rgb(122, 88, 88); font-weight: 400;">Ответы на вопросы</span></div> </div> </div> </div> <style>.t-section__descr {max-width:560px;}#rec603384117 .t-section__title {margin-bottom:90px;}#rec603384117 .t-section__descr {}@media screen and (max-width:960px) {#rec603384117 .t-section__title {margin-bottom:45px;}}</style> <div class="t-container"> <div class="t-item t-col t-col_8 t-prefix_2"> <div class="t849__accordion" data-accordion="false"> <div class="t849__wrapper"> <div class="t849__header " style="border-top: 1px solid #eee;"> <button type="button"
+class="t849__trigger-button "
+aria-controls="accordion1_603384117"
+aria-expanded="false"> <span class="t849__title t-name t-name_xl" field="li_title__1531218331971">Почему так дорого?</span> <svg class="t849__icon" role="presentation" focusable="false" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"> <circle cx="20" cy="20" r="20" stroke-width="0" /> <g class="t849__lines" stroke-width="2px" fill="none"> <path d="M9 20H31" /> <path d="M20 9V31" /> </g> </svg> </button> </div> <div class="t849__content"
+id="accordion1_603384117"
+hidden > <div class="t849__textwrapper"> <div class="t849__text t-descr t-descr_sm" field="li_descr__1531218331971">Если для вас эта сумма некомфортна, то вы можете начать с самостоятельной проработки или проработки в группе. Либо обратиться к другому специалисту. Ни в коем случае не покупайте у меня ничего на последние и тем более на кредитные деньги.</div> </div> </div> </div> </div> </div> <div class="t-item t-col t-col_8 t-prefix_2"> <div class="t849__accordion" data-accordion="false"> <div class="t849__wrapper"> <div class="t849__header " style="border-top: 1px solid #eee;"> <button type="button"
+class="t849__trigger-button "
+aria-controls="accordion2_603384117"
+aria-expanded="false"> <span class="t849__title t-name t-name_xl" field="li_title__1531218535874">А если мне не подойдет?</span> <svg class="t849__icon" role="presentation" focusable="false" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"> <circle cx="20" cy="20" r="20" stroke-width="0" /> <g class="t849__lines" stroke-width="2px" fill="none"> <path d="M9 20H31" /> <path d="M20 9V31" /> </g> </svg> </button> </div> <div class="t849__content"
+id="accordion2_603384117"
+hidden > <div class="t849__textwrapper"> <div class="t849__text t-descr t-descr_sm" field="li_descr__1531218535874">Именно для того, чтобы понять, подходит вам или нет, вы можете записаться на диагностическую сессию. На ней мы познакомимся поближе, вы зададите все интересующие вас вопросы по вашей проблеме. Мы проясним причины вашей проблемы и детали работы с ней. У вас появится представление о количестве сессий и стоимости работы. А также у вас на руках останется "маршрутная карта" с причинами и источниками ваших проблем и планом для дальнейшей работы.<br /><a href="diagnostic.html" target="_blank" rel="noreferrer noopener"><u>Подробнее о диагностике &gt;&gt;</u></a></div> </div> </div> </div> </div> </div> <div class="t-item t-col t-col_8 t-prefix_2"> <div class="t849__accordion" data-accordion="false"> <div class="t849__wrapper"> <div class="t849__header " style="border-top: 1px solid #eee;"> <button type="button"
+class="t849__trigger-button "
+aria-controls="accordion3_603384117"
+aria-expanded="false"> <span class="t849__title t-name t-name_xl" field="li_title__1531218625139">Есть рассрочка?</span> <svg class="t849__icon" role="presentation" focusable="false" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"> <circle cx="20" cy="20" r="20" stroke-width="0" /> <g class="t849__lines" stroke-width="2px" fill="none"> <path d="M9 20H31" /> <path d="M20 9V31" /> </g> </svg> </button> </div> <div class="t849__content"
+id="accordion3_603384117"
+hidden > <div class="t849__textwrapper"> <div class="t849__text t-descr t-descr_sm" field="li_descr__1531218625139">Нет. Если вы собираетесь купить мои консультации на последние/кредитные деньги, я вас не возьму.</div> </div> </div> </div> </div> </div> <div class="t-item t-col t-col_8 t-prefix_2"> <div class="t849__accordion" data-accordion="false"> <div class="t849__wrapper"> <div class="t849__header " style="border-top: 1px solid #eee;"> <button type="button"
+class="t849__trigger-button "
+aria-controls="accordion4_603384117"
+aria-expanded="false"> <span class="t849__title t-name t-name_xl" field="li_title__1531218700960">Вы сможете мне помочь?</span> <svg class="t849__icon" role="presentation" focusable="false" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"> <circle cx="20" cy="20" r="20" stroke-width="0" /> <g class="t849__lines" stroke-width="2px" fill="none"> <path d="M9 20H31" /> <path d="M20 9V31" /> </g> </svg> </button> </div> <div class="t849__content"
+id="accordion4_603384117"
+hidden > <div class="t849__textwrapper"> <div class="t849__text t-descr t-descr_sm" field="li_descr__1531218700960"><p style="text-align: left;">Я не знаю. Если в результате диагностики я берусь лично с вами работать, то обычно мы достигаем успешного результата. Но я не могу гарантировать, что в вашем случае будет именно так. Так как будущее мне не известно, как и никому другому. Бывает, что я перенаправляю к другому специалисту еще до диагностики. Если на диагностике я вижу вашу готовность к изменениям, готовность к глубинной работе, то есть большая доля вероятности, что я смогу вам помочь. В иных случаях я буду вынуждена отказать, так как не хочу тратить ваши деньги впустую. </p><p style="text-align: left;">Сама работа выполняется в вашем бессознательном, моя работа – это качественно сопроводить вас в этом процессе.</p></div> </div> </div> </div> </div> </div> <div class="t-item t-col t-col_8 t-prefix_2"> <div class="t849__accordion" data-accordion="false"> <div class="t849__wrapper"> <div class="t849__header " style="border-top: 1px solid #eee;"> <button type="button"
+class="t849__trigger-button "
+aria-controls="accordion5_603384117"
+aria-expanded="false"> <span class="t849__title t-name t-name_xl" field="li_title__1686650865262">Сколько сессий мне нужно?</span> <svg class="t849__icon" role="presentation" focusable="false" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"> <circle cx="20" cy="20" r="20" stroke-width="0" /> <g class="t849__lines" stroke-width="2px" fill="none"> <path d="M9 20H31" /> <path d="M20 9V31" /> </g> </svg> </button> </div> <div class="t849__content"
+id="accordion5_603384117"
+hidden > <div class="t849__textwrapper"> <div class="t849__text t-descr t-descr_sm" field="li_descr__1686650865262">Чаще всего проблема решается за 5 сессий. Бывает даже за 1-2 сессии, а в оставшиеся сессии уже работаем с другими запросами/проблемами. А бывает и так, что в причине лежит тяжелая травма, и для работы с ней и ее последствиями потребуется больше сессий. Но не больше 25, так как краткосрочная терапия предполагает максимум 25 сессий. Повторюсь, как правило результат наступает быстрее. И даже эти максимальные 25 сессий в сравнении с долгосрочной терапией – это очень быстро. Сколько сессий потребуется вам, я смогу сказать только на диагностике. </div> </div> </div> </div> </div> <div class="t849__border" style="height: 1px; background-color: #eee;"></div> </div> </div> </div> <style>#rec603384117 .t849__icon {fill:#faf5f5;stroke:#7a5858;}@media (hover:hover) {#rec603384117 .t849__trigger-button:hover .t849__icon {fill:#7a5858;stroke:#ffffff;}}#rec603384117 .t849__trigger-button:focus-visible .t849__icon {fill:#7a5858;stroke:#ffffff;}</style> <script type="text/javascript">t_onReady(function() {t_onFuncLoad('t849_init',function() {t849_init('603384117');});});</script> <style> #rec603384117 .t849__title{font-size:20px;color:#7a5858;}#rec603384117 .t849__text{color:#666666;font-family:'Noto Sans';}</style> </div> <div id="rec523034014" class="r t-rec" style=" " data-record-type="782"> <div style="position:relative; display:none;" class="js-payment-systembox"> <ul
+class="js-dropdown-paysystem"
+style="
+border: solid ;
+background-color:#FFFFFF;
+"> <li> <a href="#" style="color:" data-payment-system="custom.payform" class="js-payment-system t-name">
+Prodamus
+</a> </li> </ul> </div> </div> <!--footer--> <footer id="t-footer" class="t-records" data-hook="blocks-collection-content-node" data-tilda-project-id="997326" data-tilda-page-id="7431968" data-tilda-page-alias="footer" data-tilda-formskey="9e62bdb59dc2ec2a90d5a903251d128f" data-tilda-lazy="yes" data-tilda-root-zone="com" data-tilda-ts="y" data-tilda-project-country="RU"> <div id="rec534993933" class="r t-rec t-rec_pt_0 t-rec_pb_0" style="padding-top:0px;padding-bottom:0px;background-color:#faf5f5; " data-record-type="363" data-bg-color="#faf5f5"> <!-- T029 --> <div class="t029"> <div class="t029__container t-container"> <div class="t029__col t-col t-col_8"> <div class="t029__linewrapper" style="opacity:0.2;"> <div class="t029__opacity t029__opacity_left" style="background-image: linear-gradient(to left, #000000, rgba(0,0,0,0));"></div> <div class="t-divider t029__line" style="background: #000000;"></div> <div class="t029__opacity t029__opacity_right" style="background-image: linear-gradient(to right, #000000, rgba(0,0,0,0));"></div> </div> </div> </div> </div> </div> <div id="rec523194540" class="r t-rec t-rec_pt_60 t-rec_pb_75" style="padding-top:60px;padding-bottom:75px;background-color:#faf5f5; " data-animationappear="off" data-record-type="457" data-bg-color="#faf5f5"> <!-- T457 --> <div class="t457"> <div class="t-container"> <div class="t-col t-col_12"> <ul class="t457__ul"> <li class="t457__li"> <a href="index.html" data-menu-item-number="1">Главная</a> </li> <li class="t457__li"> <a href="about.html" data-menu-item-number="2">История</a> </li> <li class="t457__li"> <a href="peresborka.html" data-menu-item-number="3">Метод "Пересборка"</a> </li> <li class="t457__li"> <a href="blog.html" target="_blank" data-menu-item-number="4">Блог</a> </li> </ul> </div> <div class="t-col t-col_12"> <div class="t457__copyright" field="text">© 2022 Все материалы сайта принадлежат правообладателям, публиковать материалы разрешается только с использованием ссылки на источник.<br />По всем вопросам писать на support@janeotabaeva.ru или по телефону +79955070740<br /><br />ИП Отабаева Евгения Ивановна ОГРНИП: 325508100679721 ИНН: 550397280186</div> </div> </div> </div> <style> #rec523194540 .t457__link{font-size:28px;color:#ffffff;font-weight:600;}#rec523194540 .t457__copyright{color:#666666;}#rec523194540 .t457__li a{color:#666666;}</style> <style> #rec523194540 .t457__logo{color:#ffffff;font-weight:600;}@media screen and (min-width:480px){#rec523194540 .t457__logo{font-size:28px;}}</style> </div> <div id="rec130158910" class="r t-rec t-rec_pt_0 t-rec_pb_45" style="padding-top:0px;padding-bottom:45px;background-color:#faf5f5; " data-record-type="212" data-bg-color="#faf5f5"> <!-- T188 --> <div class="t188"> <div class="t-container_100"> <div class="t188__wrapper"> <div class="t-sociallinks"> <ul role="list" class="t-sociallinks__wrapper" aria-label="Соц. сети"> <!-- new soclinks --><li class="t-sociallinks__item t-sociallinks__item_youtube"><a href="https://www.youtube.com/@jane.otabaeva" target="_blank" rel="nofollow" aria-label="youtube" style="width: 32px; height: 32px;"><svg class="t-sociallinks__svg" role="presentation" width=32px height=32px viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"> <path fill-rule="evenodd" clip-rule="evenodd" d="M50 100c27.614 0 50-22.386 50-50S77.614 0 50 0 0 22.386 0 50s22.386 50 50 50Zm17.9-67.374c3.838.346 6 2.695 6.474 6.438.332 2.612.626 6.352.626 10.375 0 7.064-.626 11.148-.626 11.148-.588 3.728-2.39 5.752-6.18 6.18-4.235.48-13.76.7-17.992.7-4.38 0-13.237-.184-17.66-.552-3.8-.317-6.394-2.44-6.916-6.218-.38-2.752-.626-6.022-.626-11.222 0-5.788.209-8.238.7-10.853.699-3.732 2.48-5.54 6.548-5.96C36.516 32.221 40.55 32 49.577 32c4.413 0 13.927.228 18.322.626Zm-23.216 9.761v14.374L58.37 49.5l-13.686-7.114Z" fill="#666666"/> </svg></a></li>&nbsp;<li class="t-sociallinks__item t-sociallinks__item_instagram"><a href="https://www.instagram.com/jane.otabaeva/" target="_blank" rel="nofollow" aria-label="instagram" style="width: 32px; height: 32px;"><svg class="t-sociallinks__svg" role="presentation" width=32px height=32px viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"> <path fill-rule="evenodd" clip-rule="evenodd" d="M50 100C77.6142 100 100 77.6142 100 50C100 22.3858 77.6142 0 50 0C22.3858 0 0 22.3858 0 50C0 77.6142 22.3858 100 50 100ZM25 39.3918C25 31.4558 31.4566 25 39.3918 25H60.6082C68.5442 25 75 31.4566 75 39.3918V60.8028C75 68.738 68.5442 75.1946 60.6082 75.1946H39.3918C31.4558 75.1946 25 68.738 25 60.8028V39.3918ZM36.9883 50.0054C36.9883 42.8847 42.8438 37.0922 50.0397 37.0922C57.2356 37.0922 63.0911 42.8847 63.0911 50.0054C63.0911 57.1252 57.2356 62.9177 50.0397 62.9177C42.843 62.9177 36.9883 57.1252 36.9883 50.0054ZM41.7422 50.0054C41.7422 54.5033 45.4641 58.1638 50.0397 58.1638C54.6153 58.1638 58.3372 54.5041 58.3372 50.0054C58.3372 45.5066 54.6145 41.8469 50.0397 41.8469C45.4641 41.8469 41.7422 45.5066 41.7422 50.0054ZM63.3248 39.6355C65.0208 39.6355 66.3956 38.2606 66.3956 36.5646C66.3956 34.8687 65.0208 33.4938 63.3248 33.4938C61.6288 33.4938 60.2539 34.8687 60.2539 36.5646C60.2539 38.2606 61.6288 39.6355 63.3248 39.6355Z" fill="#666666"/> </svg></a></li>&nbsp;<li class="t-sociallinks__item t-sociallinks__item_vk"><a href="https://vk.com/jane.otabaeva" target="_blank" rel="nofollow" aria-label="vk" style="width: 32px; height: 32px;"><svg class="t-sociallinks__svg" role="presentation" width=32px height=32px viewBox="0 0 100 100" fill="none"
+xmlns="http://www.w3.org/2000/svg"> <path fill-rule="evenodd" clip-rule="evenodd"
+d="M50 100c27.614 0 50-22.386 50-50S77.614 0 50 0 0 22.386 0 50s22.386 50 50 50ZM25 34c.406 19.488 10.15 31.2 27.233 31.2h.968V54.05c6.278.625 11.024 5.216 12.93 11.15H75c-2.436-8.87-8.838-13.773-12.836-15.647C66.162 47.242 71.783 41.62 73.126 34h-8.058c-1.749 6.184-6.932 11.805-11.867 12.336V34h-8.057v21.611C40.147 54.362 33.838 48.304 33.556 34H25Z"
+fill="#666666" /> </svg></a></li>&nbsp;<li class="t-sociallinks__item t-sociallinks__item_email"><a href="mailto:support@janeotabaeva.ru?subject=Добрый день, нужна помощь!" target="_blank" rel="nofollow" aria-label="Электронная почта" style="width: 32px; height: 32px;"><svg class="t-sociallinks__svg" role="presentation" width=32px height=32px viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"> <path fill-rule="evenodd" clip-rule="evenodd" d="M50 100C77.6142 100 100 77.6142 100 50C100 22.3858 77.6142 0 50 0C22.3858 0 0 22.3858 0 50C0 77.6142 22.3858 100 50 100ZM51.8276 49.2076L74.191 33.6901C73.4347 32.6649 72.2183 32 70.8466 32H29.1534C27.8336 32 26.6576 32.6156 25.8968 33.5752L47.5881 49.172C48.8512 50.0802 50.5494 50.0945 51.8276 49.2076ZM75 63.6709V37.6286L53.4668 52.57C51.1883 54.151 48.1611 54.1256 45.9095 52.5066L25 37.4719V63.6709C25 65.9648 26.8595 67.8243 29.1534 67.8243H70.8466C73.1405 67.8243 75 65.9648 75 63.6709Z" fill="#666666"/> </svg></a></li><!-- /new soclinks --> </ul> </div> </div> </div> </div> </div> </footer> <!--/footer--> </div> <!--/allrecords--> <!-- Stat --> <!-- Yandex.Metrika counter 97998169 --> <script type="text/javascript" data-tilda-cookie-type="analytics">setTimeout(function(){(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym");window.mainMetrikaId='97998169';ym(window.mainMetrikaId,"init",{clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:true,params:{__ym:{"ymCms":{"cms":"tilda","cmsVersion":"1.0"}}},ecommerce:"dataLayer"});},2000);</script> <noscript><div><img src="https://mc.yandex.ru/watch/97998169" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter --> <script type="text/javascript">if(!window.mainTracker) {window.mainTracker='tilda';}
+setTimeout(function(){(function(d,w,k,o,g) {var n=d.getElementsByTagName(o)[0],s=d.createElement(o),f=function(){n.parentNode.insertBefore(s,n);};s.type="text/javascript";s.async=true;s.key=k;s.id="tildastatscript";s.src=g;if(w.opera=="[object Opera]") {d.addEventListener("DOMContentLoaded",f,false);} else {f();}})(document,window,'d7282e86c9422d80c9e1a3f13f726ac2','script','js/tilda-stat-1.0.min.js');},2000);</script> </body> </html>
