@@ -1,0 +1,1017 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>5 типов невротического голода — Евгения Отабаева</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Nunito+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #FDF8F4;
+  --bg-card: #FFFFFF;
+  --bg-accent: #F5EDE6;
+  --bg-dark: #2C2321;
+  --text: #3A2E2A;
+  --text-light: #7A6B65;
+  --text-on-dark: #F5EDE6;
+  --accent: #C47A5A;
+  --accent-deep: #9E5A3C;
+  --accent-light: #E8C4B0;
+  --accent-glow: #F0D5C4;
+  --gold: #BFA26A;
+  --green: #7A9E7E;
+  --red-soft: #D4847A;
+  --shadow: 0 4px 24px rgba(60,40,30,0.08);
+  --shadow-lg: 0 12px 48px rgba(60,40,30,0.12);
+  --radius: 16px;
+  --radius-sm: 10px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+
+html, body { overflow-x: hidden; width: 100%; }
+
+body {
+  font-family: 'Nunito Sans', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+img, svg { max-width: 100%; height: auto; display: block; }
+
+.serif { font-family: 'Cormorant Garamond', serif; }
+
+.container {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ========== HERO ========== */
+.hero {
+  background: linear-gradient(165deg, #2C2321 0%, #4A3530 40%, #6B4A40 100%);
+  padding: 64px 24px 56px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -40%;
+  right: -20%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(196,122,90,0.15) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: -30%;
+  left: -15%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(191,162,106,0.1) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+.hero-badge {
+  display: inline-block;
+  background: rgba(196,122,90,0.2);
+  border: 1px solid rgba(196,122,90,0.3);
+  color: var(--accent-light);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  padding: 8px 20px;
+  border-radius: 30px;
+  margin-bottom: 28px;
+  position: relative;
+  z-index: 1;
+}
+
+.hero h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(30px, 7vw, 52px);
+  font-weight: 700;
+  color: #FFF;
+  line-height: 1.15;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 1;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+.hero h1 span {
+  color: var(--accent-light);
+  font-style: italic;
+}
+
+.hero-sub {
+  color: rgba(245,237,230,0.75);
+  font-size: 17px;
+  line-height: 1.6;
+  max-width: 520px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-author {
+  margin-top: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-author-dot {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent), var(--gold));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: #FFF;
+}
+
+.hero-author-text {
+  text-align: left;
+  color: rgba(245,237,230,0.65);
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.hero-author-text strong {
+  display: block;
+  color: rgba(245,237,230,0.9);
+  font-size: 14px;
+}
+
+/* ========== SECTIONS ========== */
+section {
+  padding: 48px 0;
+}
+
+.section-intro {
+  padding: 56px 24px;
+  background: var(--bg);
+}
+
+.intro-text {
+  max-width: 680px;
+  margin: 0 auto;
+  font-size: 17px;
+  color: var(--text);
+}
+
+.intro-text p {
+  margin-bottom: 20px;
+}
+
+.intro-text .highlight {
+  background: linear-gradient(to bottom, transparent 60%, var(--accent-glow) 60%);
+  padding: 0 2px;
+}
+
+.intro-text .aside {
+  color: var(--text-light);
+  font-style: italic;
+  font-size: 15px;
+}
+
+/* ========== TYPE CARDS ========== */
+.types-section {
+  padding: 48px 0 24px;
+}
+
+.types-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.types-header h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(26px, 5vw, 36px);
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.types-header p {
+  color: var(--text-light);
+  font-size: 15px;
+}
+
+.type-card {
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 36px 32px;
+  margin-bottom: 28px;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(196,122,90,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.type-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.type-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+}
+
+.type-card[data-type="1"]::before { background: var(--accent); }
+.type-card[data-type="2"]::before { background: var(--gold); }
+.type-card[data-type="3"]::before { background: var(--green); }
+.type-card[data-type="4"]::before { background: var(--red-soft); }
+.type-card[data-type="5"]::before { background: #8B7EC8; }
+
+.type-number {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1;
+  opacity: 0.08;
+  position: absolute;
+  top: 16px;
+  right: 28px;
+}
+
+.type-emoji {
+  font-size: 28px;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.type-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(22px, 5vw, 26px);
+  font-weight: 700;
+  margin-bottom: 6px;
+  padding-right: 60px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.type-tagline {
+  font-size: 14px;
+  color: var(--text-light);
+  font-style: italic;
+  margin-bottom: 16px;
+}
+
+.type-desc {
+  font-size: 15px;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.type-signs {
+  background: var(--bg-accent);
+  border-radius: var(--radius-sm);
+  padding: 20px 24px;
+  margin-bottom: 0;
+}
+
+.type-signs-title {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--text-light);
+  margin-bottom: 12px;
+}
+
+.type-signs label {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  font-size: 14.5px;
+  line-height: 1.5;
+  transition: opacity 0.2s;
+}
+
+.type-signs label:last-child { margin-bottom: 0; }
+
+.type-signs input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  min-width: 20px;
+  border: 2px solid var(--accent-light);
+  border-radius: 5px;
+  margin-top: 2px;
+  cursor: pointer;
+  transition: all 0.2s;
+  position: relative;
+}
+
+.type-signs input[type="checkbox"]:checked {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+.type-signs input[type="checkbox"]:checked::after {
+  content: '✓';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #FFF;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+/* ========== RESULT ========== */
+.result-section {
+  background: linear-gradient(165deg, #2C2321, #4A3530);
+  padding: 56px 24px;
+  text-align: center;
+  border-radius: var(--radius);
+  margin: 0 16px 48px;
+  max-width: 680px;
+}
+
+@media (min-width: 720px) {
+  .result-section { margin: 0 auto 48px; }
+}
+
+.result-count {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(56px, 12vw, 72px);
+  font-weight: 700;
+  color: var(--accent-light);
+  line-height: 1;
+}
+
+.result-label {
+  color: rgba(245,237,230,0.6);
+  font-size: 14px;
+  margin-bottom: 24px;
+}
+
+.result-message {
+  color: var(--text-on-dark);
+  font-size: 17px;
+  line-height: 1.7;
+  max-width: 520px;
+  margin: 0 auto 8px;
+}
+
+/* ========== MECHANISM ========== */
+.mechanism-section {
+  padding: 48px 24px;
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.mechanism-section h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(24px, 5vw, 32px);
+  font-weight: 700;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.mechanism-block {
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  padding: 28px;
+  box-shadow: var(--shadow);
+  margin-bottom: 20px;
+  border: 1px solid rgba(196,122,90,0.08);
+}
+
+.mechanism-block h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.mechanism-block p {
+  font-size: 15px;
+  color: var(--text);
+  line-height: 1.7;
+}
+
+.mechanism-block .metaphor {
+  font-style: italic;
+  color: var(--accent-deep);
+}
+
+/* ========== CASES ========== */
+.cases-section {
+  padding: 48px 24px;
+  background: var(--bg-accent);
+}
+
+.cases-section h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(24px, 5vw, 32px);
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+.case-card {
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  padding: 28px 28px 24px;
+  margin-bottom: 20px;
+  max-width: 680px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: var(--shadow);
+  position: relative;
+}
+
+.case-card::before {
+  content: '"';
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 64px;
+  color: var(--accent-light);
+  position: absolute;
+  top: 12px;
+  left: 20px;
+  line-height: 1;
+}
+
+.case-quote {
+  font-size: 15px;
+  line-height: 1.7;
+  padding-left: 8px;
+  margin-bottom: 16px;
+  font-style: italic;
+  color: var(--text);
+}
+
+.case-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-left: 8px;
+}
+
+.case-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700;
+  font-size: 15px;
+  color: #FFF;
+}
+
+.case-meta-text {
+  font-size: 13px;
+  color: var(--text-light);
+}
+
+.case-meta-text strong {
+  display: block;
+  color: var(--text);
+  font-size: 14px;
+}
+
+.case-result {
+  display: inline-block;
+  background: rgba(122,158,126,0.12);
+  color: var(--green);
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 20px;
+  margin-top: 8px;
+}
+
+/* ========== CTA ========== */
+.cta-section {
+  padding: 64px 24px;
+  text-align: center;
+}
+
+.cta-section h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(24px, 5vw, 34px);
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.cta-section p {
+  font-size: 16px;
+  color: var(--text-light);
+  max-width: 520px;
+  margin: 0 auto 32px;
+  line-height: 1.7;
+}
+
+.cta-btn {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--accent), var(--accent-deep));
+  color: #FFF;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 18px 44px;
+  border-radius: 50px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 8px 24px rgba(196,122,90,0.3);
+  letter-spacing: 0.3px;
+}
+
+.cta-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(196,122,90,0.4);
+}
+
+.cta-sub {
+  font-size: 13px;
+  color: var(--text-light);
+  margin-top: 16px;
+}
+
+/* ========== FOOTER ========== */
+.footer {
+  padding: 32px 24px;
+  text-align: center;
+  font-size: 13px;
+  color: var(--text-light);
+  border-top: 1px solid rgba(196,122,90,0.1);
+}
+
+.footer a { color: var(--accent); text-decoration: none; }
+
+/* ========== DIVIDER ========== */
+.divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 24px 0;
+}
+
+.divider::before, .divider::after {
+  content: '';
+  height: 1px;
+  width: 60px;
+  background: var(--accent-light);
+}
+
+.divider span {
+  color: var(--accent-light);
+  font-size: 18px;
+}
+
+/* ========== COUNTER BAR ========== */
+.counter-bar {
+  position: sticky;
+  bottom: 0;
+  background: rgba(44,35,33,0.95);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  z-index: 100;
+  transition: opacity 0.3s;
+  padding-bottom: calc(14px + env(safe-area-inset-bottom));
+}
+
+.counter-bar-text {
+  color: var(--text-on-dark);
+  font-size: 14px;
+}
+
+.counter-bar-text strong {
+  color: var(--accent-light);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.counter-bar-btn {
+  background: var(--accent);
+  color: #FFF;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 10px 24px;
+  border-radius: 30px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+/* ========== RESPONSIVE BREAKPOINTS ========== */
+
+/* Extra small screens — phones <360px */
+@media (max-width: 359px) {
+  body { font-size: 15px; }
+  .container { padding: 0 16px; }
+  .hero { padding: 40px 16px 36px; }
+  .hero-badge { font-size: 10px; letter-spacing: 2px; padding: 7px 16px; margin-bottom: 22px; }
+  .hero h1 { font-size: 28px; }
+  .hero-sub { font-size: 15px; }
+  .type-card { padding: 24px 18px; }
+  .type-signs { padding: 14px 16px; }
+  .type-signs label { font-size: 13.5px; }
+  .type-number { font-size: 44px; right: 18px; }
+  .result-section { margin: 0 8px 36px; padding: 40px 16px; }
+  .mechanism-section { padding: 36px 16px; }
+  .mechanism-block { padding: 22px 20px; }
+  .cases-section { padding: 40px 16px; }
+  .case-card { padding: 24px 20px 22px; }
+  .cta-section { padding: 48px 16px; }
+  .cta-btn { padding: 16px 32px; font-size: 15px; }
+  .counter-bar { padding: 12px 16px; gap: 10px; }
+  .counter-bar-text { font-size: 13px; }
+  .counter-bar-text strong { font-size: 19px; }
+  .counter-bar-btn { font-size: 12px; padding: 9px 18px; }
+}
+
+/* Phones */
+@media (max-width: 480px) {
+  .hero { padding: 48px 20px 44px; }
+  .type-card { padding: 28px 24px; }
+  .type-signs { padding: 16px 18px; }
+  .result-section { margin: 0 8px 40px; padding: 44px 20px; }
+  .section-intro { padding: 44px 20px; }
+  .mechanism-section { padding: 40px 20px; }
+  .cases-section { padding: 44px 20px; }
+  .cta-section { padding: 52px 20px; }
+  .hero-author-text { font-size: 12px; }
+  .hero-author-text strong { font-size: 13px; }
+}
+
+/* Tablets and up */
+@media (min-width: 768px) {
+  body { font-size: 17px; }
+  .hero { padding: 88px 32px 76px; }
+  .section-intro { padding: 72px 32px; }
+  .types-section { padding: 64px 0 32px; }
+  .mechanism-section { padding: 64px 32px; }
+  .cases-section { padding: 72px 32px; }
+  .cta-section { padding: 88px 32px; }
+  .type-card { padding: 44px 40px; }
+  .mechanism-block { padding: 32px 36px; }
+  .case-card { padding: 32px 32px 28px; }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .hero { padding: 112px 32px 96px; }
+  .hero::before { width: 720px; height: 720px; }
+  .hero::after { width: 600px; height: 600px; }
+}
+
+/* Large desktop — cap the hero content */
+@media (min-width: 1200px) {
+  .hero-sub { font-size: 19px; max-width: 600px; }
+}
+
+/* Print + reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-badge">Бесплатный гайд + тест</div>
+  <h1>5 типов <span>невротического голода</span></h1>
+  <p class="hero-sub">Узнай, какой тип заставляет тебя переедать — и&nbsp;почему ни&nbsp;одна диета не&nbsp;работала</p>
+  <div class="hero-author">
+    <div class="hero-author-dot">Е</div>
+    <div class="hero-author-text">
+      <strong>Евгения Отабаева</strong>
+      психолог · краткосрочная терапия
+    </div>
+  </div>
+</header>
+
+<!-- INTRO -->
+<section class="section-intro">
+  <div class="intro-text">
+    <p>Знаешь, что меня вгоняло в отчаяние больше всего, когда я весила 75 кг при своей норме в 55?</p>
+    <p>Не сам вес. А то, что <span class="highlight">я не могла понять, почему я ем</span>. Только поужинала — и рука сама тянется к шоколадке. Мозг говорит «не надо», а тело уже жуёт.</p>
+    <p>Потом — вина. Потом — «ну всё, с понедельника точно». Потом — очередной понедельник, который ничего не меняет. <span class="aside">(знакомо, да?)</span></p>
+    <p>И вот когда я разобралась в механизме, стало понятно: <strong>проблема не в еде. И не в силе воли. А в том, какой именно тип невротического голода тобой управляет.</strong></p>
+    <p>Их всего 5. И у каждого — своя ловушка, свой триггер и свой способ разрешения.</p>
+    <p>Ниже — каждый тип с тестом. Отмечай то, что про тебя. В&nbsp;конце — узнаешь, насколько глубоко засела проблема и что с&nbsp;этим делать. <span class="aside">(спойлер: не диета)</span></p>
+  </div>
+</section>
+
+<div class="divider"><span>✦</span></div>
+
+<!-- TYPES -->
+<section class="types-section">
+  <div class="container">
+    <div class="types-header">
+      <h2>5 типов невротического голода</h2>
+      <p>Отмечай признаки, которые узнаёшь в себе</p>
+    </div>
+
+    <!-- TYPE 1 -->
+    <div class="type-card" data-type="1">
+      <span class="type-number">01</span>
+      <span class="type-emoji">🌊</span>
+      <div class="type-name">Эмоциональный заедатель</div>
+      <div class="type-tagline">«Мне плохо — значит, мне нужна шоколадка»</div>
+      <div class="type-desc">
+        Это когда еда = антидепрессант. Скучно — пожевать. Тревожно — пожевать. Поссорилась с мужем — там точно есть мороженое в морозилке. Ты не голодна. Ты пытаешься <em>заесть чувство</em>, которое не можешь переварить эмоционально.
+        <br><br>
+        А бывает и так: поставила себе цель — заработать определённую сумму, начать вести блог, продавать. Но тебе страшно. И каждый раз, когда страшно — появляется желание что-то съесть. А от мысли, что ты не реализуешься, не можешь добиться своей цели — фоновая тревога и неудовлетворённость собой. А это = постоянное желание что-то жевать.
+        <br><br>
+        Причина не в слабости характера. В подсознании еда связалась с безопасностью. Когда-то давно мозг запомнил: поела — стало спокойнее. И теперь гонит тебя к холодильнику каждый раз, когда внутри штормит.
+      </div>
+      <div class="type-signs">
+        <div class="type-signs-title">Узнаёшь себя?</div>
+        <label><input type="checkbox" class="sign-check"> После ссоры или стресса первым делом хочется что-то съесть</label>
+        <label><input type="checkbox" class="sign-check"> Когда скучно или одиноко — рука сама тянется к еде</label>
+        <label><input type="checkbox" class="sign-check"> Страх перед важным делом (продажи, блог, выступление) = поход к холодильнику</label>
+        <label><input type="checkbox" class="sign-check"> После еды ненадолго становится легче, потом — вина</label>
+      </div>
+    </div>
+
+    <!-- TYPE 2 -->
+    <div class="type-card" data-type="2">
+      <span class="type-number">02</span>
+      <span class="type-emoji">👁</span>
+      <div class="type-name">Визуальный голод</div>
+      <div class="type-tagline">«Увидела — всё, пропала»</div>
+      <div class="type-desc">
+        Минуту назад ты не хотела есть. А потом увидела фото бургера в ленте — и всё. Или зашла в магазин за чаем, а на витрине — свежие круассаны, золотистые, идеальные. Ты выходишь с полной корзиной и думаешь: «Как? Я же просто за чаем шла!»
+        <br><br>
+        Визуальный голод — это когда глаза буквально «включают» аппетит. Мозг видит еду — и древний инстинкт кричит: «Хватай! Кто знает, когда ещё будет!» <span style="color:var(--text-light);font-style:italic">(привет, пещерный человек внутри нас)</span>
+      </div>
+      <div class="type-signs">
+        <div class="type-signs-title">Узнаёшь себя?</div>
+        <label><input type="checkbox" class="sign-check"> Кулинарные фото/видео вызывают моментальное желание поесть</label>
+        <label><input type="checkbox" class="sign-check"> Увидела красивую витрину в магазине — и уже несёшь то, что не планировала</label>
+        <label><input type="checkbox" class="sign-check"> Когда при тебе едят вкусное — невозможно отказаться</label>
+        <label><input type="checkbox" class="sign-check"> Телевизор/ролики про еду = немедленный поход на кухню</label>
+      </div>
+    </div>
+
+    <!-- TYPE 3 -->
+    <div class="type-card" data-type="3">
+      <span class="type-number">03</span>
+      <span class="type-emoji">⏰</span>
+      <div class="type-name">Голод-привычка</div>
+      <div class="type-tagline">«14:00 — значит, пора обедать. Даже если не хочу»</div>
+      <div class="type-desc">
+        Включила телевизор — надо что-то пожевать. Пришла домой с работы — надо поесть. 14:00 — обед, точка. Ты не спрашиваешь тело, голодно ли оно. Ты действуешь на автопилоте. Это рефлекс, который годами укреплялся и стал частью «расписания».
+        <br><br>
+        Знаешь, как собака Павлова? Вот ты — немножко она. <span style="color:var(--text-light);font-style:italic">(без обид, я тоже была)</span>
+      </div>
+      <div class="type-signs">
+        <div class="type-signs-title">Узнаёшь себя?</div>
+        <label><input type="checkbox" class="sign-check"> Ешь в одно и то же время, даже если не голодна</label>
+        <label><input type="checkbox" class="sign-check"> Перед телевизором/ноутбуком обязательно нужно что-то жевать</label>
+        <label><input type="checkbox" class="sign-check"> На столе всегда стоят орешки/конфеты/что-то «для фона»</label>
+        <label><input type="checkbox" class="sign-check"> В отпуске тело «хочет есть» ровно в то же время, что и на работе</label>
+      </div>
+    </div>
+
+    <!-- TYPE 4 -->
+    <div class="type-card" data-type="4">
+      <span class="type-number">04</span>
+      <span class="type-emoji">🌙</span>
+      <div class="type-name">Ночной едок</div>
+      <div class="type-tagline">«Весь день держалась. Ночью — сорвалась»</div>
+      <div class="type-desc">
+        Днём ты молодец. Всё по плану. А ночью — как подменили. Холодильник манит, рука открывает, и ты стоишь в темноте и ешь. Потом вина. Потом «как повесить замок на холодильник». Потом засыпаешь с тяжестью в желудке и в душе.
+        <br><br>
+        Это не слабость. За день копится напряжение, которое ты держишь «на зубах». Это как воздушный шарик: весь день надуваешь, надуваешь — а ночью он лопается. Контроль заканчивается, и тело берёт своё. Чем жёстче ты себя ограничиваешь днём, тем сильнее «отпускает» ночью.
+      </div>
+      <div class="type-signs">
+        <div class="type-signs-title">Узнаёшь себя?</div>
+        <label><input type="checkbox" class="sign-check"> Регулярно ешь после 22:00–23:00, хотя давала себе слово не делать этого</label>
+        <label><input type="checkbox" class="sign-check"> Утром — вина и обещание «больше никогда»</label>
+        <label><input type="checkbox" class="sign-check"> Днём ограничиваешь себя, а вечером «компенсируешь»</label>
+        <label><input type="checkbox" class="sign-check"> Сон не приходит, пока не поешь</label>
+      </div>
+    </div>
+
+    <!-- TYPE 5 -->
+    <div class="type-card" data-type="5">
+      <span class="type-number">05</span>
+      <span class="type-emoji">🚫</span>
+      <div class="type-name">Пружина запрета</div>
+      <div class="type-tagline">«Нельзя-нельзя-нельзя... ДАЙТЕ ВСЁ»</div>
+      <div class="type-desc">
+        Ты на диете. Строго. Никакого хлеба, сладкого, мучного. Неделю, две, месяц. А потом — срыв. И не просто «съела конфетку», а прямо полная корзина, три порции, расстегнуть пуговицу на джинсах. И потом — опускаются руки: «Видимо, красивое тело не для меня».
+        <br><br>
+        Это как резинка: чем сильнее натягиваешь — тем больнее бьёт, когда отпускаешь. Диета → срыв → диета → срыв. Замкнутый круг. Ты пытаешься логикой запретить то, что требует твой древний инстинкт выживания. А он всегда сильнее любых правил — потому что ему миллионы лет, а твоему решению «с понедельника не есть сладкое» — три дня.
+      </div>
+      <div class="type-signs">
+        <div class="type-signs-title">Узнаёшь себя?</div>
+        <label><input type="checkbox" class="sign-check"> После каждой диеты — срыв и набор ещё бо́льшего веса</label>
+        <label><input type="checkbox" class="sign-check"> Чувствуешь боль/обиду, когда при тебе едят «запрещённое»</label>
+        <label><input type="checkbox" class="sign-check"> Уже пробовала 3+ диет/методов — и каждый раз откат</label>
+        <label><input type="checkbox" class="sign-check"> Думаешь: «Может, просто смириться и жить так»</label>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- RESULT -->
+<div id="result-block" class="result-section">
+  <div class="result-count" id="result-count">0</div>
+  <div class="result-label">признаков отмечено из 20</div>
+  <p class="result-message" id="result-message">Отмечай признаки выше — и здесь появится твой результат</p>
+</div>
+
+<div class="divider"><span>✦</span></div>
+
+<!-- MECHANISM -->
+<section class="mechanism-section">
+  <h2>Почему диеты не работают<br>(и что работает)</h2>
+
+  <div class="mechanism-block">
+    <h3>🦖 Человек против динозавра</h3>
+    <p>Представь: ты стоишь перед голодным тираннозавром и пытаешься <em>уговорить</em> его тебя не есть. Объясняешь логически, приводишь аргументы, строишь графики. Он тебя не слышит — у него другие приоритеты. Вот именно так работает сила воли против инстинктов. Твоя логика — это ты. Древний мозг, которому миллионы лет и который управляет голодом — это динозавр. <span class="metaphor">Представь масштаб этой неравной битвы.</span></p>
+  </div>
+
+  <div class="mechanism-block">
+    <h3>🔥 Как рождается «сбой» в голове</h3>
+    <p>Представь: в детстве ты хотела проявиться — высказать мнение, заявить о себе, быть заметной. А в ответ получила: «Не высовывайся», «Кто тебя спрашивал?», «Будешь так себя вести — никто тебя любить не будет». Мозг моментально связал два факта: «проявляться = опасно, будет больно». И теперь, во взрослой жизни, каждый раз когда ты хочешь сделать что-то важное — продать, выступить, сказать «нет» — внутри поднимается тревога. Ты не можешь прийти к своей цели, потому что мозг блокирует. Внутри — напряжение, разочарование, злость на себя. И чтобы хоть как-то снять это состояние и снова почувствовать себя хорошо — ты ешь. <span class="metaphor">Еда не помогает достичь цели. Она просто на время глушит боль от того, что ты к ней не пришла.</span></p>
+  </div>
+
+  <div class="mechanism-block">
+    <h3>🔗 Разъединить — и всё</h3>
+    <p>Не надо лезть в травму, раскапывать детство, простить всех обидчиков. <span class="metaphor">Достаточно разъединить связку «факт + чувство» в подсознании.</span> «Проявляться» снова станет просто действием, а не угрозой. Тревога уйдёт — и вместе с ней уйдёт потребность заедать. Не потому что «нельзя». А потому что больше не нужно.</p>
+  </div>
+</section>
+
+<div class="divider"><span>✦</span></div>
+
+<!-- CASES -->
+<section class="cases-section">
+  <h2>Они узнали себя — и&nbsp;изменили это</h2>
+
+  <div class="case-card">
+    <div class="case-quote">Вся жизнь крутилась вокруг дочки. Единственное удовольствие — чай с шоколадками, когда дочка спала. После сессии произошла замена ценностей: впечатления от еды теперь занимают не больше 15% от всех остальных.</div>
+    <div class="case-meta">
+      <div class="case-avatar" style="background:linear-gradient(135deg,var(--accent),var(--gold))">А</div>
+      <div class="case-meta-text">
+        <strong>Анна</strong>
+        мама в декрете · эмоциональный заедатель
+      </div>
+    </div>
+    <div class="case-result">Еда перестала быть главным удовольствием</div>
+  </div>
+
+  <div class="case-card">
+    <div class="case-quote">Я всю жизнь был сладкоежкой, все 60 лет. Вдруг изменюсь из-за психологии? Нереально! Однако — прошло полгода. С литров варенья — до ложки мёда. И только когда сильно захочется.</div>
+    <div class="case-meta">
+      <div class="case-avatar" style="background:linear-gradient(135deg,var(--green),#5A8E6E)">В</div>
+      <div class="case-meta-text">
+        <strong>Владимир, 60 лет</strong>
+        сладкоежка всю жизнь · голод-привычка
+      </div>
+    </div>
+    <div class="case-result">С литров варенья → ложка мёда за 1 сессию</div>
+  </div>
+
+  <div class="case-card">
+    <div class="case-quote">Питание перестало быть заполнением пустоты. Скорее как топливо. Я начала чувствовать, когда реально голодна, а когда просто нервничаю.</div>
+    <div class="case-meta">
+      <div class="case-avatar" style="background:linear-gradient(135deg,#8B7EC8,#6B5EA8)">С</div>
+      <div class="case-meta-text">
+        <strong>Светлана</strong>
+        заедала стресс · эмоциональный заедатель
+      </div>
+    </div>
+    <div class="case-result">Еда стала топливом, а не утешением</div>
+  </div>
+
+  <div class="case-card">
+    <div class="case-quote">Не могла есть, заставляла себя. После практик вернулся аппетит и, что самое удивительное, — радость от еды. Спокойная, без маниакальности.</div>
+    <div class="case-meta">
+      <div class="case-avatar" style="background:linear-gradient(135deg,var(--red-soft),#B86A60)">Т</div>
+      <div class="case-meta-text">
+        <strong>Татьяна</strong>
+        обратная проблема · отсутствие аппетита
+      </div>
+    </div>
+    <div class="case-result">Вернулся здоровый аппетит</div>
+  </div>
+
+  <div class="case-card">
+    <div class="case-quote">−11 кг за год. Без спорта. Без диет. Я просто перестал маниакально хотеть есть. Тело само пришло к нормальному весу.</div>
+    <div class="case-meta">
+      <div class="case-avatar" style="background:linear-gradient(135deg,var(--gold),#A08950)">Е</div>
+      <div class="case-meta-text">
+        <strong>Евгений</strong>
+        переедание · пружина запрета
+      </div>
+    </div>
+    <div class="case-result">−11 кг за год без диет и спорта</div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <h2>Узнала себя?<br>Вот что делать дальше</h2>
+  <p>Я записала видео-разбор, где показываю, как именно работает метод краткосрочной терапии и как убрать невротический голод за 1–2 сессии. Без диет, без силы воли, без копания в детских травмах.</p>
+  <p style="font-weight:600;color:var(--text);">Ты увидишь конкретный механизм и поймёшь, почему раньше ничего не работало.</p>
+  <a href="https://janeotabaeva.ru/intensiv" class="cta-btn">Смотреть видео-разбор →</a>
+  <div class="cta-sub">Бесплатно · Без подписок</div>
+
+  <div style="margin-top:40px;background:var(--bg-accent);border-radius:var(--radius);padding:28px;max-width:520px;margin-left:auto;margin-right:auto;text-align:left;">
+    <div style="font-size:14px;color:var(--text-light);margin-bottom:8px;">P.S.</div>
+    <div style="font-size:15px;line-height:1.7;">Мой результат — минус 17 кг без единой диеты. Без спорта. Просто потому что <em>перестало тянуть</em>. Не «нельзя», а «не хочу». Это совершенно другое ощущение. И я хочу, чтобы ты тоже его почувствовала. ❤️</div>
+    <div style="margin-top:12px;font-size:13px;color:var(--text-light);font-style:italic;">— Женя</div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  Евгения Отабаева · Психолог · Краткосрочная терапия<br>
+  <a href="https://janeotabaeva.ru/intensiv">janeotabaeva.ru</a>
+</footer>
+
+<!-- STICKY BAR -->
+<div class="counter-bar" id="counter-bar" style="opacity:0;pointer-events:none;">
+  <div class="counter-bar-text">Отмечено: <strong id="bar-count">0</strong>/20</div>
+  <a href="https://janeotabaeva.ru/intensiv" class="counter-bar-btn">Смотреть видео →</a>
+</div>
+
+<script>
+const checks = document.querySelectorAll('.sign-check');
+const resultCount = document.getElementById('result-count');
+const resultMessage = document.getElementById('result-message');
+const counterBar = document.getElementById('counter-bar');
+const barCount = document.getElementById('bar-count');
+
+function update() {
+  const n = document.querySelectorAll('.sign-check:checked').length;
+  resultCount.textContent = n;
+  barCount.textContent = n;
+
+  if (n === 0) {
+    resultMessage.textContent = 'Отмечай признаки выше — и здесь появится твой результат';
+    counterBar.style.opacity = '0';
+    counterBar.style.pointerEvents = 'none';
+  } else {
+    counterBar.style.opacity = '1';
+    counterBar.style.pointerEvents = 'auto';
+    if (n <= 3) {
+      resultMessage.innerHTML = 'Невротический голод уже влияет на твою жизнь. Пока это «фоновый шум» — но именно он не даёт весу уходить. <strong>Одной сессии может быть достаточно.</strong>';
+    } else if (n <= 8) {
+      resultMessage.innerHTML = 'Несколько типов невротического голода работают одновременно. Диеты и сила воли здесь бессильны — причина глубже. <strong>Посмотри видео-разбор, чтобы понять механизм.</strong>';
+    } else if (n <= 14) {
+      resultMessage.innerHTML = 'Невротический голод управляет твоим питанием почти полностью. Ты не слабая — просто логикой невозможно победить инстинкты. <strong>Нужен другой подход. Он есть.</strong>';
+    } else {
+      resultMessage.innerHTML = 'Практически все типы — про тебя. Это значит, что причин несколько, и каждую можно убрать отдельной практикой за 1 сессию. <strong>Прямо сейчас посмотри видео — там ответ, почему ничего не работало.</strong>';
+    }
+  }
+}
+
+checks.forEach(c => c.addEventListener('change', update));
+</script>
+
+</body>
+</html>
