@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Карта сайта — Евгения Отабаева</title>
+<meta name="robots" content="noindex">
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700&family=Noto+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #faf5f5;
+    --card: #ffffff;
+    --ink: #3a2e2a;
+    --ink-soft: #7a5858;
+    --ink-mute: #b09898;
+    --accent: #8c6868;
+    --accent-deep: #7a5858;
+    --line: #e8dcdc;
+    --radius: 14px;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Noto Sans', sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.55;
+    padding: 24px 16px 80px;
+  }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  .sm-wrap { max-width: 980px; margin: 0 auto; }
+
+  .sm-hero {
+    padding: 36px 28px;
+    background: linear-gradient(135deg, #2C2321 0%, #4A3530 60%, #7a5858 100%);
+    color: #fff;
+    border-radius: 18px;
+    margin-bottom: 28px;
+    position: relative;
+    overflow: hidden;
+  }
+  .sm-hero::after {
+    content: '';
+    position: absolute;
+    right: -60px; top: -60px;
+    width: 280px; height: 280px;
+    background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+  .sm-hero h1 {
+    font-family: 'Lora', serif;
+    font-size: clamp(28px, 4.5vw, 38px);
+    font-weight: 700;
+    margin-bottom: 8px;
+    position: relative;
+    z-index: 1;
+  }
+  .sm-hero p {
+    color: rgba(255,255,255,0.85);
+    font-size: 15px;
+    max-width: 640px;
+    position: relative;
+    z-index: 1;
+  }
+  .sm-hero .meta {
+    margin-top: 14px;
+    font-size: 13px;
+    color: rgba(255,255,255,0.65);
+    position: relative;
+    z-index: 1;
+  }
+  .sm-hero .meta strong { color: #fff; font-weight: 600; }
+
+  .toc {
+    background: var(--card);
+    border-radius: var(--radius);
+    padding: 18px 22px;
+    margin-bottom: 32px;
+    box-shadow: 0 4px 18px rgba(60,40,30,0.06);
+  }
+  .toc h3 {
+    font-family: 'Lora', serif;
+    font-size: 16px;
+    color: var(--ink-soft);
+    margin-bottom: 12px;
+    font-weight: 600;
+  }
+  .toc ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .toc li a {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    background: var(--bg);
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    font-size: 13px;
+    color: var(--ink-soft);
+    transition: all .15s ease;
+  }
+  .toc li a:hover {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #fff;
+    text-decoration: none;
+  }
+  .toc .toc-count {
+    background: var(--ink-mute);
+    color: #fff;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 1px 7px;
+    border-radius: 10px;
+    min-width: 22px;
+    text-align: center;
+  }
+  .toc li a:hover .toc-count { background: rgba(255,255,255,0.25); }
+
+  .sm-section {
+    background: var(--card);
+    border-radius: var(--radius);
+    padding: 26px 28px;
+    margin-bottom: 22px;
+    box-shadow: 0 4px 18px rgba(60,40,30,0.06);
+  }
+  .sm-section__head {
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--line);
+    margin-bottom: 14px;
+  }
+  .sm-section__title {
+    font-family: 'Lora', serif;
+    font-size: 22px;
+    color: var(--ink-soft);
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+  .sm-section__sub {
+    font-size: 13px;
+    color: var(--ink-mute);
+  }
+  .sm-section__sub strong { color: var(--ink-soft); }
+
+  .sm-list { list-style: none; }
+  .sm-list li { border-bottom: 1px dashed var(--line); }
+  .sm-list li:last-child { border-bottom: none; }
+  .sm-list a {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    padding: 11px 6px;
+    color: var(--ink);
+    transition: background .12s ease, padding-left .12s ease;
+    border-radius: 6px;
+  }
+  .sm-list a:hover {
+    background: var(--bg);
+    text-decoration: none;
+    padding-left: 10px;
+  }
+  .sm-list .fn {
+    font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, monospace;
+    font-size: 12.5px;
+    color: var(--accent);
+    white-space: nowrap;
+    flex-shrink: 0;
+    min-width: 280px;
+  }
+  .sm-list .ttl {
+    font-size: 14.5px;
+    color: var(--ink);
+  }
+
+  .footer {
+    text-align: center;
+    margin-top: 36px;
+    padding-top: 24px;
+    border-top: 1px solid var(--line);
+    font-size: 13px;
+    color: var(--ink-mute);
+  }
+  .footer code {
+    background: var(--card);
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    color: var(--accent-deep);
+  }
+
+  @media (max-width: 640px) {
+    body { padding: 16px 12px 60px; }
+    .sm-hero { padding: 28px 20px; }
+    .sm-section { padding: 22px 18px; }
+    .sm-list a { flex-direction: column; gap: 2px; align-items: flex-start; padding: 10px 6px; }
+    .sm-list .fn { min-width: 0; font-size: 11.5px; }
+  }
+</style>
+</head>
+<body>
+<div class="sm-wrap">
+
+  <div class="sm-hero">
+    <h1>Карта сайта</h1>
+    <p>Все страницы сайта janeotabaeva.ru, сгруппированные по назначению. Клик по любой строке открывает страницу.</p>
+    <div class="meta">
+      Страниц всего: <strong>52</strong> · Обновлено: <strong>2026-04-24</strong>
+    </div>
+  </div>
+
+  <div class="toc">
+    <h3>Разделы</h3>
+    <ul>
+      <li><a href="#sec-funnel">🎯 Воронка</a> <span class="toc-count">3</span></li>
+<li><a href="#sec-main">🏠 Основные информационные страницы</a> <span class="toc-count">6</span></li>
+<li><a href="#sec-forms">📝 Формы и заявки</a> <span class="toc-count">3</span></li>
+<li><a href="#sec-numerology">🔮 Нумерология</a> <span class="toc-count">4</span></li>
+<li><a href="#sec-webinars">🎤 Вебинары и благодарности</a> <span class="toc-count">4</span></li>
+<li><a href="#sec-blog_articles">📝 Блог — Записки психолога</a> <span class="toc-count">13</span></li>
+<li><a href="#sec-blog_cases">💼 Блог — Кейсы пересборки</a> <span class="toc-count">12</span></li>
+<li><a href="#sec-legal">⚖️ Юридические документы</a> <span class="toc-count">6</span></li>
+<li><a href="#sec-legacy">🗄️ Архив / Legacy</a> <span class="toc-count">1</span></li>
+
+    </ul>
+  </div>
+
+  
+  <section class="sm-section" id="sec-funnel">
+    <header class="sm-section__head">
+      <h2 class="sm-section__title">🎯 Воронка</h2>
+      <p class="sm-section__sub">Путь клиента: квиз → видео → интенсив · <strong>3</strong> стр.</p>
+    </header>
+    <ul class="sm-list">
+      <li><a href="5prichin.html"><span class="fn">5prichin.html</span><span class="ttl">Квиз «5 типов невротического голода» (лид-магнит)</span></a></li>
+<li><a href="video.html"><span class="fn">video.html</span><span class="ttl">Видео-разбор интенсива</span></a></li>
+<li><a href="intensiv.html"><span class="fn">intensiv.html</span><span class="ttl">Интенсив «Моё идеальное тело» (продукт)</span></a></li>
+
+    </ul>
+  </section>
+
+  <section class="sm-section" id="sec-main">
+    <header class="sm-section__head">
+      <h2 class="sm-section__title">🏠 Основные информационные страницы</h2>
+      <p class="sm-section__sub">Те, что в верхнем меню сайта · <strong>6</strong> стр.</p>
+    </header>
+    <ul class="sm-list">
+      <li><a href="index.html"><span class="fn">index.html</span><span class="ttl">Главная — Евгения Отабаева</span></a></li>
+<li><a href="about.html"><span class="fn">about.html</span><span class="ttl">Обо мне · История</span></a></li>
+<li><a href="peresborka.html"><span class="fn">peresborka.html</span><span class="ttl">Метод «Пересборка»</span></a></li>
+<li><a href="diagnostic.html"><span class="fn">diagnostic.html</span><span class="ttl">Диагностическая сессия</span></a></li>
+<li><a href="intensivo.html"><span class="fn">intensivo.html</span><span class="ttl">Микровебинар (ближайший)</span></a></li>
+<li><a href="blog.html"><span class="fn">blog.html</span><span class="ttl">Блог</span></a></li>
+
+    </ul>
+  </section>
+
+  <section class="sm-section" id="sec-forms">
+    <header class="sm-section__head">
+      <h2 class="sm-section__title">📝 Формы и заявки</h2>
+      <p class="sm-section__sub">Формы записи на консультации и программы · <strong>3</strong> стр.</p>
+    </header>
+    <ul class="sm-list">
+      <li><a href="coaching.html"><span class="fn">coaching.html</span><span class="ttl">Заявка на коуч-сессию</span></a></li>
+<li><a href="freecons.html"><span class="fn">freecons.html</span><span class="ttl">Бесплатная консультация</span></a></li>
+<li><a href="anketa_predzapisi_nu.html"><span class="fn">anketa_predzapisi_nu.html</span><span class="ttl">Анкета предзаписи «Новый уровень»</span></a></li>
+
+    </ul>
+  </section>
+
+  <section class="sm-section" id="sec-numerology">
+    <header class="sm-section__head">
+      <h2 class="sm-section__title">🔮 Нумерология</h2>
+      <p class="sm-section__sub">Отдельное направление — консультации по дате рождения · <strong>4</strong> стр.</p>
+    </header>
+    <ul class="sm-list">
+      <li><a href="kod.html"><span class="fn">kod.html</span><span class="ttl">Активация предназначения</span></a></li>
+<li><a href="aktivaciya_koda_deneg.html"><span class="fn">aktivaciya_koda_deneg.html</span><span class="ttl">Экспресс-консультация: активация кода денег</span></a></li>
+<li><a href="sekrety_daty_rozhdeniya.html"><span class="fn">sekrety_daty_rozhdeniya.html</span><span class="ttl">Секреты Даты Рождения</span></a></li>
+<li><a href="prednaznachenie_po_date.html"><span class="fn">prednaznachenie_po_date.html</span><span class="ttl">Предназначение по дате рождения</span></a></li>
+
+    </ul>
+  </section>
+
+  <section class="sm-section" id="sec-webinars">
+    <header class="sm-section__head">
+      <h2 class="sm-section__title">🎤 Вебинары и благодарности</h2>
+      <p class="sm-section__sub">Прошедшие вебинары + страницы благодарности · <strong>4</strong> стр.</p>
+    </header>
+    <ul class="sm-list">
+      <li><a href="vash_luchshij_2025.html"><span class="fn">vash_luchshij_2025.html</span><span class="ttl">Ваш лучший 2025</span></a></li>
+<li><a href="vash_luchshij_2025_svm.html"><span class="fn">vash_luchshij_2025_svm.html</span><span class="ttl">Ваш лучший 2025 (СВМ)</span></a></li>
+<li><a href="webinar_20_02_25_spasibo.html"><span class="fn">webinar_20_02_25_spasibo.html</span><span class="ttl">Спасибо за вебинар 20.02.25</span></a></li>
+<li><a href="webinar_20_02_25_spasibo_svm.html"><span class="fn">webinar_20_02_25_spasibo_svm.html</span><span class="ttl">Спасибо за вебинар 20.02.25 (СВМ)</span></a></li>
+
+    </ul>
+  </section>
+
+  <section class="sm-section" id="sec-blog_articles">
+    <header class="sm-section__head">
+      <h2 class="sm-section__title">📝 Блог — Записки психолога</h2>
+      <p class="sm-section__sub">Статьи блога · <strong>13</strong> стр.</p>
+    </header>
+    <ul class="sm-list">
+      <li><a href="tpost-1yige7h8v1-chto-delat-esli-strahi-ostanavlivayut-ro.html"><span class="fn">tpost-1yige7h8v1-chto-delat-esli-strahi-ostanavlivayut-ro.html</span><span class="ttl">Что делать, если страхи останавливают рост вашего дохода?</span></a></li>
+<li><a href="tpost-35xfftbem1-5-oshibok-kotorie-meshali-mne-zarabativa.html"><span class="fn">tpost-35xfftbem1-5-oshibok-kotorie-meshali-mne-zarabativa.html</span><span class="ttl">5 ошибок, которые мешали мне зарабатывать деньги</span></a></li>
+<li><a href="tpost-84khyjh8h1-pochemu-ya-nichego-ne-hochu.html"><span class="fn">tpost-84khyjh8h1-pochemu-ya-nichego-ne-hochu.html</span><span class="ttl">Почему я ничего не хочу?</span></a></li>
+<li><a href="tpost-badkr6hpv1-ya-dvigayus-kak-cherepaha-chto-so-mnoi-n.html"><span class="fn">tpost-badkr6hpv1-ya-dvigayus-kak-cherepaha-chto-so-mnoi-n.html</span><span class="ttl">Я двигаюсь как черепаха. Что со мной не так?</span></a></li>
+<li><a href="tpost-f0gji8gxd1-pochemu-sovet-polyubi-sebya-ne-rabotaet.html"><span class="fn">tpost-f0gji8gxd1-pochemu-sovet-polyubi-sebya-ne-rabotaet.html</span><span class="ttl">Почему совет "полюби себя" не работает?</span></a></li>
+<li><a href="tpost-gp8jceeut1-kakoi-iz-tebya-ekspert-esli-dazhe-sebe-p.html"><span class="fn">tpost-gp8jceeut1-kakoi-iz-tebya-ekspert-esli-dazhe-sebe-p.html</span><span class="ttl">Какой из тебя эксперт, если даже себе помочь не можешь?</span></a></li>
+<li><a href="tpost-kjvp47dhp1-govoryat-chto-samie-bolnie-lyudi-eto-psi.html"><span class="fn">tpost-kjvp47dhp1-govoryat-chto-samie-bolnie-lyudi-eto-psi.html</span><span class="ttl">Говорят, что самые больные люди это психологи</span></a></li>
+<li><a href="tpost-mu1b58tml1-kak-zhe-menya-besyat-tupie-lyudi.html"><span class="fn">tpost-mu1b58tml1-kak-zhe-menya-besyat-tupie-lyudi.html</span><span class="ttl">Как же меня бесят тупые люди!</span></a></li>
+<li><a href="tpost-ng3afgvat1-pochemu-mi-toropimsya-zhit.html"><span class="fn">tpost-ng3afgvat1-pochemu-mi-toropimsya-zhit.html</span><span class="ttl">Почему мы торопимся жить?</span></a></li>
+<li><a href="tpost-p4md4rl4c1-pochemu-mi-boimsya-proyavlyatsya.html"><span class="fn">tpost-p4md4rl4c1-pochemu-mi-boimsya-proyavlyatsya.html</span><span class="ttl">Почему мы боимся проявляться?</span></a></li>
+<li><a href="tpost-p7rjg4kfs1-hotite-uskoritsya-togda-pritormozite.html"><span class="fn">tpost-p7rjg4kfs1-hotite-uskoritsya-togda-pritormozite.html</span><span class="ttl">Хотите ускориться? Тогда притормозите</span></a></li>
+<li><a href="tpost-sb4zk7tpt1-otkuda-beretsya-nizkaya-samootsenka.html"><span class="fn">tpost-sb4zk7tpt1-otkuda-beretsya-nizkaya-samootsenka.html</span><span class="ttl">Откуда берется низкая самооценка?</span></a></li>
+<li><a href="tpost-ypj3r1man1-kakoi-vi-tip-dostigatora.html"><span class="fn">tpost-ypj3r1man1-kakoi-vi-tip-dostigatora.html</span><span class="ttl">Какой вы тип достигатора?</span></a></li>
+
+    </ul>
+  </section>
+
+  <section class="sm-section" id="sec-blog_cases">
+    <header class="sm-section__head">
+      <h2 class="sm-section__title">💼 Блог — Кейсы пересборки</h2>
+      <p class="sm-section__sub">Реальные истории клиентов · <strong>12</strong> стр.</p>
+    </header>
+    <ul class="sm-list">
+      <li><a href="tpost-0thdfkyps1-keis-9-teryayu-dengi-oschuschenie-chto-v.html"><span class="fn">tpost-0thdfkyps1-keis-9-teryayu-dengi-oschuschenie-chto-v.html</span><span class="ttl">Кейс 9 - Теряю деньги, ощущение, что все бесполезно</span></a></li>
+<li><a href="tpost-3ihj3x9y71-keis-6-izbeganie-konfliktov.html"><span class="fn">tpost-3ihj3x9y71-keis-6-izbeganie-konfliktov.html</span><span class="ttl">Кейс 6 - Избегание конфликтов</span></a></li>
+<li><a href="tpost-5n410k9ai1-keis-11-poteryala-kontrol-nad-komandoi.html"><span class="fn">tpost-5n410k9ai1-keis-11-poteryala-kontrol-nad-komandoi.html</span><span class="ttl">Кейс 11 - Потеряла контроль над командой</span></a></li>
+<li><a href="tpost-fp4059bc61-keis-2-prokrastinatsiya-i-depressiya.html"><span class="fn">tpost-fp4059bc61-keis-2-prokrastinatsiya-i-depressiya.html</span><span class="ttl">Кейс 2 - Прокрастинация и депрессия</span></a></li>
+<li><a href="tpost-g467topl31-keis-4-panicheskaya-ataka.html"><span class="fn">tpost-g467topl31-keis-4-panicheskaya-ataka.html</span><span class="ttl">Кейс 4 - Паническая атака</span></a></li>
+<li><a href="tpost-gr7z5tj721-keis-8-chuvstvuyu-sebya-neprofessionalom.html"><span class="fn">tpost-gr7z5tj721-keis-8-chuvstvuyu-sebya-neprofessionalom.html</span><span class="ttl">Кейс 8 - Чувствую себя непрофессионалом</span></a></li>
+<li><a href="tpost-hcdn8tc711-keis-12-stopor-v-dengah-v-prodvizhenii-i.html"><span class="fn">tpost-hcdn8tc711-keis-12-stopor-v-dengah-v-prodvizhenii-i.html</span><span class="ttl">Кейс 12 - Стопор в деньгах, в продвижении и клиентах</span></a></li>
+<li><a href="tpost-mjzd4ca7f1-keis-10-stupor-i-volnenie-na-vistupleniy.html"><span class="fn">tpost-mjzd4ca7f1-keis-10-stupor-i-volnenie-na-vistupleniy.html</span><span class="ttl">Кейс 10 - Ступор и волнение на выступлениях</span></a></li>
+<li><a href="tpost-o6ial6gbv1-keis-1-bessonnitsa.html"><span class="fn">tpost-o6ial6gbv1-keis-1-bessonnitsa.html</span><span class="ttl">Кейс 1 - Бессонница - Евгения Отабаева</span></a></li>
+<li><a href="tpost-op8kujt531-keis-5-sindrom-samozvantsa.html"><span class="fn">tpost-op8kujt531-keis-5-sindrom-samozvantsa.html</span><span class="ttl">Кейс 5 - Синдром самозванца</span></a></li>
+<li><a href="tpost-xhb7eeldj1-keis-7-soprotivlenie-k-prorabotkam.html"><span class="fn">tpost-xhb7eeldj1-keis-7-soprotivlenie-k-prorabotkam.html</span><span class="ttl">Кейс 7 - Сопротивление к проработкам</span></a></li>
+<li><a href="tpost-xua1hzs9o1-keis-3-vigoranie.html"><span class="fn">tpost-xua1hzs9o1-keis-3-vigoranie.html</span><span class="ttl">Кейс 3 - Выгорание</span></a></li>
+
+    </ul>
+  </section>
+
+  <section class="sm-section" id="sec-legal">
+    <header class="sm-section__head">
+      <h2 class="sm-section__title">⚖️ Юридические документы</h2>
+      <p class="sm-section__sub">Оферта, политика, согласия · <strong>6</strong> стр.</p>
+    </header>
+    <ul class="sm-list">
+      <li><a href="oferta.html"><span class="fn">oferta.html</span><span class="ttl">Оферта</span></a></li>
+<li><a href="publicoferta.html"><span class="fn">publicoferta.html</span><span class="ttl">Публичная оферта</span></a></li>
+<li><a href="politika.html"><span class="fn">politika.html</span><span class="ttl">Политика обработки персональных данных</span></a></li>
+<li><a href="soglasiye.html"><span class="fn">soglasiye.html</span><span class="ttl">Согласие с обработкой ПД</span></a></li>
+<li><a href="confidence.html"><span class="fn">confidence.html</span><span class="ttl">Политика конфиденциальности</span></a></li>
+<li><a href="mail.html"><span class="fn">mail.html</span><span class="ttl">Согласие на рекламные рассылки</span></a></li>
+
+    </ul>
+  </section>
+
+  <section class="sm-section" id="sec-legacy">
+    <header class="sm-section__head">
+      <h2 class="sm-section__title">🗄️ Архив / Legacy</h2>
+      <p class="sm-section__sub">Старые лендинги, на которые могут вести внешние ссылки · <strong>1</strong> стр.</p>
+    </header>
+    <ul class="sm-list">
+      <li><a href="page7431740.html"><span class="fn">page7431740.html</span><span class="ttl">[архив] Бесплатный вебинар (старый лендинг)</span></a></li>
+
+    </ul>
+  </section>
+
+
+  <div class="footer">
+    Сгенерировано скриптом <code>.claude/build_sitemap.py</code><br>
+    Правила обновления — см. <code>CLAUDE.md</code> в корне репозитория
+  </div>
+
+</div>
+</body>
+</html>
